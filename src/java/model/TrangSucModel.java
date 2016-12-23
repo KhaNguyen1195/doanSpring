@@ -7,15 +7,15 @@ import org.hibernate.Session;
 
 public class TrangSucModel {
 
-    public List<Trangsuc> getAll() {
+    public List<Trangsuc>getAllTrangSuc() {
         Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
-        List<Trangsuc> lst = new ArrayList<Trangsuc>();
+        List<Trangsuc> lsttrangsuc  = new ArrayList<Trangsuc>();
         try {
             session.beginTransaction();
-            lst = session.createCriteria(Trangsuc.class).list();
+            lsttrangsuc = session.createCriteria(Trangsuc.class).list();
 
             // toString để lấy name load ra danh sách
-            for (Trangsuc trangsuc : lst) {
+            for (Trangsuc trangsuc : lsttrangsuc) {
                 System.out.println(trangsuc.toString());
             }
             session.getTransaction().commit();
@@ -24,11 +24,11 @@ public class TrangSucModel {
             System.out.println("Lỗi" + ex.toString());
         }
 
-        return lst;
+        return lsttrangsuc;
     }
 
     //insert  
-    public void Create(Trangsuc ts) {
+    public void createTrangSuc(Trangsuc ts) {
         Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
@@ -46,6 +46,7 @@ public class TrangSucModel {
         try {
             session.beginTransaction();
             ts = (Trangsuc) session.get(Trangsuc.class, id);
+            //System.out.println("//=====findOne======"+ts.toString());
             session.getTransaction().commit();
         } catch (Exception ex) {
             System.out.println("Lỗi" + ex.toString());
@@ -54,7 +55,7 @@ public class TrangSucModel {
     }
 
     //update 
-    public void edit(Trangsuc ts) {
+    public void editTrangSuc(Trangsuc ts) {
         Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();

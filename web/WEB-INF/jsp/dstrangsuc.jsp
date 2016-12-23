@@ -43,7 +43,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <c:forEach var="item" items="${lst}">  
+                                        <c:forEach var="item" items="${lsttrangsuc}">  
                                         <tr>
                                             <td class="kc">${item.id}</td>
                                             <td class="kc">${item.ma}</td>
@@ -52,7 +52,7 @@
                                             <td class="kc">${item.mota}</td>
                                             <td>
                                                 <div class="kc">
-                                                    <a href="edit/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
+                                                    <a href="chinhsua/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
                                                         <i class="fa fa-pencil"></i></a>
                                                     <a href="" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
                                                         <i class="fa fa-info"></i></a>

@@ -22,8 +22,8 @@ public class TrangSucController {
     @RequestMapping(value = "/danhsachtrangsuc",method = RequestMethod.GET)
     public String getall(Model m){
         TrangSucModel model = new TrangSucModel();
-        m.addAttribute("lst",model.getAll());
-        System.out.println("//=================="+model.getAll().size());
+        m.addAttribute("lsttrangsuc",model.getAllTrangSuc());
+        System.out.println("//=================="+model.getAllTrangSuc().size());
         return "dstrangsuc";
     }
     
@@ -38,10 +38,10 @@ public class TrangSucController {
     }
     
     @RequestMapping(value = "create",method = RequestMethod.POST)
-    public String create(@ModelAttribute(value = "trangsuc") Trangsuc u){
-        System.out.println("====>"+u.getId()+"-"+u.getTen());
+    public String create(@ModelAttribute(value = "trangsuc") Trangsuc ts){
+        System.out.println("====>"+ts.getId()+"-"+ts.getTen());
         TrangSucModel model =new TrangSucModel();
-        model.Create(u);
+        model.createTrangSuc(ts);
         return "redirect:danhsachtrangsuc.htm";
     }
     // end insert
@@ -59,22 +59,23 @@ public class TrangSucController {
     }
     
     // edit
-    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
-    public String showEdit(Model model, @PathVariable int id){
+    @RequestMapping(value = "/chinhsua/{id}", method = RequestMethod.GET)
+    public String showEdit(Model m, @PathVariable int id){
         TrangSucModel ts =new TrangSucModel();
-        System.out.println("----------------id)"+id);
-        model.addAttribute("trangsuc", ts.findOne(id));
-        model.addAttribute("action", "update");
-        setLoaiTrangSucDropDownList(model);
+        m.addAttribute("trangsuc", ts.findOne(id));
+        m.addAttribute("action", "update");
+//        System.out.println("--------"+ts.findOne(id).toString());
+//        System.out.println("//============"+ts.findOne(id).toString());
+        setLoaiTrangSucDropDownList(m);
         return "trangsuc";
     }
 
     
     //update
-    @RequestMapping(value = "edit/update",method = RequestMethod.POST)
+    @RequestMapping(value = "chinhsua/update",method = RequestMethod.POST)
     public String update(@ModelAttribute(value = "trangsuc") Trangsuc ts){
         TrangSucModel model =new TrangSucModel();
-        model.edit(ts);
+        model.editTrangSuc(ts);
         return "redirect:/danhsachtrangsuc.htm";
     }
     

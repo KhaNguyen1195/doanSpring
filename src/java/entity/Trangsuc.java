@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 23, 2016 5:22:55 PM by Hibernate Tools 4.3.1
+// Generated Dec 23, 2016 8:35:57 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -133,11 +133,11 @@ public class Trangsuc  implements java.io.Serializable {
 
     @Override
     public String toString() {
-        return "Trangsuc{" + "id=" + id + ", loaitrangsuc=" + loaitrangsuc.getTen() + ", ten=" + ten + ", ma=" + ma + ", mota=" + mota + ", daxoa=" + daxoa + ", ngaytao=" + ngaytao + ", sanphams=" + sanphams + '}';
+        return "Trangsuc{" + "id=" + id + ", loaitrangsuc=" + loaitrangsuc + ", ten=" + ten + ", ma=" + ma + ", mota=" + mota + ", daxoa=" + daxoa + ", ngaytao=" + ngaytao + ", sanphams=" + sanphams + '}';
     }
 
 
-    
+
 
 }
 
