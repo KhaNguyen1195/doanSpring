@@ -35,19 +35,13 @@
                             <div class="form">
                                 <form class="form-group form-validate" id="register-form" method="get" action="">
                                     <div class="form-group col-lg-6">
-                                        <label for="ma" class="control-label col-lg-4">Mã trang sức</label>
+                                        <label for="ma" class="control-label col-lg-4">Mã loại trang sức</label>
                                         <div class="col-lg-8">
                                             <input class=" form-control" id="ma" name="ma" type="text" placeholder="Mã loại trang sức"/>
                                         </div>
                                     </div>
                                     <div class="form-group col-lg-6">
-                                        <label for="ten" class="control-label col-lg-4">Tên trang sức</label>
-                                        <div class="col-lg-8">
-                                            <input class=" form-control" id="ten" name="ten" type="text" placeholder="Tên loại trang sức"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-lg-6">
-                                        <label for="ten" class="control-label col-lg-4">Tên trang sức</label>
+                                        <label for="ten" class="control-label col-lg-4">Tên loại trang sức</label>
                                         <div class="col-lg-8">
                                             <input class=" form-control" id="ten" name="ten" type="text" placeholder="Tên loại trang sức"/>
                                         </div>

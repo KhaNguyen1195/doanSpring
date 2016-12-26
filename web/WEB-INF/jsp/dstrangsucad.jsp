@@ -33,19 +33,19 @@
                             <div class="form">
                                 <form class="form-group form-validate" id="register-form" method="get" action="">
                                     <div class="form-group col-lg-6">
-                                        <label for="ma" class="control-label col-lg-4">Mã loại trang sức</label>
+                                        <label for="ma" class="control-label col-lg-4">Mã trang sức</label>
                                         <div class="col-lg-8">
-                                            <input class=" form-control" id="ma" name="ma" type="text" placeholder="Mã loại trang sức"/>
+                                            <input class=" form-control" id="ma" name="ma" type="text" placeholder="Mã trang sức"/>
                                         </div>
                                     </div>
                                     <div class="form-group col-lg-6">
-                                        <label for="ten" class="control-label col-lg-4">Tên loại trang sức</label>
+                                        <label for="ten" class="control-label col-lg-4">Tên trang sức</label>
                                         <div class="col-lg-8">
-                                            <input class=" form-control" id="ten" name="ten" type="text" placeholder="Tên loại trang sức"/>
+                                            <input class=" form-control" id="ten" name="ten" type="text" placeholder="Tên trang sức"/>
                                         </div>
                                     </div>
                                     <div class="form-group col-lg-6">
-                                            <label class="control-label col-lg-4">Loại trang sức <span class="required">*</span></label>
+                                            <label class="control-label col-lg-4">Loại trang sức</label>
                                             <div class="col-lg-8">                               
                                                 <select class="form-control" id="loaitrangsuc" name="loaitrangsuc">
                                                   <option value="">--- Chọn loại trang sức ---</option>
@@ -84,7 +84,7 @@
                                             <td class="kc">${item.mota}</td>
                                             <td>
                                                 <div class="kc">
-                                                    <a href="chinhsua/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
+                                                    <a href="chinhsuatrangsuc/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
                                                         <i class="fa fa-pencil"></i></a>
                                                     <a href="" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
                                                         <i class="fa fa-info"></i></a>

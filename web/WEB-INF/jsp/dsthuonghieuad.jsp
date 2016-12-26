@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <ol class="breadcrumb">
-                            <li><i class="fa fa-home"></i><a href="index1.html">Trang chủ</a></li>
+                            <li><i class="fa fa-home"></i><a href="admin.htm">Trang chủ</a></li>
                             <li><i class="fa fa-list-alt"></i>Quản lý danh mục</li>
                             <li>Thương hiệu</li>
                         </ol>
@@ -29,10 +29,29 @@
                             <header class="panel-heading">
                                 <h2><strong>Danh sách thương hiệu</strong></h2>
                                 <div class="button-ds">
-                                    <a class="btn btn-primary btn-sm" href="thuonghieu.html">Thêm mới</a>
-                                    <a class="btn btn-danger btn-sm" href="">Xóa</a>
+                                    <a class="btn btn-primary btn-sm" href="thuonghieu.htm">Thêm mới</a>
                                 </div>
                             </header>
+                            <div class="form">
+                                <form class="form-group form-validate" id="register-form" method="get" action="">
+                                    <div class="form-group col-lg-6">
+                                        <label for="ma" class="control-label col-lg-4">Mã thương hiệu</label>
+                                        <div class="col-lg-8">
+                                            <input class=" form-control" id="ma" name="ma" type="text" placeholder="Mã thương hiệu"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label for="ten" class="control-label col-lg-4">Tên thương hiệu</label>
+                                        <div class="col-lg-8">
+                                            <input class=" form-control" id="ten" name="ten" type="text" placeholder="Tên thương hiệu"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-offset-6 col-lg-6">
+                                        <button class="btn btn-warning" type="submit">Tìm kiếm</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <br>
                             <div class="table-responsive ">
                                 <table class="table table-bordered">
                                     <thead style="font-size:18px;">
@@ -55,21 +74,21 @@
                                                     <div class="kc">
                                                         <a href="chinhsuathuonghieu/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
                                                             <i class="fa fa-pencil"></i></a>
-                                                        <a href="" class=" btn btn-default btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xem chi tiết">
+                                                        <a href="" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
                                                             <i class="fa fa-info"></i></a>
                                                     </div>
                                                 </td>
                                             </tr>
                                         </tbody>
-                                        </c:forEach>
-                                    </table>
-                                </div>
-
-                            </section>
-                        </div>
+                                    </c:forEach>
+                                </table>
+                                <br>
+                            </div>
+                        </section>
                     </div>
-                    <!-- page end-->
-                </section>
+                </div>
+                <!-- page end-->
             </section>
-        </body>
-    </html>
+        </section>
+    </body>
+</html>

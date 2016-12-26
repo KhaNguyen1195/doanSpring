@@ -249,8 +249,17 @@ public class Sanpham  implements java.io.Serializable {
         this.giohangs = giohangs;
     }
 
+    @Override
+    public String toString() {
+        return "Sanpham{" + "id=" + id + ", chatlieu=" + chatlieu + ", chungloai=" + chungloai +
+                ", loaida=" + loaida + ", loaivang=" + loaivang + ", mauda=" + mauda + ", thuonghieu=" + thuonghieu + 
+                ", trangsuc=" + trangsuc + ", ten=" + ten + ", ma=" + ma + ", giaban=" + giaban + ", mota=" + mota + 
+                ", daxoa=" + daxoa + ", img=" + img + ", ngaytao=" + ngaytao + ", khohangs=" + khohangs +
+                ", chitietdonhangs=" + chitietdonhangs + ", giohangs=" + giohangs + '}';
+    }
 
 
+    
 
 }
 

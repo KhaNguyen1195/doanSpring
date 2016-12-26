@@ -104,8 +104,8 @@
                             <span class="menu-arrow arrow_carrot-right"></span>
                         </a>
                         <ul class="sub">
-                            <li><a class="" href="dsnhanvien.html">Quản lý nhân viên</a></li>                          
-                            <li><a class="" href="dskhachhang.html">Quản lý khách hàng</a></li>
+                            <li><a class="" href="danhsachnhanvien.htm">Quản lý nhân viên</a></li>                          
+                            <li><a class="" href="danhsachkhachhang.html">Quản lý khách hàng</a></li>
                         </ul>
                     </li>       
                     <li class="sub-menu">
@@ -119,12 +119,12 @@
                             <li><a class="" href="danhsachtrangsuc.htm">Trang sức</a></li>
                             <li><a class="" href="danhsachsanpham.htm">Sản phẩm</a></li>
                             <li><a class="" href="danhsachthuonghieu.htm">Thương hiệu</a></li>
-                            <li><a class="" href="dschatlieu.html">Chất liệu</a></li>
-                            <li><a class="" href="dschungloai.html">Chủng loại</a></li>
-                            <li><a class="" href="dsloaivang.html">Loại vàng</a></li>
-                            <li><a class="" href="dsloaida.html">Loại đá</a></li>
-                            <li><a class="" href="dsmauda.html">Màu đá</a></li>
-                            <li><a class="" href="dsnhacungcap.html">Nhà cung cấp</a></li>
+                            <li><a class="" href="danhsachchatlieu.htm">Chất liệu</a></li>
+                            <li><a class="" href="danhsachchungloai.htm">Chủng loại</a></li>
+                            <li><a class="" href="danhsachloaivang.htm">Loại vàng</a></li>
+                            <li><a class="" href="danhsachloaida.htm">Loại đá</a></li>
+                            <li><a class="" href="danhsachmauda.htm">Màu đá</a></li>
+                            <li><a class="" href="danhsachnhacungcap.htm">Nhà cung cấp</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">

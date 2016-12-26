@@ -60,7 +60,7 @@ public class TrangSucController {
     }
     
     // edit
-    @RequestMapping(value = "/chinhsua/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/chinhsuatrangsuc/{id}", method = RequestMethod.GET)
     public String showEditTS(Model m, @PathVariable int id){
         TrangSucModel ts =new TrangSucModel();
         m.addAttribute("trangsuc", ts.findTrangSuc(id));
@@ -73,7 +73,7 @@ public class TrangSucController {
 
     
     //update
-    @RequestMapping(value = "chinhsua/capnhattrangsuc",method = RequestMethod.POST)
+    @RequestMapping(value = "chinhsuatrangsuc/capnhattrangsuc",method = RequestMethod.POST)
     public String updateTS(@ModelAttribute(value = "trangsuc") Trangsuc ts){
         TrangSucModel model =new TrangSucModel();
         model.editTrangSuc(ts);

@@ -30,9 +30,7 @@
                             <div class="panel-body">
                                 <div class="form">
                                     <form:form action="${action}" modelAttribute="trangsuc" class="form-group form-validate form-horizontal" id="register-form">
-
                                         <form:hidden path="id"/>
-
                                         <div class="form-group">
                                             <label for="ma" class="control-label col-lg-2">Mã trang sức <span class="required">*</span></label>
                                             <div class="col-lg-10">
