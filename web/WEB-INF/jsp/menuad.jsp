@@ -53,24 +53,12 @@
     <body>
         <header class="header dark-bg">
             <div class="toggle-nav">
-                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+                <div class="icon-reorder tooltips" data-original-title="Menu" data-placement="bottom"><i class="icon_menu"></i></div>
             </div>
 
             <!--logo start-->
             <a href="index1.html" class="logo">Quản trị <span class="lite">Hệ thống</span></a>
             <!--logo end-->
-
-            <div class="nav search-row" id="top_menu">
-                <!--  search form start -->
-                <ul class="nav top-menu">                    
-                    <li>
-                        <form class="navbar-form">
-                            <input class="form-control" placeholder="Search" type="text">
-                        </form>
-                    </li>                    
-                </ul>
-                <!--  search form end -->                
-            </div>
 
             <div class="top-nav notification-row">                
                 <!-- notification dropdown start-->
@@ -78,9 +66,6 @@
 
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="profile-ava">
-                                <img alt="" src="img/avatar1_small.jpg">
-                            </span>
                             <span class="username">Jenifer Smith</span>
                             <b class="caret"></b>
                         </a>
@@ -132,8 +117,8 @@
                         <ul class="sub">
                             <li><a class="" href="danhsachloaitrangsuc.htm">Loại trang sức</a></li>
                             <li><a class="" href="danhsachtrangsuc.htm">Trang sức</a></li>
-                            <li><a class="" href="dssanpham.html">Sản phẩm</a></li>
-                            <li><a class="" href="dsthuonghieu.html">Thương hiệu</a></li>
+                            <li><a class="" href="danhsachsanpham.htm">Sản phẩm</a></li>
+                            <li><a class="" href="danhsachthuonghieu.htm">Thương hiệu</a></li>
                             <li><a class="" href="dschatlieu.html">Chất liệu</a></li>
                             <li><a class="" href="dschungloai.html">Chủng loại</a></li>
                             <li><a class="" href="dsloaivang.html">Loại vàng</a></li>

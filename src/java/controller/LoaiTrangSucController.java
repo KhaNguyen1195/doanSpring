@@ -9,55 +9,55 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 @RequestMapping(value = "/")
 public class LoaiTrangSucController {
     
     @RequestMapping(value = "/danhsachloaitrangsuc",method = RequestMethod.GET)
-    public String getall(Model m){
+    public String getallLTS(Model m){
         LoaiTrangSucModel model = new LoaiTrangSucModel();
-        m.addAttribute("lstloaitrangsuc",model.getAll());
+        m.addAttribute("lstloaitrangsuc",model.getAllLoaiTrangSuc());
         //System.out.println("//=================="+model.getAll().size());
-        return "dsloaitrangsuc";
+        return "dsloaitrangsucad";
     }
     
     // insert 
     //chuyển từ all sang create
     @RequestMapping(value = "/loaitrangsuc", method=RequestMethod.GET)
-    public String redirectCreate(Model m){
+    public String redirectCreateLTS(Model m){
         m.addAttribute("loaitrangsuc", new Loaitrangsuc());
-        m.addAttribute("action", "create");
-        return "loaitrangsuc";
+        m.addAttribute("action", "themloaitrangsuc");
+        return "loaitrangsucad";
     }
     
-    @RequestMapping(value = "create",method = RequestMethod.POST, produces = "application/x-www-form-urlencoded;charset=UTF-8")
-    public String create(@ModelAttribute(value = "loaitrangsuc") Loaitrangsuc lts){
+    @RequestMapping(value = "themloaitrangsuc",method = RequestMethod.POST)
+    public String createLTS(@ModelAttribute(value = "loaitrangsuc") Loaitrangsuc lts){
         LoaiTrangSucModel model =new LoaiTrangSucModel();
-        model.Create(lts);
+        model.CreateLoaiTrangSuc(lts);
         return "redirect:danhsachloaitrangsuc.htm";
     }
     // end insert*/
     
     // edit
-    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
-    public String showEdit(Model model, @PathVariable int id){
+    @RequestMapping(value = "/chinhsualoaitrangsuc/{id}", method = RequestMethod.GET)
+    public String showEditLTS(Model model, @PathVariable int id){
         LoaiTrangSucModel lts =new LoaiTrangSucModel();
         System.out.println("----------------id)"+id);
-        model.addAttribute("loaitrangsuc", lts.findOne(id));
-        System.out.println("//============"+lts.findOne(id).toString());
-        model.addAttribute("action", "update");
-        return "loaitrangsuc";
+        model.addAttribute("loaitrangsuc", lts.findLoaiTrangSuc(id));
+        System.out.println("//============"+lts.findLoaiTrangSuc(id).toString());
+        model.addAttribute("action", "capnhatloaitrangsuc");
+        return "loaitrangsucad";
     }
 
     
     //update
-    @RequestMapping(value = "edit/update",method = RequestMethod.POST, produces = "application/x-www-form-urlencoded;charset=UTF-8")
-    public String update(@ModelAttribute(value = "loaitrangsuc") Loaitrangsuc lts){
+    @RequestMapping(value = "chinhsualoaitrangsuc/capnhatloaitrangsuc",method = RequestMethod.POST, produces = "application/x-www-form-urlencoded;charset=UTF-8")
+    public String updateLTS(@ModelAttribute(value = "loaitrangsuc") Loaitrangsuc lts){
         LoaiTrangSucModel model =new LoaiTrangSucModel();
         //System.out.println("loaitrangsuc"+lts.toString());
-        model.edit(lts);
+        model.editLoaiTrangSuc(lts);
         return "redirect:/danhsachloaitrangsuc.htm";
     }
     

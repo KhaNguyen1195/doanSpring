@@ -1,35 +1,35 @@
 
 package model;
 
-import entity.Loaitrangsuc;
+import entity.Thuonghieu;
 import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.Session;
-import org.hibernate.criterion.Restrictions;
 
 
-public class LoaiTrangSucModel {
-    public List<Loaitrangsuc> getAllLoaiTrangSuc(){
+public class ThuongHieuModel {
+    
+    public List<Thuonghieu> getAllThuongHieu(){
         Session session=NewHibernateUtil.getSessionFactory().getCurrentSession();
-        List<Loaitrangsuc> lstloaitrangsuc =new ArrayList<Loaitrangsuc>();
+        List<Thuonghieu> lstthuonghieu =new ArrayList<Thuonghieu>();
         try{
             session.beginTransaction();
-            lstloaitrangsuc=session.createCriteria(Loaitrangsuc.class).list();
+            lstthuonghieu=session.createCriteria(Thuonghieu.class).list();
             session.getTransaction().commit();
             
        }catch(Exception ex){
             System.out.println("Lỗi"+ex.toString());
         }
             
-        return lstloaitrangsuc;
+        return lstthuonghieu;
     }
     
     //insert  
-    public void CreateLoaiTrangSuc(Loaitrangsuc lts){
+    public void CreateThuongHieu(Thuonghieu th){
         Session session=NewHibernateUtil.getSessionFactory().getCurrentSession();
         try{
             session.beginTransaction();
-            session.save(lts);
+            session.save(th);
             session.getTransaction().commit();
         }catch(Exception ex){
             System.out.println("Lỗi"+ex.toString());
@@ -37,26 +37,26 @@ public class LoaiTrangSucModel {
     }
     
     //lấy ra  theo id
-    public Loaitrangsuc findLoaiTrangSuc(int id){
+    public Thuonghieu findThuongHieu(int id){
         Session session=NewHibernateUtil.getSessionFactory().getCurrentSession();
-        Loaitrangsuc lts =new Loaitrangsuc();
+        Thuonghieu th =new Thuonghieu();
         try{
             session.beginTransaction();
-            lts=(Loaitrangsuc) session.get(Loaitrangsuc.class, id);
+            th=(Thuonghieu) session.get(Thuonghieu.class, id);
             //System.out.println("//=====findOne======"+lts.toString());
             session.getTransaction().commit();
         }catch(Exception ex){
             System.out.println("Lỗi"+ex.toString());
         }
-        return lts;
+        return th;
     }
     
     //update 
-    public void editLoaiTrangSuc(Loaitrangsuc lts){
+    public void editThuongHieu(Thuonghieu th){
         Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
         try{
             session.beginTransaction();
-               session.update(lts);
+               session.update(th);
             session.getTransaction().commit();
         }catch(Exception ex){
             System.out.println("Lỗi"+ex.toString());
@@ -64,7 +64,7 @@ public class LoaiTrangSucModel {
     }
     
     // xóa 
-    /*public void delete(Loaitrangsuc lts){
+    /*public void delete(Thuonghieu lts){
         Session session=NewHibernateUtil.getSessionFactory().getCurrentSession();
         try{
             session.beginTransaction();

@@ -40,7 +40,7 @@ public class TrangSucModel {
     }
 
     //lấy ra  theo id
-    public Trangsuc findOne(int id) {
+    public Trangsuc findTrangSuc(int id) {
         Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
         Trangsuc ts = new Trangsuc();
         try {

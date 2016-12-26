@@ -19,10 +19,11 @@
 
     <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
     <context:annotation-config/>
-    <mvc:annotation-driven/>
-    <context:component-scan base-package="controller"/>
     
-
+    <context:component-scan base-package="controller"/>
+    <mvc:default-servlet-handler />
+    <mvc:resources mapping="/libs/**" location="/libs/" />
+    <mvc:annotation-driven/>
     <!--
     Most controllers will use the ControllerClassNameHandlerMapping above, but
     for the index controller we are using ParameterizableViewController, so we must
@@ -49,7 +50,6 @@
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="index" />
     
-    <mvc:default-servlet-handler />
-    <mvc:resources mapping="/libs/**" location="/libs/" />
+    
     
 </beans>

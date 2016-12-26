@@ -1,5 +1,7 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@page contentType="text/html; charset=utf-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -14,9 +16,9 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <ol class="breadcrumb">
-                            <li><i class="fa fa-home"></i><a href="index.htm">Trang chủ</a></li>
+                            <li><i class="fa fa-home"></i><a href="index1.html">Trang chủ</a></li>
                             <li><i class="fa fa-list-alt"></i>Quản lý danh mục</li>
-                            <li>Loại trang sức</li>
+                            <li>Thương hiệu</li>
                         </ol>
                     </div>
                 </div>
@@ -25,9 +27,10 @@
                     <div class="col-lg-12">
                         <section class="panel">
                             <header class="panel-heading">
-                                <h2><strong>Danh sách loại trang sức</strong></h2>
+                                <h2><strong>Danh sách thương hiệu</strong></h2>
                                 <div class="button-ds">
-                                    <a class="btn btn-primary btn-sm" href="loaitrangsuc.htm">Thêm mới</a>
+                                    <a class="btn btn-primary btn-sm" href="thuonghieu.html">Thêm mới</a>
+                                    <a class="btn btn-danger btn-sm" href="">Xóa</a>
                                 </div>
                             </header>
                             <div class="table-responsive ">
@@ -35,14 +38,14 @@
                                     <thead style="font-size:18px;">
                                         <tr>
                                             <th class="kc">#</th>
-                                            <th class="kc">Mã loại trang sức</th>
-                                            <th class="kc">Tên loại trang sức</th>
+                                            <th class="kc">Mã thương hiệu</th>
+                                            <th class="kc">Tên thương hiệu</th>
                                             <th class="kc">Mô tả</th>
                                             <th class="kc" style="min-width:50px;">Hành động</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <c:forEach var="item" items="${lstloaitrangsuc}">  
+                                        <c:forEach var="item" items="${lstthuonghieu}">
                                             <tr>
                                                 <td class="kc">${item.id}</td>
                                                 <td class="kc">${item.ma}</td>
@@ -50,24 +53,23 @@
                                                 <td class="kc">${item.mota}</td>
                                                 <td>
                                                     <div class="kc">
-
-                                                        <a href="edit/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
+                                                        <a href="chinhsuathuonghieu/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
                                                             <i class="fa fa-pencil"></i></a>
-                                                        <a href="" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
-                                                            <i class="fa fa-trash-o"></i></a>
+                                                        <a href="" class=" btn btn-default btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xem chi tiết">
+                                                            <i class="fa fa-info"></i></a>
                                                     </div>
                                                 </td>
                                             </tr>
-                                        </c:forEach> 
-                                    </tbody>
-                                </table>
-                            </div>
+                                        </tbody>
+                                        </c:forEach>
+                                    </table>
+                                </div>
 
-                        </section>
+                            </section>
+                        </div>
                     </div>
-                </div>
-                <!-- page end-->
+                    <!-- page end-->
+                </section>
             </section>
-        </section>
-    </body>
-</html>
+        </body>
+    </html>

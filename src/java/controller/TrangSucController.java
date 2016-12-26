@@ -15,31 +15,32 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+
 @Controller
 @RequestMapping(value = "/")
 public class TrangSucController {
     
     @RequestMapping(value = "/danhsachtrangsuc",method = RequestMethod.GET)
-    public String getall(Model m){
+    public String getalLTS(Model m){
         TrangSucModel model = new TrangSucModel();
         m.addAttribute("lsttrangsuc",model.getAllTrangSuc());
         System.out.println("//=================="+model.getAllTrangSuc().size());
-        return "dstrangsuc";
+        return "dstrangsucad";
     }
     
     // insert 
     //chuyển từ all sang create
     @RequestMapping(value = "/trangsuc", method=RequestMethod.GET)
-    public String redirectCreate(Model m){
+    public String redirectCreateTS(Model m){
         m.addAttribute("trangsuc", new Trangsuc());
-        m.addAttribute("action", "create");
+        m.addAttribute("action", "themtrangsuc");
         setLoaiTrangSucDropDownList(m);
-        return "trangsuc";
+        return "trangsucad";
     }
     
-    @RequestMapping(value = "create",method = RequestMethod.POST)
-    public String create(@ModelAttribute(value = "trangsuc") Trangsuc ts){
-        System.out.println("====>"+ts.getId()+"-"+ts.getTen());
+    @RequestMapping(value = "themtrangsuc",method = RequestMethod.POST)
+    public String createTS(@ModelAttribute(value = "trangsuc") Trangsuc ts){
+        //System.out.println("====>"+ts.getId()+"-"+ts.getTen());
         TrangSucModel model =new TrangSucModel();
         model.createTrangSuc(ts);
         return "redirect:danhsachtrangsuc.htm";
@@ -48,7 +49,7 @@ public class TrangSucController {
 
     private void setLoaiTrangSucDropDownList(Model model) {
         LoaiTrangSucModel lstloaitrangsuc = new LoaiTrangSucModel();
-        List<Loaitrangsuc> ltsList=lstloaitrangsuc.getAll();
+        List<Loaitrangsuc> ltsList=lstloaitrangsuc.getAllLoaiTrangSuc();
         if(!ltsList.isEmpty()){
             HashMap<Integer, String> ltsMap=new HashMap<Integer, String>();
             for(Loaitrangsuc loaitrangsucEntity : ltsList){
@@ -60,20 +61,20 @@ public class TrangSucController {
     
     // edit
     @RequestMapping(value = "/chinhsua/{id}", method = RequestMethod.GET)
-    public String showEdit(Model m, @PathVariable int id){
+    public String showEditTS(Model m, @PathVariable int id){
         TrangSucModel ts =new TrangSucModel();
-        m.addAttribute("trangsuc", ts.findOne(id));
-        m.addAttribute("action", "update");
+        m.addAttribute("trangsuc", ts.findTrangSuc(id));
+        m.addAttribute("action", "capnhattrangsuc");
 //        System.out.println("--------"+ts.findOne(id).toString());
 //        System.out.println("//============"+ts.findOne(id).toString());
         setLoaiTrangSucDropDownList(m);
-        return "trangsuc";
+        return "trangsucad";
     }
 
     
     //update
-    @RequestMapping(value = "chinhsua/update",method = RequestMethod.POST)
-    public String update(@ModelAttribute(value = "trangsuc") Trangsuc ts){
+    @RequestMapping(value = "chinhsua/capnhattrangsuc",method = RequestMethod.POST)
+    public String updateTS(@ModelAttribute(value = "trangsuc") Trangsuc ts){
         TrangSucModel model =new TrangSucModel();
         model.editTrangSuc(ts);
         return "redirect:/danhsachtrangsuc.htm";

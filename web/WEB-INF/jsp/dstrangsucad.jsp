@@ -30,6 +30,38 @@
                                     <a class="btn btn-primary btn-sm" href="trangsuc.htm">Thêm mới</a>
                                 </div>
                             </header>
+                            <div class="form">
+                                <form class="form-group form-validate" id="register-form" method="get" action="">
+                                    <div class="form-group col-lg-6">
+                                        <label for="ma" class="control-label col-lg-4">Mã loại trang sức</label>
+                                        <div class="col-lg-8">
+                                            <input class=" form-control" id="ma" name="ma" type="text" placeholder="Mã loại trang sức"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label for="ten" class="control-label col-lg-4">Tên loại trang sức</label>
+                                        <div class="col-lg-8">
+                                            <input class=" form-control" id="ten" name="ten" type="text" placeholder="Tên loại trang sức"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                            <label class="control-label col-lg-4">Loại trang sức <span class="required">*</span></label>
+                                            <div class="col-lg-8">                               
+                                                <select class="form-control" id="loaitrangsuc" name="loaitrangsuc">
+                                                  <option value="">--- Chọn loại trang sức ---</option>
+                                                  <option value="1">Trang sức đá quý</option>
+                                                  <option value="2">Trang sức ngọc trai</option>
+                                                  <option value="3">Media</option>
+                                                  <option value="4">Funny</option>
+                                                </select>  
+                                            </div>
+                                          </div>  
+                                    <div class="form-group col-lg-offset-6 col-lg-6">
+                                        <button class="btn btn-warning" type="submit">Tìm kiếm</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <br>
                             <div class="table-responsive ">
                                 <table class="table table-bordered">
                                     <thead style="font-size:18px;">
@@ -64,7 +96,7 @@
                                     </tbody>
                                 </table>
                             </div>
-
+                            <br>
                         </section>
                     </div>
                 </div>
