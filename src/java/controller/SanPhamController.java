@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class SanPhamController {
     
     @RequestMapping(value = "/danhsachsanpham",method = RequestMethod.GET)
-    public String getalSP(Model m){
+    public String getallSP(Model m){
         SanPhamModel model = new SanPhamModel();
         m.addAttribute("lstsanpham",model.getAllSanPham());
         System.out.println("//=================="+model.getAllSanPham().size());
