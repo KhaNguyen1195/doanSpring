@@ -108,7 +108,7 @@
                         </a>
                         <ul class="sub">
                             <li><a class="" href="danhsachnhanvien.htm">Quản lý nhân viên</a></li>                          
-                            <li><a class="" href="danhsachkhachhang.html">Quản lý khách hàng</a></li>
+                            <li><a class="" href="danhsachkhachhang.htm">Quản lý khách hàng</a></li>
                         </ul>
                     </li>       
                     <li class="sub-menu">
