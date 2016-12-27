@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 27, 2016 10:57:08 AM by Hibernate Tools 4.3.1
+// Generated Dec 27, 2016 6:33:12 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -39,14 +39,13 @@ public class Nhanvien  implements java.io.Serializable {
      private String tendangnhap;
      private String matkhau;
      private Integer daxoa;
-     private Date ngaytao;
      private Set<Hoadon> hoadons = new HashSet<Hoadon>(0);
      private Set<Khohang> khohangs = new HashSet<Khohang>(0);
 
     public Nhanvien() {
     }
 
-    public Nhanvien(Chucvu chucvu, String ten, String ma, Date ngaysinh, Integer gioitinh, String diachi, String sodienthoai, String tendangnhap, String matkhau, Integer daxoa, Date ngaytao, Set<Hoadon> hoadons, Set<Khohang> khohangs) {
+    public Nhanvien(Chucvu chucvu, String ten, String ma, Date ngaysinh, Integer gioitinh, String diachi, String sodienthoai, String tendangnhap, String matkhau, Integer daxoa, Set<Hoadon> hoadons, Set<Khohang> khohangs) {
        this.chucvu = chucvu;
        this.ten = ten;
        this.ma = ma;
@@ -57,7 +56,6 @@ public class Nhanvien  implements java.io.Serializable {
        this.tendangnhap = tendangnhap;
        this.matkhau = matkhau;
        this.daxoa = daxoa;
-       this.ngaytao = ngaytao;
        this.hoadons = hoadons;
        this.khohangs = khohangs;
     }
@@ -172,16 +170,6 @@ public class Nhanvien  implements java.io.Serializable {
     
     public void setDaxoa(Integer daxoa) {
         this.daxoa = daxoa;
-    }
-
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name="ngaytao", length=19)
-    public Date getNgaytao() {
-        return this.ngaytao;
-    }
-    
-    public void setNgaytao(Date ngaytao) {
-        this.ngaytao = ngaytao;
     }
 
 @OneToMany(fetch=FetchType.LAZY, mappedBy="nhanvien")

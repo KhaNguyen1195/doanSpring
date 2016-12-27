@@ -18,13 +18,12 @@ public class ThuongHieuController {
     public String getallTH(Model m){
         ThuongHieuModel model = new ThuongHieuModel();
         m.addAttribute("lstthuonghieu",model.getAllThuongHieu());
-        //System.out.println("//=================="+model.getAll().size());
         return "dsthuonghieuad";
     }
     
     // insert 
     //chuyển từ all sang create
-    @RequestMapping(value = "/thuonghieu", method=RequestMethod.GET)
+    @RequestMapping(value = "thuonghieu", method=RequestMethod.GET)
     public String redirectCreateLTH(Model m){
         m.addAttribute("thuonghieu", new Thuonghieu());
         m.addAttribute("action", "themthuonghieu");
@@ -40,7 +39,7 @@ public class ThuongHieuController {
     // end insert
     
     // edit
-    @RequestMapping(value = "/chinhsuathuonghieu/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "{id}", method = RequestMethod.GET)
     public String showEditTH(Model model, @PathVariable int id){
         ThuongHieuModel th =new ThuongHieuModel();
         System.out.println("----------------id)"+id);
@@ -52,7 +51,7 @@ public class ThuongHieuController {
 
     
     //update
-    @RequestMapping(value = "chinhsuathuonghieu/capnhatthuonghieu",method = RequestMethod.POST, produces = "application/x-www-form-urlencoded;charset=UTF-8")
+    @RequestMapping(value = "capnhatthuonghieu",method = RequestMethod.POST, produces = "application/x-www-form-urlencoded;charset=UTF-8")
     public String updateTH(@ModelAttribute(value = "thuonghieu") Thuonghieu th){
         ThuongHieuModel model =new ThuongHieuModel();
         //System.out.println("loaitrangsuc"+lts.toString());

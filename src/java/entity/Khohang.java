@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 27, 2016 10:57:08 AM by Hibernate Tools 4.3.1
+// Generated Dec 27, 2016 6:33:12 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -34,12 +34,11 @@ public class Khohang  implements java.io.Serializable {
      private Date ngaynhapkho;
      private Integer tongtrigia;
      private String donvitinh;
-     private Date ngaytao;
 
     public Khohang() {
     }
 
-    public Khohang(Nhacungcap nhacungcap, Nhanvien nhanvien, Sanpham sanpham, Integer soluong, Integer gianhap1sp, Date ngaynhapkho, Integer tongtrigia, String donvitinh, Date ngaytao) {
+    public Khohang(Nhacungcap nhacungcap, Nhanvien nhanvien, Sanpham sanpham, Integer soluong, Integer gianhap1sp, Date ngaynhapkho, Integer tongtrigia, String donvitinh) {
        this.nhacungcap = nhacungcap;
        this.nhanvien = nhanvien;
        this.sanpham = sanpham;
@@ -48,7 +47,6 @@ public class Khohang  implements java.io.Serializable {
        this.ngaynhapkho = ngaynhapkho;
        this.tongtrigia = tongtrigia;
        this.donvitinh = donvitinh;
-       this.ngaytao = ngaytao;
     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
@@ -141,16 +139,6 @@ public class Khohang  implements java.io.Serializable {
     
     public void setDonvitinh(String donvitinh) {
         this.donvitinh = donvitinh;
-    }
-
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name="ngaytao", length=19)
-    public Date getNgaytao() {
-        return this.ngaytao;
-    }
-    
-    public void setNgaytao(Date ngaytao) {
-        this.ngaytao = ngaytao;
     }
 
 

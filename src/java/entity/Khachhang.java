@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 27, 2016 10:57:08 AM by Hibernate Tools 4.3.1
+// Generated Dec 27, 2016 6:33:12 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -172,8 +172,8 @@ public class Khachhang  implements java.io.Serializable {
         this.daxoa = daxoa;
     }
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name="ngaytao", length=19)
+    @Temporal(TemporalType.DATE)
+    @Column(name="ngaytao", length=10)
     public Date getNgaytao() {
         return this.ngaytao;
     }
