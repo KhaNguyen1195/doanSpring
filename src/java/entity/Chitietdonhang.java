@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 23, 2016 8:35:57 PM by Hibernate Tools 4.3.1
+// Generated Dec 27, 2016 10:57:08 AM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -29,13 +29,13 @@ public class Chitietdonhang  implements java.io.Serializable {
      private Donhang donhang;
      private Sanpham sanpham;
      private Integer soluongdathang;
-     private Long dongia;
+     private Integer dongia;
      private Date ngaytao;
 
     public Chitietdonhang() {
     }
 
-    public Chitietdonhang(Donhang donhang, Sanpham sanpham, Integer soluongdathang, Long dongia, Date ngaytao) {
+    public Chitietdonhang(Donhang donhang, Sanpham sanpham, Integer soluongdathang, Integer dongia, Date ngaytao) {
        this.donhang = donhang;
        this.sanpham = sanpham;
        this.soluongdathang = soluongdathang;
@@ -86,12 +86,12 @@ public class Chitietdonhang  implements java.io.Serializable {
     }
 
     
-    @Column(name="dongia", precision=10, scale=0)
-    public Long getDongia() {
+    @Column(name="dongia", precision=5, scale=0)
+    public Integer getDongia() {
         return this.dongia;
     }
     
-    public void setDongia(Long dongia) {
+    public void setDongia(Integer dongia) {
         this.dongia = dongia;
     }
 

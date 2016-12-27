@@ -29,7 +29,7 @@
                             <header class="panel-heading"><h2><strong>Thương hiệu</strong></h2></header>
                             <div class="panel-body">
                                 <div class="form">
-                                    <form:form action="${action}" modelAttribute="thuonghieu" class="form-group form-validate form-horizontal" id="register-form">
+                                    <form:form class="form-group form-validate form-horizontal" id="register-form" action="${action}" modelAttribute="thuonghieu">
                                         <form:hidden path="id"/>
                                         <div class="form-group">
                                             <label for="ma" class="control-label col-lg-2">Mã thương hiệu <span class="required">*</span></label>
@@ -52,7 +52,7 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="col-lg-offset-2 col-lg-10">
-                                                <button class="btn btn-primary" type="submit">Lưu</button>
+                                                <button class="btn btn-primary" type="submit" id="btn">Lưu</button>
                                                 <button type="reset" class="btn btn-default">Làm mới</button>
                                                 <a href="danhsachthuonghieu.htm" class="btn btn-success" type="button">Quay lại</a>
                                             </div>

@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 23, 2016 8:35:57 PM by Hibernate Tools 4.3.1
+// Generated Dec 27, 2016 10:57:08 AM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -29,7 +29,7 @@ public class Hoadon  implements java.io.Serializable {
      private Donhang donhang;
      private Nhanvien nhanvien;
      private Integer sosp;
-     private Long tongtien;
+     private Integer tongtien;
      private String sodienthoai;
      private Date ngaygiaohang;
      private String diachigiaohang;
@@ -40,7 +40,7 @@ public class Hoadon  implements java.io.Serializable {
     public Hoadon() {
     }
 
-    public Hoadon(Donhang donhang, Nhanvien nhanvien, Integer sosp, Long tongtien, String sodienthoai, Date ngaygiaohang, String diachigiaohang, Integer trangthai, String ghichu, Date ngaytao) {
+    public Hoadon(Donhang donhang, Nhanvien nhanvien, Integer sosp, Integer tongtien, String sodienthoai, Date ngaygiaohang, String diachigiaohang, Integer trangthai, String ghichu, Date ngaytao) {
        this.donhang = donhang;
        this.nhanvien = nhanvien;
        this.sosp = sosp;
@@ -96,12 +96,12 @@ public class Hoadon  implements java.io.Serializable {
     }
 
     
-    @Column(name="tongtien", precision=10, scale=0)
-    public Long getTongtien() {
+    @Column(name="tongtien", precision=5, scale=0)
+    public Integer getTongtien() {
         return this.tongtien;
     }
     
-    public void setTongtien(Long tongtien) {
+    public void setTongtien(Integer tongtien) {
         this.tongtien = tongtien;
     }
 

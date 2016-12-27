@@ -29,7 +29,15 @@
         <link type="text/css" href="${pageContext.request.contextPath}/libs/css/style-responsive-ad.css" rel="stylesheet" >
         <!-- javascripts -->
         <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/jquery-ad.js"></script>
-
+        <!--custome script for all page-->
+        <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/scripts.js"></script>
+        <!-- custom script for this page-->
+        <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/morris.min.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/morris-script.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/jquery.tagsinput.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/form-validation-script.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/form-component.js"></script>
         <!-- bootstrap -->
         <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/bootstrap-ad.min.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/bootstrap-switch-ad.js"></script>
@@ -38,15 +46,10 @@
         <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/jquery.localscroll.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/jquery.scrollTo.min.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/jquery.slimscroll.min.js"></script>
-        <!--custome script for all page-->
-        <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/scripts.js"></script>
-        <!-- custom script for this page-->
-        <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/morris.min.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/morris-script.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/jquery.tagsinput.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/form-validation-script.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/form-component.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/jquery.validate.min.js"></script>
+        
+        
+        
+        
 
 
     </head>

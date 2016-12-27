@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 23, 2016 8:35:57 PM by Hibernate Tools 4.3.1
+// Generated Dec 27, 2016 10:57:08 AM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -93,7 +93,7 @@ public class Trangsuc  implements java.io.Serializable {
     }
 
     
-    @Column(name="mota", length=250)
+    @Column(name="mota", length=65535)
     public String getMota() {
         return this.mota;
     }
@@ -133,11 +133,13 @@ public class Trangsuc  implements java.io.Serializable {
 
     @Override
     public String toString() {
-        return "Trangsuc{" + "id=" + id + ", loaitrangsuc=" + loaitrangsuc + ", ten=" + ten + ", ma=" + ma + ", mota=" + mota + ", daxoa=" + daxoa + ", ngaytao=" + ngaytao + ", sanphams=" + sanphams + '}';
+        return "Trangsuc{" + "id=" + id + ", loaitrangsuc=" + loaitrangsuc + ","
+                + " ten=" + ten + ", ma=" + ma + ", mota=" + mota + ", daxoa=" + daxoa + ","
+                + " ngaytao=" + ngaytao + ", sanphams=" + sanphams + '}';
     }
 
 
-
+    
 
 }
 

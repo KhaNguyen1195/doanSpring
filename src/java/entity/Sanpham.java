@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 23, 2016 8:35:57 PM by Hibernate Tools 4.3.1
+// Generated Dec 27, 2016 10:57:08 AM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -38,10 +38,10 @@ public class Sanpham  implements java.io.Serializable {
      private Trangsuc trangsuc;
      private String ten;
      private String ma;
-     private Long giaban;
+     private Integer giaban;
      private String mota;
-     private Integer daxoa;
      private String img;
+     private Integer daxoa;
      private Date ngaytao;
      private Set<Khohang> khohangs = new HashSet<Khohang>(0);
      private Set<Chitietdonhang> chitietdonhangs = new HashSet<Chitietdonhang>(0);
@@ -50,7 +50,7 @@ public class Sanpham  implements java.io.Serializable {
     public Sanpham() {
     }
 
-    public Sanpham(Chatlieu chatlieu, Chungloai chungloai, Loaida loaida, Loaivang loaivang, Mauda mauda, Thuonghieu thuonghieu, Trangsuc trangsuc, String ten, String ma, Long giaban, String mota, Integer daxoa, String img, Date ngaytao, Set<Khohang> khohangs, Set<Chitietdonhang> chitietdonhangs, Set<Giohang> giohangs) {
+    public Sanpham(Chatlieu chatlieu, Chungloai chungloai, Loaida loaida, Loaivang loaivang, Mauda mauda, Thuonghieu thuonghieu, Trangsuc trangsuc, String ten, String ma, Integer giaban, String mota, String img, Integer daxoa, Date ngaytao, Set<Khohang> khohangs, Set<Chitietdonhang> chitietdonhangs, Set<Giohang> giohangs) {
        this.chatlieu = chatlieu;
        this.chungloai = chungloai;
        this.loaida = loaida;
@@ -62,8 +62,8 @@ public class Sanpham  implements java.io.Serializable {
        this.ma = ma;
        this.giaban = giaban;
        this.mota = mota;
-       this.daxoa = daxoa;
        this.img = img;
+       this.daxoa = daxoa;
        this.ngaytao = ngaytao;
        this.khohangs = khohangs;
        this.chitietdonhangs = chitietdonhangs;
@@ -173,33 +173,23 @@ public class Sanpham  implements java.io.Serializable {
     }
 
     
-    @Column(name="giaban", precision=10, scale=0)
-    public Long getGiaban() {
+    @Column(name="giaban", precision=5, scale=0)
+    public Integer getGiaban() {
         return this.giaban;
     }
     
-    public void setGiaban(Long giaban) {
+    public void setGiaban(Integer giaban) {
         this.giaban = giaban;
     }
 
     
-    @Column(name="mota", length=250)
+    @Column(name="mota", length=65535)
     public String getMota() {
         return this.mota;
     }
     
     public void setMota(String mota) {
         this.mota = mota;
-    }
-
-    
-    @Column(name="daxoa")
-    public Integer getDaxoa() {
-        return this.daxoa;
-    }
-    
-    public void setDaxoa(Integer daxoa) {
-        this.daxoa = daxoa;
     }
 
     
@@ -210,6 +200,16 @@ public class Sanpham  implements java.io.Serializable {
     
     public void setImg(String img) {
         this.img = img;
+    }
+
+    
+    @Column(name="daxoa")
+    public Integer getDaxoa() {
+        return this.daxoa;
+    }
+    
+    public void setDaxoa(Integer daxoa) {
+        this.daxoa = daxoa;
     }
 
     @Temporal(TemporalType.TIMESTAMP)
@@ -251,11 +251,12 @@ public class Sanpham  implements java.io.Serializable {
 
     @Override
     public String toString() {
-        return "Sanpham{" + "id=" + id + ", chatlieu=" + chatlieu + ", chungloai=" + chungloai +
-                ", loaida=" + loaida + ", loaivang=" + loaivang + ", mauda=" + mauda + ", thuonghieu=" + thuonghieu + 
-                ", trangsuc=" + trangsuc + ", ten=" + ten + ", ma=" + ma + ", giaban=" + giaban + ", mota=" + mota + 
-                ", daxoa=" + daxoa + ", img=" + img + ", ngaytao=" + ngaytao + ", khohangs=" + khohangs +
-                ", chitietdonhangs=" + chitietdonhangs + ", giohangs=" + giohangs + '}';
+        return "Sanpham{" + "id=" + id + ", chatlieu=" + chatlieu + ", chungloai=" + chungloai + ","
+                + " loaida=" + loaida + ", loaivang=" + loaivang + ", mauda=" + mauda + ","
+                + " thuonghieu=" + thuonghieu + ", trangsuc=" + trangsuc + ", ten=" + ten + ","
+                + " ma=" + ma + ", giaban=" + giaban + ", mota=" + mota + ", img=" + img + ","
+                + " daxoa=" + daxoa + ", ngaytao=" + ngaytao + ", khohangs=" + khohangs + ","
+                + " chitietdonhangs=" + chitietdonhangs + ", giohangs=" + giohangs + '}';
     }
 
 

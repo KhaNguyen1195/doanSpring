@@ -7,6 +7,7 @@ import java.util.List;
 import org.hibernate.Session;
 
 
+
 public class ThuongHieuModel {
     
     public List<Thuonghieu> getAllThuongHieu(){
@@ -74,4 +75,6 @@ public class ThuongHieuModel {
             System.out.println("Lỗi"+ex.toString());
         }
     }*/
+    
+    
 }

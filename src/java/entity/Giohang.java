@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 23, 2016 8:35:57 PM by Hibernate Tools 4.3.1
+// Generated Dec 27, 2016 10:57:08 AM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -28,7 +28,7 @@ public class Giohang  implements java.io.Serializable {
      private Integer id;
      private Khachhang khachhang;
      private Sanpham sanpham;
-     private Long dongia;
+     private Integer dongia;
      private Integer soluong;
      private Integer daxoa;
      private Date ngaytao;
@@ -36,7 +36,7 @@ public class Giohang  implements java.io.Serializable {
     public Giohang() {
     }
 
-    public Giohang(Khachhang khachhang, Sanpham sanpham, Long dongia, Integer soluong, Integer daxoa, Date ngaytao) {
+    public Giohang(Khachhang khachhang, Sanpham sanpham, Integer dongia, Integer soluong, Integer daxoa, Date ngaytao) {
        this.khachhang = khachhang;
        this.sanpham = sanpham;
        this.dongia = dongia;
@@ -78,12 +78,12 @@ public class Giohang  implements java.io.Serializable {
     }
 
     
-    @Column(name="dongia", precision=10, scale=0)
-    public Long getDongia() {
+    @Column(name="dongia", precision=5, scale=0)
+    public Integer getDongia() {
         return this.dongia;
     }
     
-    public void setDongia(Long dongia) {
+    public void setDongia(Integer dongia) {
         this.dongia = dongia;
     }
 

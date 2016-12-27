@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 23, 2016 8:35:57 PM by Hibernate Tools 4.3.1
+// Generated Dec 27, 2016 10:57:08 AM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -29,17 +29,17 @@ public class Khohang  implements java.io.Serializable {
      private Nhacungcap nhacungcap;
      private Nhanvien nhanvien;
      private Sanpham sanpham;
-     private Long soluong;
-     private Long gianhap1sp;
+     private Integer soluong;
+     private Integer gianhap1sp;
      private Date ngaynhapkho;
-     private Long tongtrigia;
+     private Integer tongtrigia;
      private String donvitinh;
      private Date ngaytao;
 
     public Khohang() {
     }
 
-    public Khohang(Nhacungcap nhacungcap, Nhanvien nhanvien, Sanpham sanpham, Long soluong, Long gianhap1sp, Date ngaynhapkho, Long tongtrigia, String donvitinh, Date ngaytao) {
+    public Khohang(Nhacungcap nhacungcap, Nhanvien nhanvien, Sanpham sanpham, Integer soluong, Integer gianhap1sp, Date ngaynhapkho, Integer tongtrigia, String donvitinh, Date ngaytao) {
        this.nhacungcap = nhacungcap;
        this.nhanvien = nhanvien;
        this.sanpham = sanpham;
@@ -94,22 +94,22 @@ public class Khohang  implements java.io.Serializable {
     }
 
     
-    @Column(name="soluong", precision=10, scale=0)
-    public Long getSoluong() {
+    @Column(name="soluong")
+    public Integer getSoluong() {
         return this.soluong;
     }
     
-    public void setSoluong(Long soluong) {
+    public void setSoluong(Integer soluong) {
         this.soluong = soluong;
     }
 
     
-    @Column(name="gianhap1sp", precision=10, scale=0)
-    public Long getGianhap1sp() {
+    @Column(name="gianhap1sp", precision=5, scale=0)
+    public Integer getGianhap1sp() {
         return this.gianhap1sp;
     }
     
-    public void setGianhap1sp(Long gianhap1sp) {
+    public void setGianhap1sp(Integer gianhap1sp) {
         this.gianhap1sp = gianhap1sp;
     }
 
@@ -124,12 +124,12 @@ public class Khohang  implements java.io.Serializable {
     }
 
     
-    @Column(name="tongtrigia", precision=10, scale=0)
-    public Long getTongtrigia() {
+    @Column(name="tongtrigia", precision=5, scale=0)
+    public Integer getTongtrigia() {
         return this.tongtrigia;
     }
     
-    public void setTongtrigia(Long tongtrigia) {
+    public void setTongtrigia(Integer tongtrigia) {
         this.tongtrigia = tongtrigia;
     }
 

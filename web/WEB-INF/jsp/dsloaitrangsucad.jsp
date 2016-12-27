@@ -59,7 +59,7 @@
                                             <th class="kc">#</th>
                                             <th class="kc">Mã loại trang sức</th>
                                             <th class="kc">Tên loại trang sức</th>
-                                            <th class="kc">Mô tả</th>
+                                            <th class="kc" style="width:600px;">Mô tả</th>
                                             <th class="kc" style="min-width:50px;">Hành động</th>
                                         </tr>
                                     </thead>

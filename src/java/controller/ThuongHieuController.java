@@ -70,4 +70,6 @@ public class ThuongHieuController {
         model.delete(lts);
         return "redirect:danhsachloaitrangsuc.htm";
     }*/
+    
+ 
 }
