@@ -33,7 +33,6 @@
                                 <h2><strong>Danh sách màu đá</strong></h2>
                                 <div class="button-ds">
                                     <a class="btn btn-primary btn-sm" href="mauda.htm">Thêm mới</a>
-                                    <a class="btn btn-danger btn-sm" href="">Xóa</a>
                                 </div>
                             </header>
                             <div class="table-responsive ">
@@ -44,29 +43,27 @@
                                             <th class="kc">Mã màu đá</th>
                                             <th class="kc">Tên màu đá</th>
                                             <th class="kc">Mô tả</th>
-                                            <th class="kc">Trạng thái</th>
                                             <th class="kc" style="min-width:50px;">Hành động</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <c:forEach var="item" items="${lstmauda}">  
-                                            <tr>
-                                                <td class="kc">${item.id}</td>
-                                                <td class="kc">${item.ma}</td>
-                                                <td class="kc">${item.ten}</td>
-                                                <td class="kc">${item.mota}</td>
-                                                <td class="kc">${item.trangthai}</td>
-                                                <td>
-                                                    <div class="kc">
-                                                        <a href="" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
-                                                            <i class="fa fa-pencil"></i></a>
-                                                        <a href="" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
-                                                            <i class="fa fa-info"></i></a>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                        <c:forEach var="item" items="${lstmauda}">
+                                        <tr> 
+                                            <td class="kc">${item.id}</td>
+                                            <td class="kc">${item.ma}</td>
+                                            <td class="kc">${item.ten}</td>
+                                            <td class="kc">${item.mota}</td>
+                                            <td>
+                                                <div class="kc">
+                                                    <a href="" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
+                                                        <i class="fa fa-pencil"></i></a>
+                                                    <a href="" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
+                                                            <i class="fa fa-trash-o"></i></a>
+                                                    
+                                                </div>
+                                            </td>
+                                        </tr>
                                         </c:forEach>
-
                                     </tbody>
                                 </table>
                             </div>

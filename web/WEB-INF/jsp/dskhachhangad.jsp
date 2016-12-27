@@ -30,7 +30,6 @@
                         <section class="panel">
                             <header class="panel-heading">
                                 <h2><strong>Danh sách khách hàng</strong></h2>
-                                <div class="button-ds"><a class="btn btn-danger btn-sm" href="">Xóa</a></div>
                             </header>
                             <div class="table-responsive ">
                                 <table class="table table-bordered">
@@ -62,10 +61,10 @@
 
                                             <td>
                                                 <div class="kc">
-                                                    <a href="" class=" btn btn-default btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xem chi tiết">
-                                                        <i class="fa fa-info"></i></a>
                                                     <a href="chinhsuakhachhang/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
-                                                        <i class="fa fa-pencil"></i></a>
+                                                            <i class="fa fa-pencil"></i></a>
+                                                        <a href="" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
+                                                            <i class="fa fa-trash-o"></i></a>
                                                 </div>
                                             </td>
                                         </tr>

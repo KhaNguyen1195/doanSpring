@@ -29,4 +29,16 @@ public class MauDaModel {
 
         return lstmauda;
     }
+    
+    //insert  
+    public void createMauDa(Mauda md) {
+        Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        try {
+            session.beginTransaction();
+            session.save(md);
+            session.getTransaction().commit();
+        } catch (Exception ex) {
+            System.out.println("Lỗi" + ex.toString());
+        }
+    }
 }

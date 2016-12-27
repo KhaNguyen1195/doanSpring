@@ -29,4 +29,16 @@ public class NhaCungCapModel {
 
         return lstnhacungcap;
     }
+    
+    //insert  
+    public void createNhaCungCap(Nhacungcap ncc) {
+        Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        try {
+            session.beginTransaction();
+            session.save(ncc);
+            session.getTransaction().commit();
+        } catch (Exception ex) {
+            System.out.println("Lỗi" + ex.toString());
+        }
+    }
 }

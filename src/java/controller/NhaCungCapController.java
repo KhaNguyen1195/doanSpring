@@ -5,9 +5,11 @@
  */
 package controller;
 
+import entity.Nhacungcap;
 import model.NhaCungCapModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -25,4 +27,22 @@ public class NhaCungCapController {
         System.out.println("//=================="+model.getAllNhaCungCap().size());
         return "dsnhacungcapad";
     }
+    
+    // insert 
+    //chuyển từ all sang create
+    @RequestMapping(value = "/nhacungcap", method=RequestMethod.GET)
+    public String redirectCreateTS(Model m){
+        m.addAttribute("nhacungcap", new Nhacungcap());
+        m.addAttribute("action", "themnhacungcap");
+        return "nhacungcapad";
+    }
+    
+    @RequestMapping(value = "themnhacungcap",method = RequestMethod.POST)
+    public String createTS(@ModelAttribute(value = "nhacungcap") Nhacungcap ncc){
+        //System.out.println("====>"+ts.getId()+"-"+ts.getTen());
+        NhaCungCapModel model =new NhaCungCapModel();
+        model.createNhaCungCap(ncc);
+        return "redirect:danhsachnhacungcap.htm";
+    }
+    // end insert
 }

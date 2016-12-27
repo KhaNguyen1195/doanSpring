@@ -50,4 +50,13 @@ public class KhachHangController {
     }
     
     // end edit
+    
+    
+    // edit
+    @RequestMapping(value = "/chitietkhachhang/{id}", method = RequestMethod.GET)
+    public String showKH(Model m, @PathVariable int id){
+        KhachHangModel kh =new KhachHangModel();
+        m.addAttribute("khachhang", kh.findKhachHang(id));
+        return "chitietkhad";
+    }
 }
