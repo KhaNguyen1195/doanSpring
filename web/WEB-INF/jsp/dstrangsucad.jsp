@@ -75,9 +75,9 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <c:forEach var="item" items="${lsttrangsuc}">  
+                                        <c:forEach var="item" items="${lsttrangsuc}" varStatus="status">  
                                         <tr>
-                                            <td class="kc">${item.id}</td>
+                                            <td class="kc">${status.index + 1}</td>
                                             <td class="kc">${item.ma}</td>
                                             <td class="kc">${item.ten}</td>
                                             <td class="kc">${item.loaitrangsuc.ten}</td>

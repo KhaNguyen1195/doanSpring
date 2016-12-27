@@ -64,15 +64,15 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <c:forEach var="item" items="${lstthuonghieu}">
+                                        <c:forEach var="item" items="${lstthuonghieu}" varStatus="status">
                                             <tr>
-                                                <td class="kc">${item.id}</td>
+                                                <td class="kc">${status.index + 1}</td>
                                                 <td class="kc">${item.ma}</td>
                                                 <td class="kc">${item.ten}</td>
                                                 <td class="kc">${item.mota}</td>
                                                 <td>
                                                     <div class="kc">
-                                                        <a href="${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
+                                                        <a href="chinhsuathuonghieu/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
                                                             <i class="fa fa-pencil"></i></a>
                                                         <a href="" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
                                                             <i class="fa fa-info"></i></a>

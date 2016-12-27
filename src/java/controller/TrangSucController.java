@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping(value = "/")
 public class TrangSucController {
     
-    @RequestMapping(value = "/danhsachtrangsuc",method = RequestMethod.GET)
+    @RequestMapping(value = "danhsachtrangsuc",method = RequestMethod.GET)
     public String getalLTS(Model m){
         TrangSucModel model = new TrangSucModel();
         m.addAttribute("lsttrangsuc",model.getAllTrangSuc());
@@ -30,12 +30,12 @@ public class TrangSucController {
     
     // insert 
     //chuyển từ all sang create
-    @RequestMapping(value = "/trangsuc", method=RequestMethod.GET)
+    @RequestMapping(value = "trangsuc", method=RequestMethod.GET)
     public String redirectCreateTS(Model m){
         m.addAttribute("trangsuc", new Trangsuc());
         m.addAttribute("action", "themtrangsuc");
         setLoaiTrangSucDropDownList(m);
-        return "trangsucad";
+        return "themtrangsucad";
     }
     
     @RequestMapping(value = "themtrangsuc",method = RequestMethod.POST)
@@ -60,7 +60,7 @@ public class TrangSucController {
     }
     
     // edit
-    @RequestMapping(value = "/chinhsuatrangsuc/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "chinhsuatrangsuc/{id}", method = RequestMethod.GET)
     public String showEditTS(Model m, @PathVariable int id){
         TrangSucModel ts =new TrangSucModel();
         m.addAttribute("trangsuc", ts.findTrangSuc(id));
@@ -68,7 +68,7 @@ public class TrangSucController {
 //        System.out.println("--------"+ts.findOne(id).toString());
 //        System.out.println("//============"+ts.findOne(id).toString());
         setLoaiTrangSucDropDownList(m);
-        return "trangsucad";
+        return "chinhsuatrangsucad";
     }
 
     

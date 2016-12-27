@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value = "/")
 public class LoaiTrangSucController {
     
-    @RequestMapping(value = "/danhsachloaitrangsuc",method = RequestMethod.GET)
+    @RequestMapping(value = "danhsachloaitrangsuc",method = RequestMethod.GET)
     public String getallLTS(Model m){
         LoaiTrangSucModel model = new LoaiTrangSucModel();
         m.addAttribute("lstloaitrangsuc",model.getAllLoaiTrangSuc());
@@ -25,11 +25,11 @@ public class LoaiTrangSucController {
     
     // insert 
     //chuyển từ all sang create
-    @RequestMapping(value = "/loaitrangsuc", method=RequestMethod.GET)
+    @RequestMapping(value = "loaitrangsuc", method=RequestMethod.GET)
     public String redirectCreateLTS(Model m){
         m.addAttribute("loaitrangsuc", new Loaitrangsuc());
         m.addAttribute("action", "themloaitrangsuc");
-        return "loaitrangsucad";
+        return "themloaitrangsucad";
     }
     
     @RequestMapping(value = "themloaitrangsuc",method = RequestMethod.POST)
@@ -41,14 +41,14 @@ public class LoaiTrangSucController {
     // end insert*/
     
     // edit
-    @RequestMapping(value = "/chinhsualoaitrangsuc/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "chinhsualoaitrangsuc/{id}", method = RequestMethod.GET)
     public String showEditLTS(Model model, @PathVariable int id){
         LoaiTrangSucModel lts =new LoaiTrangSucModel();
         System.out.println("----------------id)"+id);
         model.addAttribute("loaitrangsuc", lts.findLoaiTrangSuc(id));
         System.out.println("//============"+lts.findLoaiTrangSuc(id).toString());
         model.addAttribute("action", "capnhatloaitrangsuc");
-        return "loaitrangsucad";
+        return "chinhsualoaitrangsucad";
     }
 
     

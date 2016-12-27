@@ -15,7 +15,7 @@ import org.hibernate.Session;
  * @author Administrator
  */
 public class MauDaModel {
-    public List<Mauda>getAllMauDa() {
+    public List<Mauda> getAllMauDa() {
         Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
         List<Mauda> lstmauda  = new ArrayList<Mauda>();
         try {

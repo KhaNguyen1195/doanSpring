@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value = "/")
 public class SanPhamController {
     
-    @RequestMapping(value = "/danhsachsanpham",method = RequestMethod.GET)
+    @RequestMapping(value = "danhsachsanpham",method = RequestMethod.GET)
     public String getallSP(Model m){
         SanPhamModel model = new SanPhamModel();
         m.addAttribute("lstsanpham",model.getAllSanPham());
@@ -125,7 +125,7 @@ public class SanPhamController {
     
     // insert 
     //chuyển từ all sang create
-    @RequestMapping(value = "/sanpham", method=RequestMethod.GET)
+    @RequestMapping(value = "sanpham", method=RequestMethod.GET)
     public String redirectCreateSP(Model m){
         m.addAttribute("sanpham", new Trangsuc());
         m.addAttribute("action", "themsanpham");
@@ -136,7 +136,7 @@ public class SanPhamController {
         setLoaiDaDropDownList(m);
         setMauDaDropDownList(m);
         setChatLieuDropDownList(m);*/
-        return "sanphamad";
+        return "themsanphamad";
     }
     
     @RequestMapping(value = "themsanpham",method = RequestMethod.POST)
@@ -149,7 +149,7 @@ public class SanPhamController {
     // end insert
     
     // edit
-    @RequestMapping(value = "/chinhsuasanpham/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "chinhsuasanpham/{id}", method = RequestMethod.GET)
     public String showEditSP(Model m, @PathVariable int id){
         SanPhamModel sp =new SanPhamModel();
         m.addAttribute("sanpham", sp.findSanPham(id));
@@ -163,7 +163,7 @@ public class SanPhamController {
         setLoaiDaDropDownList(m);
         setMauDaDropDownList(m);
         setChatLieuDropDownList(m);*/
-        return "sanphamad";
+        return "chinhsuasanphamad";
     }
 
     
