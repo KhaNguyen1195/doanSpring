@@ -38,7 +38,7 @@
                                 <table class="table table-bordered">
                                     <thead style="font-size:18px;">
                                         <tr>
-                                            <th class="kc">#</th>
+                                            <th class="kc">STT</th>
                                             <th class="kc">Mã nhà cung cấp</th>
                                             <th class="kc">Tên nhà cung cấp</th>
                                             <th class="kc">Điện thoại</th>
@@ -60,7 +60,7 @@
                                             <td class="kc">${item.quocgia}</td>
                                             <td>
                                                 <div class="kc">
-                                                    <a href="" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
+                                                    <a href="chinhsuanhacungcap/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
                                                         <i class="fa fa-pencil"></i></a>
                                                     <a href="" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
                                                             <i class="fa fa-trash-o"></i></a>

@@ -41,4 +41,31 @@ public class NhanVienModel {
             System.out.println("Lỗi" + ex.toString());
         }
     }
+    
+    //lấy ra  theo id
+    public Nhanvien findNhanVien(int id) {
+        Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        Nhanvien nv = new Nhanvien();
+        try {
+            session.beginTransaction();
+            nv = (Nhanvien) session.get(Nhanvien.class, id);
+            //System.out.println("//=====findOne======"+ts.toString());
+            session.getTransaction().commit();
+        } catch (Exception ex) {
+            System.out.println("Lỗi" + ex.toString());
+        }
+        return nv;
+    }
+
+    //update 
+    public void editNhanVien(Nhanvien nv) {
+        Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        try {
+            session.beginTransaction();
+            session.update(nv);
+            session.getTransaction().commit();
+        } catch (Exception ex) {
+            System.out.println("Lỗi" + ex.toString());
+        }
+    }
 }

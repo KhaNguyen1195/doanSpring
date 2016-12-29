@@ -1,10 +1,8 @@
 <%-- 
-    Document   : dsmaudaad
-    Created on : Dec 27, 2016, 7:21:34 PM
+    Document   : dskhohangad
+    Created on : Dec 28, 2016, 3:33:15 PM
     Author     : Administrator
 --%>
-
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -32,7 +30,7 @@
                             <header class="panel-heading">
                                 <h2><strong>Danh sách màu đá</strong></h2>
                                 <div class="button-ds">
-                                    <a class="btn btn-primary btn-sm" href="mauda.htm">Thêm mới</a>
+                                    <a class="btn btn-primary btn-sm" href="khohang.htm">Thêm mới</a>
                                 </div>
                             </header>
                             <div class="table-responsive ">
@@ -40,30 +38,29 @@
                                     <thead style="font-size:18px;">
                                         <tr>
                                             <th class="kc">STT</th>
-                                            <th class="kc">Mã màu đá</th>
-                                            <th class="kc">Tên màu đá</th>
-                                            <th class="kc">Mô tả</th>
+                                            <th class="kc">Giá</th>
+                                            <th class="kc">Số lượng</th>                                            
+                                            <th class="kc">Tổng giá</th>
+                                            <th class="kc">Ngày nhập kho</th>
                                             <th class="kc" style="min-width:50px;">Hành động</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <c:forEach var="item" items="${lstkhohang}">
-                                        <tr> 
+                                        <tr>
                                             <td class="kc">${item.id}</td>
-                                            <td class="kc">${item.ma}</td>
-                                            <td class="kc">${item.ten}</td>
-                                            <td class="kc">${item.mota}</td>
+                                            <td class="kc">${item.gianhap1sp}</td>
+                                            <td class="kc">${item.soluong}</td>
+                                            <td class="kc">${item.tongtrigia}</td>
+                                            <td class="kc">${item.ngaynhapkho}</td>
                                             <td>
                                                 <div class="kc">
                                                     <a href="" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
                                                         <i class="fa fa-pencil"></i></a>
                                                     <a href="" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
-                                                            <i class="fa fa-trash-o"></i></a>
-                                                    
+                                                        <i class="fa fa-info"></i></a>
                                                 </div>
                                             </td>
                                         </tr>
-                                        </c:forEach>
                                     </tbody>
                                 </table>
                             </div>
@@ -75,4 +72,5 @@
             </section>
         </section>
         <!--main content end-->
+    </body>
 </html>

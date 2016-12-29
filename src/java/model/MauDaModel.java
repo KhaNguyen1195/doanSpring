@@ -41,4 +41,31 @@ public class MauDaModel {
             System.out.println("Lỗi" + ex.toString());
         }
     }
+    
+    //lấy ra  theo id
+    public Mauda findMauDa(int id) {
+        Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        Mauda md = new Mauda();
+        try {
+            session.beginTransaction();
+            md = (Mauda) session.get(Mauda.class, id);
+            //System.out.println("//=====findOne======"+ts.toString());
+            session.getTransaction().commit();
+        } catch (Exception ex) {
+            System.out.println("Lỗi" + ex.toString());
+        }
+        return md;
+    }
+
+    //update 
+    public void editMauDa(Mauda md) {
+        Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        try {
+            session.beginTransaction();
+            session.update(md);
+            session.getTransaction().commit();
+        } catch (Exception ex) {
+            System.out.println("Lỗi" + ex.toString());
+        }
+    }
 }

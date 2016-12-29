@@ -10,6 +10,7 @@ import model.NhaCungCapModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -45,4 +46,24 @@ public class NhaCungCapController {
         return "redirect:danhsachnhacungcap.htm";
     }
     // end insert
+    
+    // edit
+    @RequestMapping(value = "chinhsuanhacungcap/{id}", method = RequestMethod.GET)
+    public String showEditNCC(Model m, @PathVariable int id){
+        NhaCungCapModel ncc =new NhaCungCapModel();
+        m.addAttribute("nhacungcap", ncc.findNhaCungCap(id));
+        m.addAttribute("action", "capnhatnhacungcap");
+//        System.out.println("--------"+ts.findOne(id).toString());
+//        System.out.println("//============"+ts.findOne(id).toString());
+        return "chinhsuanhacungcapad";
+    }
+
+    
+    //update
+    @RequestMapping(value = "chinhsuanhacungcap/capnhatnhacungcap",method = RequestMethod.POST)
+    public String updateNCC(@ModelAttribute(value = "nhacungcap") Nhacungcap ncc){
+        NhaCungCapModel model =new NhaCungCapModel();
+        model.editNhaCungCap(ncc);
+        return "redirect:/danhsachnhacungcap.htm";
+    }
 }

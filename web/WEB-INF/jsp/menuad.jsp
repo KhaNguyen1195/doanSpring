@@ -137,7 +137,7 @@
                             <span class="menu-arrow arrow_carrot-right"></span>
                         </a>
                         <ul class="sub">                          
-                            <li><a class="" href="">Nhập kho</a></li>
+                            <li><a class="" href="danhsachkhohang.htm">Nhập kho</a></li>
                             <li><a class="" href=""><span>Xuất kho</span></a></li>
                         </ul>
                     </li>

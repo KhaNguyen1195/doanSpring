@@ -53,7 +53,7 @@
                                     <tbody>
                                     <c:forEach var="item" items="${lstnhanvien}">
                                         <tr>
-                                            <td class="kc">${item.id}</td>
+                                            <td class="kc">${status.index + 1}</td>
                                             <td class="kc">${item.ma}</td>
                                             <td class="kc">${item.ten}</td>
                                             <td class="kc">${item.ngaysinh}</td>

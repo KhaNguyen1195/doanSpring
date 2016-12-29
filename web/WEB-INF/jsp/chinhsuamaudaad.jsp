@@ -1,6 +1,6 @@
 <%-- 
-    Document   : maudaad
-    Created on : Dec 27, 2016, 8:34:25 PM
+    Document   : chinhsuamaudaad
+    Created on : Dec 28, 2016, 2:40:13 PM
     Author     : Administrator
 --%>
 <%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
@@ -58,7 +58,7 @@
                                             <div class="col-lg-offset-2 col-lg-10">
                                                 <button class="btn btn-primary" type="submit">Lưu</button>
                                                 <button type="reset" class="btn btn-default">Làm mới</button>
-                                                <a href="danhsachmauda.htm" class="btn btn-success" type="button">Quay lại</a>
+                                                <a href="../danhsachmauda.htm" class="btn btn-success" type="button">Quay lại</a>
                                             </div>
                                         </div>
                                     </form:form>

@@ -30,33 +30,22 @@ public class KhachHangController {
     }
     
     // edit
-    @RequestMapping(value = "/chinhsuakhachhang/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "chinhsuakhachhang/{id}", method = RequestMethod.GET)
     public String showEditKH(Model m, @PathVariable int id){
         KhachHangModel kh =new KhachHangModel();
         m.addAttribute("khachhang", kh.findKhachHang(id));
         m.addAttribute("action", "capnhatkhachhang");
 //        System.out.println("--------"+ts.findOne(id).toString());
 //        System.out.println("//============"+ts.findOne(id).toString());
-        //setLoaiTrangSucDropDownList(m);
-        return "khachhangad";
+        return "chinhsuakhachhangad";
     }
 
+    
     //update
     @RequestMapping(value = "chinhsuakhachhang/capnhatkhachhang",method = RequestMethod.POST)
-    public String updateKH(@ModelAttribute(value = "khachhang") Khachhang kh){
+    public String updateTS(@ModelAttribute(value = "khachhang") Khachhang kh){
         KhachHangModel model =new KhachHangModel();
         model.editKhachHang(kh);
         return "redirect:/danhsachkhachhang.htm";
-    }
-    
-    // end edit
-    
-    
-    // edit
-    @RequestMapping(value = "/chitietkhachhang/{id}", method = RequestMethod.GET)
-    public String showKH(Model m, @PathVariable int id){
-        KhachHangModel kh =new KhachHangModel();
-        m.addAttribute("khachhang", kh.findKhachHang(id));
-        return "chitietkhad";
     }
 }

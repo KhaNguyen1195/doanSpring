@@ -41,4 +41,31 @@ public class NhaCungCapModel {
             System.out.println("Lỗi" + ex.toString());
         }
     }
+    
+    //lấy ra  theo id
+    public Nhacungcap findNhaCungCap(int id) {
+        Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        Nhacungcap ncc = new Nhacungcap();
+        try {
+            session.beginTransaction();
+            ncc = (Nhacungcap) session.get(Nhacungcap.class, id);
+            //System.out.println("//=====findOne======"+ts.toString());
+            session.getTransaction().commit();
+        } catch (Exception ex) {
+            System.out.println("Lỗi" + ex.toString());
+        }
+        return ncc;
+    }
+
+    //update 
+    public void editNhaCungCap(Nhacungcap ncc) {
+        Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        try {
+            session.beginTransaction();
+            session.update(ncc);
+            session.getTransaction().commit();
+        } catch (Exception ex) {
+            System.out.println("Lỗi" + ex.toString());
+        }
+    }
 }

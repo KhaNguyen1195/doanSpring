@@ -10,6 +10,7 @@ import model.NhanVienModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -45,4 +46,24 @@ public class NhanVienController {
         return "redirect:danhsachnhanvien.htm";
     }
     // end insert
+    
+    // edit
+    @RequestMapping(value = "chinhsuanhanvien/{id}", method = RequestMethod.GET)
+    public String showEditNV(Model m, @PathVariable int id){
+        NhanVienModel nv =new NhanVienModel();
+        m.addAttribute("nhanvien", nv.findNhanVien(id));
+        m.addAttribute("action", "capnhatnhanvien");
+//        System.out.println("--------"+ts.findOne(id).toString());
+//        System.out.println("//============"+ts.findOne(id).toString());
+        return "chinhsuanhanvienad";
+    }
+
+    
+    //update
+    @RequestMapping(value = "chinhsuanhanvien/capnhatnhanvien",method = RequestMethod.POST)
+    public String updateTS(@ModelAttribute(value = "nhanvien") Nhanvien nv){
+        NhanVienModel model =new NhanVienModel();
+        model.editNhanVien(nv);
+        return "redirect:/danhsachnhanvien.htm";
+    }
 }

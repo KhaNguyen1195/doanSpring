@@ -66,7 +66,7 @@
                                 <table class="table table-bordered">
                                     <thead style="font-size:18px;">
                                         <tr>
-                                            <th class="kc">#</th>
+                                            <th class="kc">STT</th>
                                             <th class="kc">Mã trang sức</th>
                                             <th class="kc">Tên trang sức</th>
                                             <th class="kc">Loại trang sức</th>
