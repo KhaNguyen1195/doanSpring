@@ -62,5 +62,17 @@ public class KhachHangModel {
         }
     }
     
-    
+    // remove
+    public void removeKhachHang(Khachhang kh)
+    {
+        Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        try{
+            session.beginTransaction();
+            session.delete(kh);
+            session.getTransaction().commit();
+        }catch(Exception e)
+        {
+            System.out.println("Error"+e.toString());
+        }
+    }
 }

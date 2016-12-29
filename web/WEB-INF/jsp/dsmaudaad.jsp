@@ -47,7 +47,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <c:forEach var="item" items="${lstkhohang}">
+                                        <c:forEach var="item" items="${lstmauda}">
                                         <tr> 
                                             <td class="kc">${item.id}</td>
                                             <td class="kc">${item.ma}</td>
@@ -55,9 +55,9 @@
                                             <td class="kc">${item.mota}</td>
                                             <td>
                                                 <div class="kc">
-                                                    <a href="" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
+                                                    <a href="chinhsuamauda/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
                                                         <i class="fa fa-pencil"></i></a>
-                                                    <a href="" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
+                                                    <a href="xoamauda.htm?id=${item.id}" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
                                                             <i class="fa fa-trash-o"></i></a>
                                                     
                                                 </div>

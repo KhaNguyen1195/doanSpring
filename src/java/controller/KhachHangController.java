@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -43,9 +44,19 @@ public class KhachHangController {
     
     //update
     @RequestMapping(value = "chinhsuakhachhang/capnhatkhachhang",method = RequestMethod.POST)
-    public String updateTS(@ModelAttribute(value = "khachhang") Khachhang kh){
+    public String updateKH(@ModelAttribute(value = "khachhang") Khachhang kh){
         KhachHangModel model =new KhachHangModel();
         model.editKhachHang(kh);
         return "redirect:/danhsachkhachhang.htm";
+    }
+    
+    // remove
+    @RequestMapping(value = "/xoakhachhang", method = RequestMethod.GET)
+    public String removeKH(@RequestParam(value = "id") int id)
+    {
+        KhachHangModel model = new KhachHangModel();
+        Khachhang kh = model.findKhachHang(id);
+        model.removeKhachHang(kh);
+        return "redirect:danhsachkhachhang.htm";
     }
 }

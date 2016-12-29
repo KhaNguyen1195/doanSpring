@@ -68,4 +68,19 @@ public class NhanVienModel {
             System.out.println("Lỗi" + ex.toString());
         }
     }
+    
+   
+    // remove
+    public void removeNhanVien(Nhanvien nv)
+    {
+        Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        try{
+            session.beginTransaction();
+            session.delete(nv);
+            session.getTransaction().commit();
+        }catch(Exception e)
+        {
+            System.out.println("Error"+e.toString());
+        }
+    }
 }

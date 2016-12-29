@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -65,5 +66,15 @@ public class NhaCungCapController {
         NhaCungCapModel model =new NhaCungCapModel();
         model.editNhaCungCap(ncc);
         return "redirect:/danhsachnhacungcap.htm";
+    }
+    
+    // remove
+    @RequestMapping(value = "/xoanhacungcap", method = RequestMethod.GET)
+    public String removeNCC(@RequestParam(value = "id") int id)
+    {
+        NhaCungCapModel model = new NhaCungCapModel();
+        Nhacungcap ncc = model.findNhaCungCap(id);
+        model.removeNhaCungCap(ncc);
+        return "redirect:danhsachnhacungcap.htm";
     }
 }

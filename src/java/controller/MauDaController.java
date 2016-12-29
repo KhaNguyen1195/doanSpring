@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -65,5 +66,15 @@ public class MauDaController {
         MauDaModel model =new MauDaModel();
         model.editMauDa(md);
         return "redirect:/danhsachmauda.htm";
+    }
+    
+    // remove
+    @RequestMapping(value = "/xoamauda", method = RequestMethod.GET)
+    public String removeMD(@RequestParam(value = "id") int id)
+    {
+        MauDaModel model = new MauDaModel();
+        Mauda md = model.findMauDa(id);
+        model.removeMauDa(md);
+        return "redirect:danhsachmauda.htm";
     }
 }

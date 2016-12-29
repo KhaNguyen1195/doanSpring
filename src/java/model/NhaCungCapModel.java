@@ -68,4 +68,18 @@ public class NhaCungCapModel {
             System.out.println("Lỗi" + ex.toString());
         }
     }
+    
+    // remove
+    public void removeNhaCungCap(Nhacungcap ncc)
+    {
+        Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        try{
+            session.beginTransaction();
+            session.delete(ncc);
+            session.getTransaction().commit();
+        }catch(Exception e)
+        {
+            System.out.println("Error"+e.toString());
+        }
+    }
 }

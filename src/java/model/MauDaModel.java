@@ -68,4 +68,18 @@ public class MauDaModel {
             System.out.println("Lỗi" + ex.toString());
         }
     }
+    
+    // remove
+    public void removeMauDa(Mauda md)
+    {
+        Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        try{
+            session.beginTransaction();
+            session.delete(md);
+            session.getTransaction().commit();
+        }catch(Exception e)
+        {
+            System.out.println("Error"+e.toString());
+        }
+    }
 }
