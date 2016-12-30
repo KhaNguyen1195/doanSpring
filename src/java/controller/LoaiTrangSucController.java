@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -44,9 +45,8 @@ public class LoaiTrangSucController {
     @RequestMapping(value = "chinhsualoaitrangsuc/{id}", method = RequestMethod.GET)
     public String showEditLTS(Model model, @PathVariable int id){
         LoaiTrangSucModel lts =new LoaiTrangSucModel();
-        System.out.println("----------------id)"+id);
         model.addAttribute("loaitrangsuc", lts.findLoaiTrangSuc(id));
-        System.out.println("//============"+lts.findLoaiTrangSuc(id).toString());
+        //System.out.println("//============"+lts.findLoaiTrangSuc(id).toString());
         model.addAttribute("action", "capnhatloaitrangsuc");
         return "chinhsualoaitrangsucad";
     }
@@ -64,11 +64,11 @@ public class LoaiTrangSucController {
     // end edit
     
     // xóa
-    /*@RequestMapping(value = "/delete",method = RequestMethod.GET)
-    public String delete(@RequestParam(value = "id") int id){
+    @RequestMapping(value = "/xoaloaitrangsuc",method = RequestMethod.GET)
+    public String deleteLTS(@RequestParam(value = "id") int id){
         LoaiTrangSucModel model =new LoaiTrangSucModel();
-        Loaitrangsuc lts = model.findOne(id);
-        model.delete(lts);
+        Loaitrangsuc lts = model.findLoaiTrangSuc(id);
+        model.deleteLoaiTrangSuc(lts);
         return "redirect:danhsachloaitrangsuc.htm";
-    }*/
+    }
 }

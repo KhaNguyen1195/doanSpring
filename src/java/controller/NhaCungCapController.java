@@ -36,7 +36,7 @@ public class NhaCungCapController {
     public String redirectCreateTS(Model m){
         m.addAttribute("nhacungcap", new Nhacungcap());
         m.addAttribute("action", "themnhacungcap");
-        return "nhacungcapad";
+        return "themnhacungcapad";
     }
     
     @RequestMapping(value = "themnhacungcap",method = RequestMethod.POST)

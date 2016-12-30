@@ -36,7 +36,7 @@ public class MauDaController {
     public String redirectCreateTS(Model m){
         m.addAttribute("mauda", new Mauda());
         m.addAttribute("action", "themmauda");
-        return "maudaad";
+        return "themmaudaad";
     }
     
     @RequestMapping(value = "themmauda",method = RequestMethod.POST)

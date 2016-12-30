@@ -104,7 +104,7 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="col-lg-offset-2 col-lg-10">
-                                                <button class="btn btn-primary" type="submit">Lưu</button>i</a>
+                                                <button class="btn btn-primary" type="submit">Lưu</button></a>
                                             </div>
                                         </div>
                                     </form:form>

@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 27, 2016 6:33:12 PM by Hibernate Tools 4.3.1
+// Generated Dec 30, 2016 10:39:50 AM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -103,9 +103,9 @@ public class Khachhang  implements java.io.Serializable {
         this.email = email;
     }
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name="ngaysinh", length=19)
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Temporal(TemporalType.DATE)
+    @Column(name="ngaysinh", length=10)
+    @DateTimeFormat (pattern = "yyyy-MM-dd")
     public Date getNgaysinh() {
         return this.ngaysinh;
     }
@@ -176,7 +176,6 @@ public class Khachhang  implements java.io.Serializable {
 
     @Temporal(TemporalType.DATE)
     @Column(name="ngaytao", length=10)
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
     public Date getNgaytao() {
         return this.ngaytao;
     }

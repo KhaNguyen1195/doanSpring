@@ -6,6 +6,10 @@
 package controller;
 
 import entity.Nhanvien;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
 import model.NhanVienModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,7 +40,7 @@ public class NhanVienController {
     public String redirectCreateNV(Model m){
         m.addAttribute("nhanvien", new Nhanvien());
         m.addAttribute("action", "themnhanvien");
-        return "nhanvienad";
+        return "themnhanvienad";
     }
     
     @RequestMapping(value = "themnhanvien",method = RequestMethod.POST)
@@ -77,4 +81,17 @@ public class NhanVienController {
         model.removeNhanVien(nv);
         return "redirect:danhsachnhanvien.htm";
     }
+    
+    //giới tính
+    protected Map referenceData(HttpServletRequest request) throws Exception {
+
+		Map referenceData = new HashMap();
+
+		Map<String,String> gioitinh = new LinkedHashMap<String,String>();
+		gioitinh.put("Nu", "Nữ");
+		gioitinh.put("Nam", "Nam");
+		referenceData.put("gioitinhList", gioitinh);
+
+		return referenceData;
+	}
 }

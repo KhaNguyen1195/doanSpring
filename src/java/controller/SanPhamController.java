@@ -1,11 +1,13 @@
 
 package controller;
 
+import entity.Mauda;
 import entity.Sanpham;
 import entity.Thuonghieu;
 import entity.Trangsuc;
 import java.util.HashMap;
 import java.util.List;
+import model.MauDaModel;
 import model.SanPhamModel;
 import model.ThuongHieuModel;
 import model.TrangSucModel;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping(value = "/")
@@ -51,6 +54,19 @@ public class SanPhamController {
                 thMap.put(thuonghieuEntity.getId(), thuonghieuEntity.getTen());
             }
             model.addAttribute("thuonghieuList", thMap);
+        }
+    }
+    
+    //combobox Màu Đá
+    private void setMauDaDropDownList(Model model) {
+        MauDaModel lstmauda = new MauDaModel();
+        List<Mauda> mdList = lstmauda.getAllMauDa();
+        if(!mdList.isEmpty()){
+            HashMap<Integer, String> mdMap=new HashMap<Integer, String>();
+            for(Mauda maudaEntity : mdList){
+                mdMap.put(maudaEntity.getId(), maudaEntity.getTen());
+            }
+            model.addAttribute("maudaList", mdMap);
         }
     }
     
@@ -93,19 +109,6 @@ public class SanPhamController {
         }
     }
     
-    //combobox Màu Đá
-    private void setMauDaDropDownList(Model model) {
-        MauDaModel lstmauda = new MauDaModel();
-        List<Mauda> mdList = lstmauda.getAllMauDa();
-        if(!mdList.isEmpty()){
-            HashMap<Integer, String> mdMap=new HashMap<Integer, String>();
-            for(Loaivang maudaEntity : mdList){
-                mdMap.put(maudaEntity.getId(), maudaEntity.getTen());
-            }
-            model.addAttribute("maudaList", mdMap);
-        }
-    }
-    
     //combobox Chất Liệu
     private void setChatLieuDropDownList(Model model) {
         ChatLieuModel lstchatlieu = new ChatLieuModel();
@@ -131,10 +134,10 @@ public class SanPhamController {
         m.addAttribute("action", "themsanpham");
         setTrangSucDropDownList(m);
         setThuongHieuDropDownList(m);
+        setMauDaDropDownList(m);
         /*setChungLoaiDropDownList(m);
         setLoaiVangDropDownList(m);
         setLoaiDaDropDownList(m);
-        setMauDaDropDownList(m);
         setChatLieuDropDownList(m);*/
         return "themsanphamad";
     }
@@ -158,10 +161,10 @@ public class SanPhamController {
 //        System.out.println("//============"+sp.findOne(id).toString());
         setTrangSucDropDownList(m);
         setThuongHieuDropDownList(m);
+        setMauDaDropDownList(m);
         /*setChungLoaiDropDownList(m);
         setLoaiVangDropDownList(m);
         setLoaiDaDropDownList(m);
-        setMauDaDropDownList(m);
         setChatLieuDropDownList(m);*/
         return "chinhsuasanphamad";
     }
@@ -178,12 +181,12 @@ public class SanPhamController {
     // end edit
     
     // xóa
-   /* @RequestMapping(value = "/delete",method = RequestMethod.GET)
-    public String delete(@RequestParam(value = "id") int id){
-        TrangSucModel model =new TrangSucModel();
-        Trangsuc ts=model.findOne(id);
-        model.delete(ts);
-        return "redirect:all.htm";
-    }*/
+    @RequestMapping(value = "/xoasanpham",method = RequestMethod.GET)
+    public String deleteSP(@RequestParam(value = "id") int id){
+        SanPhamModel model =new SanPhamModel();
+        Sanpham sp=model.findSanPham(id);
+        model.deleteSanPham(sp);
+        return "redirect:danhsachsanpham.htm";
+    }
     
 }

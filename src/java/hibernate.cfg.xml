@@ -46,23 +46,23 @@ Contributor(s):
     <property name="hibernate.connection.url">jdbc:mysql://localhost/doanspring?characterEncoding=UTF-8</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.current_session_context_class">thread</property>
-    <mapping class="entity.Trangsuc"/>
+    <mapping class="entity.Loaitrangsuc"/>
+    <mapping class="entity.Chungloai"/>
     <mapping class="entity.Chucvu"/>
     <mapping class="entity.Loaida"/>
-    <mapping class="entity.Loaivang"/>
-    <mapping class="entity.Thuonghieu"/>
-    <mapping class="entity.Mauda"/>
-    <mapping class="entity.Khachhang"/>
-    <mapping class="entity.Donhang"/>
-    <mapping class="entity.Chungloai"/>
-    <mapping class="entity.Hoadon"/>
-    <mapping class="entity.Nhacungcap"/>
-    <mapping class="entity.Nhanvien"/>
-    <mapping class="entity.Loaitrangsuc"/>
-    <mapping class="entity.Chatlieu"/>
-    <mapping class="entity.Chitietdonhang"/>
     <mapping class="entity.Giohang"/>
-    <mapping class="entity.Sanpham"/>
+    <mapping class="entity.Mauda"/>
+    <mapping class="entity.Hoadon"/>
+    <mapping class="entity.Trangsuc"/>
+    <mapping class="entity.Chitietdonhang"/>
+    <mapping class="entity.Donhang"/>
+    <mapping class="entity.Thuonghieu"/>
+    <mapping class="entity.Khachhang"/>
+    <mapping class="entity.Nhacungcap"/>
     <mapping class="entity.Khohang"/>
+    <mapping class="entity.Nhanvien"/>
+    <mapping class="entity.Chatlieu"/>
+    <mapping class="entity.Loaivang"/>
+    <mapping class="entity.Sanpham"/>
   </session-factory>
 </hibernate-configuration>

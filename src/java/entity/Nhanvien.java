@@ -1,7 +1,8 @@
 package entity;
-// Generated Dec 27, 2016 6:33:12 PM by Hibernate Tools 4.3.1
+// Generated Dec 30, 2016 10:39:50 AM by Hibernate Tools 4.3.1
 
 
+import java.text.DateFormat;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -34,7 +35,7 @@ public class Nhanvien  implements java.io.Serializable {
      private String ten;
      private String ma;
      private Date ngaysinh;
-     private Integer gioitinh;
+     private String gioitinh;
      private String diachi;
      private String sodienthoai;
      private String tendangnhap;
@@ -46,7 +47,7 @@ public class Nhanvien  implements java.io.Serializable {
     public Nhanvien() {
     }
 
-    public Nhanvien(Chucvu chucvu, String ten, String ma, Date ngaysinh, Integer gioitinh, String diachi, String sodienthoai, String tendangnhap, String matkhau, Integer daxoa, Set<Hoadon> hoadons, Set<Khohang> khohangs) {
+    public Nhanvien(Chucvu chucvu, String ten, String ma, Date ngaysinh, String gioitinh, String diachi, String sodienthoai, String tendangnhap, String matkhau, Integer daxoa, Set<Hoadon> hoadons, Set<Khohang> khohangs) {
        this.chucvu = chucvu;
        this.ten = ten;
        this.ma = ma;
@@ -103,9 +104,9 @@ public class Nhanvien  implements java.io.Serializable {
         this.ma = ma;
     }
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name="ngaysinh", length=19)
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Temporal(TemporalType.DATE)
+    @Column(name="ngaysinh", length=10)
+    @DateTimeFormat (pattern = "yyyy-MM-dd")
     public Date getNgaysinh() {
         return this.ngaysinh;
     }
@@ -115,12 +116,12 @@ public class Nhanvien  implements java.io.Serializable {
     }
 
     
-    @Column(name="gioitinh")
-    public Integer getGioitinh() {
+    @Column(name="gioitinh", length=10)
+    public String getGioitinh() {
         return this.gioitinh;
     }
     
-    public void setGioitinh(Integer gioitinh) {
+    public void setGioitinh(String gioitinh) {
         this.gioitinh = gioitinh;
     }
 
@@ -192,8 +193,16 @@ public class Nhanvien  implements java.io.Serializable {
         this.khohangs = khohangs;
     }
 
+    @Override
+    public String toString() {
+        return "Nhanvien{" + "id=" + id + ", chucvu=" + chucvu + ", ten=" + ten + ", ma=" + ma +
+                ", ngaysinh=" + ngaysinh + ", gioitinh=" + gioitinh + ", diachi=" + diachi +
+                ", sodienthoai=" + sodienthoai + ", tendangnhap=" + tendangnhap + ", matkhau=" + 
+                matkhau + ", daxoa=" + daxoa + ", hoadons=" + hoadons + ", khohangs=" + khohangs + '}';
+    }
 
 
+    
 
 }
 

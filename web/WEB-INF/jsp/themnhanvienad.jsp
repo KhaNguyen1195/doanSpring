@@ -62,8 +62,8 @@
                                             <div class="col-lg-8">                               
                                                 <select class="form-control" name="gioitinh" >
                                                     <option value="">--- Chọn giới tính ---</option>
-                                                    <option value="1">Nam</option>
-                                                    <option value="2">Nữ</option>
+                                                    <option value="Nam">Nam</option>
+                                                    <option value="Nu">Nữ</option>
                                                 </select>  
                                             </div>
                                         </div>

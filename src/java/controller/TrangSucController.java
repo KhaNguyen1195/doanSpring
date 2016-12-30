@@ -83,11 +83,11 @@ public class TrangSucController {
     // end edit
     
     // xóa
-   /* @RequestMapping(value = "/delete",method = RequestMethod.GET)
-    public String delete(@RequestParam(value = "id") int id){
+    @RequestMapping(value = "/xoatrangsuc",method = RequestMethod.GET)
+    public String deleteTS(@RequestParam(value = "id") int id){
         TrangSucModel model =new TrangSucModel();
-        Trangsuc ts=model.findOne(id);
-        model.delete(ts);
-        return "redirect:all.htm";
-    }*/
+        Trangsuc ts=model.findTrangSuc(id);
+        model.deleteTrangSuc(ts);
+        return "redirect:danhsachtrangsuc.htm";
+    }
 }

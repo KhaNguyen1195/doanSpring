@@ -65,16 +65,16 @@ public class ThuongHieuModel {
     }
     
     // xóa 
-    /*public void delete(Thuonghieu lts){
+    public void deleteThuongHieu(Thuonghieu th){
         Session session=NewHibernateUtil.getSessionFactory().getCurrentSession();
         try{
             session.beginTransaction();
-            session.delete(lts);
+            session.delete(th);
             session.getTransaction().commit();
         }catch(Exception ex){
             System.out.println("Lỗi"+ex.toString());
         }
-    }*/
+    }
     
     
 }

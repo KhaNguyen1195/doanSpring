@@ -67,7 +67,7 @@ public class TrangSucModel {
     }
 
     // xóa 
-    /*public void delete(Trangsuc ts){
+    public void deleteTrangSuc(Trangsuc ts){
         Session session=NewHibernateUtil.getSessionFactory().getCurrentSession();
         try{
             session.beginTransaction();
@@ -76,5 +76,5 @@ public class TrangSucModel {
         }catch(Exception ex){
             System.out.println("Lỗi"+ex.toString());
         }
-    }*/
+    }
 }

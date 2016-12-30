@@ -34,13 +34,14 @@
                                         <div class="form-group">
                                             <label for="ma" class="control-label col-lg-2">Mã thương hiệu <span class="required">*</span></label>
                                             <div class="col-lg-10">
-                                                <form:input path="ma" placeholder="Mã thương hiệu" class=" form-control" id="ma"/>
+                                                <form:input path="ma" placeholder="Mã thương hiệu" class="form-control required" id="ma" name="ma"/>
+                                                <font color="red"> <form:errors path="ma"></form:errors></font>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="ten" class="control-label col-lg-2">Tên thương hiệu <span class="required">*</span></label>
                                             <div class="col-lg-10">
-                                                <form:input path="ten" placeholder="Tên thương hiệu" class=" form-control" id="ten"/>
+                                                <form:input path="ten" placeholder="Tên thương hiệu" class="form-control required" id="ten" name="ten"/>
                                             </div>
                                         </div>
 

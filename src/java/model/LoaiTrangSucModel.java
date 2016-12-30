@@ -64,7 +64,7 @@ public class LoaiTrangSucModel {
     }
     
     // xóa 
-    /*public void delete(Loaitrangsuc lts){
+    public void deleteLoaiTrangSuc(Loaitrangsuc lts){
         Session session=NewHibernateUtil.getSessionFactory().getCurrentSession();
         try{
             session.beginTransaction();
@@ -73,5 +73,5 @@ public class LoaiTrangSucModel {
         }catch(Exception ex){
             System.out.println("Lỗi"+ex.toString());
         }
-    }*/
+    }
 }

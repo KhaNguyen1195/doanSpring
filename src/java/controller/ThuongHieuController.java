@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping(value = "/")
@@ -59,13 +60,13 @@ public class ThuongHieuController {
     // end edit
     
     // xóa
-    /*@RequestMapping(value = "/delete",method = RequestMethod.GET)
-    public String delete(@RequestParam(value = "id") int id){
-        LoaiTrangSucModel model =new LoaiTrangSucModel();
-        Loaitrangsuc lts = model.findOne(id);
-        model.delete(lts);
-        return "redirect:danhsachloaitrangsuc.htm";
-    }*/
+    @RequestMapping(value = "/xoathuonghieu",method = RequestMethod.GET)
+    public String deleteTH(@RequestParam(value = "id") int id){
+        ThuongHieuModel model =new ThuongHieuModel();
+        Thuonghieu th = model.findThuongHieu(id);
+        model.deleteThuongHieu(th);
+        return "redirect:danhsachthuonghieu.htm";
+    }
     
  
 }

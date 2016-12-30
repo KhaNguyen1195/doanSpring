@@ -69,7 +69,7 @@ public class SanPhamModel {
     }
 
     // xóa 
-    /*public void delete(Sanpham sp){
+    public void deleteSanPham(Sanpham sp){
         Session session=NewHibernateUtil.getSessionFactory().getCurrentSession();
         try{
             session.beginTransaction();
@@ -78,5 +78,5 @@ public class SanPhamModel {
         }catch(Exception ex){
             System.out.println("Lỗi"+ex.toString());
         }
-    }*/
+    }
 }

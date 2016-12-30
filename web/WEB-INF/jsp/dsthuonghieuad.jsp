@@ -74,7 +74,7 @@
                                                     <div class="kc">
                                                         <a href="chinhsuathuonghieu/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
                                                             <i class="fa fa-pencil"></i></a>
-                                                        <a href="" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
+                                                        <a href="xoathuonghieu.htm?id=${item.id}" onclick="return confirm('Bạn chắc chắn muốn xóa?')" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
                                                             <i class="fa fa-info"></i></a>
                                                     </div>
                                                 </td>

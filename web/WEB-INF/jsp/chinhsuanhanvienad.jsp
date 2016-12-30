@@ -5,6 +5,7 @@
 --%>
 <%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -56,12 +57,16 @@
                                         </div>
                                         <div class="form-group col-lg-6">
                                             <label class="control-label col-lg-4">Giới tính <span class="required">*</span></label>
-                                            <div class="col-lg-8">                               
+                                            <div class="col-lg-8">
                                                 <select class="form-control" id="gioitinh" name="gioitinh">
                                                     <option value="">--- Chọn giới tính ---</option>
                                                     <option value="1">Nam</option>
                                                     <option value="2">Nữ</option>
-                                                </select>  
+                                                </select>
+                                                <%--<form:select path="gioitinh" class="form-control" id="gioitinh" name="gioitinh">
+                                                    <form:option value="" label="--- Chọn giới tính ---"/>
+                                                    <form:options items="${giotinhList}" />
+                                                </form:select>--%>
                                             </div>
                                         </div>
                                         <div class="form-group col-lg-6">
