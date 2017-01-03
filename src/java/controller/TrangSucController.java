@@ -5,9 +5,12 @@ import entity.Loaitrangsuc;
 import entity.Trangsuc;
 import java.util.HashMap;
 import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import model.LoaiTrangSucModel;
 import model.TrangSucModel;
 import org.springframework.stereotype.Controller;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.request;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,10 +24,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class TrangSucController {
     
     @RequestMapping(value = "danhsachtrangsuc",method = RequestMethod.GET)
-    public String getalLTS(Model m){
+    public String getalLTS(Model m,HttpServletRequest request, HttpServletResponse response){
         TrangSucModel model = new TrangSucModel();
-        m.addAttribute("lsttrangsuc",model.getAllTrangSuc());
-        System.out.println("//=================="+model.getAllTrangSuc().size());
+        String search="";
+        if(request.getParameter("search") != null){
+        search=request.getParameter("search");
+        }
+        m.addAttribute("lsttrangsuc",model.getAllTrangSuc(search));
+        System.out.println("//=================="+model.getAllTrangSuc(search).size());
         return "dstrangsucad";
     }
     

@@ -32,9 +32,9 @@ public class SanPhamController {
     }
     
     //combobox Trang Sức
-    private void setTrangSucDropDownList(Model model) {
+    /*private void setTrangSucDropDownList(Model model) {
         TrangSucModel lsttrangsuc = new TrangSucModel();
-        List<Trangsuc> tsList = lsttrangsuc.getAllTrangSuc();
+        List<Trangsuc> tsList = lsttrangsuc.getAllTrangSuc(search);
         if(!tsList.isEmpty()){
             HashMap<Integer, String> tsMap=new HashMap<Integer, String>();
             for(Trangsuc trangsucEntity : tsList){
@@ -42,7 +42,7 @@ public class SanPhamController {
             }
             model.addAttribute("trangsucList", tsMap);
         }
-    }
+    }*/
     
     //combobox Thương Hiệu
     private void setThuongHieuDropDownList(Model model) {
@@ -132,7 +132,7 @@ public class SanPhamController {
     public String redirectCreateSP(Model m){
         m.addAttribute("sanpham", new Trangsuc());
         m.addAttribute("action", "themsanpham");
-        setTrangSucDropDownList(m);
+        //setTrangSucDropDownList(m);
         setThuongHieuDropDownList(m);
         setMauDaDropDownList(m);
         /*setChungLoaiDropDownList(m);
@@ -159,7 +159,7 @@ public class SanPhamController {
         m.addAttribute("action", "capnhatsanpham");
 //        System.out.println("--------"+sp.findOne(id).toString());
 //        System.out.println("//============"+sp.findOne(id).toString());
-        setTrangSucDropDownList(m);
+        //setTrangSucDropDownList(m);
         setThuongHieuDropDownList(m);
         setMauDaDropDownList(m);
         /*setChungLoaiDropDownList(m);

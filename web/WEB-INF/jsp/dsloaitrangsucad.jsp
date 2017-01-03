@@ -33,7 +33,7 @@
                                 </div>
                             </header>
                             <div class="form">
-                                <form class="form-group form-validate" id="register-form" method="get" action="">
+                                <form action="" modelAttribute="" class="form-group form-validate" id="register-form">
                                     <div class="form-group col-lg-6">
                                         <label for="ma" class="control-label col-lg-4">Mã loại trang sức</label>
                                         <div class="col-lg-8">
@@ -47,9 +47,9 @@
                                         </div>
                                     </div>
                                     <div class="form-group col-lg-offset-6 col-lg-6">
-                                        <button class="btn btn-warning" type="submit">Tìm kiếm</button>
+                                        <button class="btn btn-warning" type="submit" name="search">Tìm kiếm</button>
                                     </div>
-                                </form>
+                                </fom>
                             </div>
                             <br>
                             <div class="table-responsive ">

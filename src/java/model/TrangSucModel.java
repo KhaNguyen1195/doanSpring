@@ -4,15 +4,18 @@ import entity.Trangsuc;
 import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 
 public class TrangSucModel {
 
-    public List<Trangsuc>getAllTrangSuc() {
+    public List<Trangsuc>getAllTrangSuc(String search) {
         Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
         List<Trangsuc> lsttrangsuc  = new ArrayList<Trangsuc>();
         try {
             session.beginTransaction();
-            lsttrangsuc = session.createCriteria(Trangsuc.class).list();
+            lsttrangsuc = session.createCriteria(Trangsuc.class)
+                    .add(Restrictions.like("doanspring", "%"+search+"%"))
+                    .list();
 
             // toString để lấy name load ra danh sách
             for (Trangsuc trangsuc : lsttrangsuc) {
