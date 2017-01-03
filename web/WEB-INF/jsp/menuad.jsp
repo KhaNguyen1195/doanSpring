@@ -15,15 +15,13 @@
 
         <!-- Bootstrap CSS -->
         <link type="text/css" href="${pageContext.request.contextPath}/libs/css/bootstrap-ad.min.css" rel="stylesheet" >
-        <link href="" rel="stylesheet" type="text/css"/>
         <!-- bootstrap theme -->
         <link type="text/css" href="${pageContext.request.contextPath}/libs/css/bootstrap-theme-ad.css" rel="stylesheet" >
-        <link href="<c:url value='' />" rel="stylesheet">
         <!--external css-->
         <!-- font icon -->
         <link type="text/css" href="${pageContext.request.contextPath}/libs/css/elegant-icons-style-ad.css" rel="stylesheet" >
         <link type="text/css" href="${pageContext.request.contextPath}/libs/css/font-awesome-ad.min.css" rel="stylesheet" >
-        <link type="text/css" href="${pageContext.request.contextPath}/libs/css/line-icons.css" rel="stylesheet" >
+        <link type="text/css" href="${pageContext.request.contextPath}/libs/css/line-icons-ad.css" rel="stylesheet" >
         <!-- Custom styles -->
         <link type="text/css" href="${pageContext.request.contextPath}/libs/css/style-ad.css" rel="stylesheet" >
         <link type="text/css" href="${pageContext.request.contextPath}/libs/css/style-responsive-ad.css" rel="stylesheet" >

@@ -60,7 +60,7 @@
                                         <div class="form-group col-lg-6">
                                             <label class="control-label col-lg-4">Giới tính <span class="required">*</span></label>
                                             <div class="col-lg-8">                               
-                                                <select class="form-control" name="gioitinh" >
+                                                <select class="form-control" name="gioitinh">
                                                     <option value="">--- Chọn giới tính ---</option>
                                                     <option value="Nam">Nam</option>
                                                     <option value="Nu">Nữ</option>

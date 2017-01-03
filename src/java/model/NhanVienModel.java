@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package model;
 
 import entity.Nhanvien;
@@ -10,10 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.Session;
 
-/**
- *
- * @author Administrator
- */
 public class NhanVienModel {
     public List<Nhanvien>getAllNhanVien() {
         Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();

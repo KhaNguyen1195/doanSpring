@@ -1,8 +1,3 @@
-<%-- 
-    Document   : dsnhanvienad
-    Created on : Dec 27, 2016, 6:01:44 PM
-    Author     : Administrator
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -65,7 +60,6 @@
                                                 </td>
                                                 <td class="kc">${item.diachi}</td>
                                                 <td class="kc">${item.sodienthoai}</td>
-
                                                 <td>
                                                     <div class="kc">
                                                         <a href="chinhsuanhanvien/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
