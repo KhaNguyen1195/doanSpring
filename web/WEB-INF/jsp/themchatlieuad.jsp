@@ -1,11 +1,7 @@
-<%-- 
-    Document   : chatlieuad
-    Created on : Dec 27, 2016, 7:47:34 PM
-    Author     : asus
---%>
+
 <%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>

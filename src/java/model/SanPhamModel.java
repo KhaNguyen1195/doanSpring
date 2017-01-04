@@ -14,11 +14,13 @@ public class SanPhamModel {
         List<Sanpham> lstsanpham  = new ArrayList<Sanpham>();
         try {
             session.beginTransaction();
-            lstsanpham = session.createCriteria(Sanpham.class).list();
+            lstsanpham = session.createCriteria(Sanpham.class)
+                    //.add(Restrictions.like("doanspring", "%"+search+"%"))
+                    .list();
 
             // toString để lấy name load ra danh sách
-            for (Sanpham trangsuc : lstsanpham) {
-                System.out.println(trangsuc.toString());
+            for (Sanpham sanpham : lstsanpham) {
+                System.out.println(sanpham.toString());
             }
             session.getTransaction().commit();
 
@@ -40,7 +42,7 @@ public class SanPhamModel {
             System.out.println("Lỗi" + ex.toString());
         }
     }
-
+    
     //lấy ra  theo id
     public Sanpham findSanPham(int id) {
         Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
@@ -48,7 +50,7 @@ public class SanPhamModel {
         try {
             session.beginTransaction();
             sp = (Sanpham) session.get(Sanpham.class, id);
-            //System.out.println("//=====findOne======"+ts.toString());
+            //System.out.println("//=====findOne======"+sp.toString());
             session.getTransaction().commit();
         } catch (Exception ex) {
             System.out.println("Lỗi" + ex.toString());
@@ -79,4 +81,5 @@ public class SanPhamModel {
             System.out.println("Lỗi"+ex.toString());
         }
     }
+    
 }

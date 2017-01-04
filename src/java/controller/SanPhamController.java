@@ -1,12 +1,20 @@
 
 package controller;
 
+import entity.Chatlieu;
+import entity.Chungloai;
+import entity.Loaida;
+import entity.Loaivang;
 import entity.Mauda;
 import entity.Sanpham;
 import entity.Thuonghieu;
 import entity.Trangsuc;
 import java.util.HashMap;
 import java.util.List;
+import model.ChatLieuModel;
+import model.ChungLoaiModel;
+import model.LoaiDaModel;
+import model.LoaiVangModel;
 import model.MauDaModel;
 import model.SanPhamModel;
 import model.ThuongHieuModel;
@@ -22,19 +30,44 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequestMapping(value = "/")
 public class SanPhamController {
-    
+   
     @RequestMapping(value = "danhsachsanpham",method = RequestMethod.GET)
-    public String getallSP(Model m){
+    public String getalLSP(Model m){
         SanPhamModel model = new SanPhamModel();
         m.addAttribute("lstsanpham",model.getAllSanPham());
         System.out.println("//=================="+model.getAllSanPham().size());
         return "dssanphamad";
     }
     
-    //combobox Trang Sức
-    /*private void setTrangSucDropDownList(Model model) {
+    // insert 
+    //chuyển từ all sang create
+    @RequestMapping(value = "sanpham", method=RequestMethod.GET)
+    public String redirectCreateSP(Model m){
+        m.addAttribute("sanpham", new Sanpham());
+        m.addAttribute("action", "themsanpham");
+        setTrangSucDropDownList(m);
+        setThuongHieuDropDownList(m);
+        setMauDaDropDownList(m);
+        setChungLoaiDropDownList(m);
+        setLoaiVangDropDownList(m);
+        setLoaiDaDropDownList(m);
+        setChatLieuDropDownList(m);
+        return "themsanphamad";
+    }
+    
+    @RequestMapping(value = "themsanpham",method = RequestMethod.POST)
+    public String createSP(@ModelAttribute(value = "sanpham") Sanpham sp){
+        //System.out.println("====>"+sp.getId()+"-"+sp.getTen());
+        SanPhamModel model =new SanPhamModel();
+        model.createSanPham(sp);
+        return "redirect:danhsachsanpham.htm";
+    }
+    // end insert
+
+    // combobox trang sức
+    private void setTrangSucDropDownList(Model model) {
         TrangSucModel lsttrangsuc = new TrangSucModel();
-        List<Trangsuc> tsList = lsttrangsuc.getAllTrangSuc(search);
+        List<Trangsuc> tsList=lsttrangsuc.getAllTrangSuc();
         if(!tsList.isEmpty()){
             HashMap<Integer, String> tsMap=new HashMap<Integer, String>();
             for(Trangsuc trangsucEntity : tsList){
@@ -42,7 +75,7 @@ public class SanPhamController {
             }
             model.addAttribute("trangsucList", tsMap);
         }
-    }*/
+    }
     
     //combobox Thương Hiệu
     private void setThuongHieuDropDownList(Model model) {
@@ -70,7 +103,7 @@ public class SanPhamController {
         }
     }
     
-    /*//combobox Chủng Loại
+    //combobox Chủng Loại
     private void setChungLoaiDropDownList(Model model) {
         ChungLoaiModel lstchungloai = new ChungLoaiModel();
         List<Chungloai> clList = lstchungloai.getAllChungLoai();
@@ -102,7 +135,7 @@ public class SanPhamController {
         List<Loaida> ldList = lstloaida.getAllLoaiDa();
         if(!ldList.isEmpty()){
             HashMap<Integer, String> ldMap=new HashMap<Integer, String>();
-            for(Loaivang loaidaEntity : ldList){
+            for(Loaida loaidaEntity : ldList){
                 ldMap.put(loaidaEntity.getId(), loaidaEntity.getTen());
             }
             model.addAttribute("loaidaList", ldMap);
@@ -122,35 +155,6 @@ public class SanPhamController {
         }
     }
     
-    
-    
-    */
-    
-    // insert 
-    //chuyển từ all sang create
-    @RequestMapping(value = "sanpham", method=RequestMethod.GET)
-    public String redirectCreateSP(Model m){
-        m.addAttribute("sanpham", new Trangsuc());
-        m.addAttribute("action", "themsanpham");
-        //setTrangSucDropDownList(m);
-        setThuongHieuDropDownList(m);
-        setMauDaDropDownList(m);
-        /*setChungLoaiDropDownList(m);
-        setLoaiVangDropDownList(m);
-        setLoaiDaDropDownList(m);
-        setChatLieuDropDownList(m);*/
-        return "themsanphamad";
-    }
-    
-    @RequestMapping(value = "themsanpham",method = RequestMethod.POST)
-    public String createSP(@ModelAttribute(value = "sanpham") Sanpham sp){
-        //System.out.println("====>"+ts.getId()+"-"+ts.getTen());
-        SanPhamModel model =new SanPhamModel();
-        model.createSanPham(sp);
-        return "redirect:danhsachsanpham.htm";
-    }
-    // end insert
-    
     // edit
     @RequestMapping(value = "chinhsuasanpham/{id}", method = RequestMethod.GET)
     public String showEditSP(Model m, @PathVariable int id){
@@ -159,13 +163,13 @@ public class SanPhamController {
         m.addAttribute("action", "capnhatsanpham");
 //        System.out.println("--------"+sp.findOne(id).toString());
 //        System.out.println("//============"+sp.findOne(id).toString());
-        //setTrangSucDropDownList(m);
+        setTrangSucDropDownList(m);
         setThuongHieuDropDownList(m);
         setMauDaDropDownList(m);
-        /*setChungLoaiDropDownList(m);
+        setChungLoaiDropDownList(m);
         setLoaiVangDropDownList(m);
         setLoaiDaDropDownList(m);
-        setChatLieuDropDownList(m);*/
+        setChatLieuDropDownList(m);
         return "chinhsuasanphamad";
     }
 

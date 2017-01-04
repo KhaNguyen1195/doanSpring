@@ -8,13 +8,13 @@ import org.hibernate.criterion.Restrictions;
 
 public class TrangSucModel {
 
-    public List<Trangsuc>getAllTrangSuc(String search) {
+    public List<Trangsuc>getAllTrangSuc() {
         Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
         List<Trangsuc> lsttrangsuc  = new ArrayList<Trangsuc>();
         try {
             session.beginTransaction();
             lsttrangsuc = session.createCriteria(Trangsuc.class)
-                    .add(Restrictions.like("doanspring", "%"+search+"%"))
+                    //.add(Restrictions.like("doanspring", "%"+search+"%"))
                     .list();
 
             // toString để lấy name load ra danh sách

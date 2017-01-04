@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 30, 2016 10:39:50 AM by Hibernate Tools 4.3.1
+// Generated Jan 4, 2017 2:03:24 PM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -38,7 +38,6 @@ public class Sanpham  implements java.io.Serializable {
      private Integer giaban;
      private String mota;
      private String img;
-     private Integer daxoa;
      private Set<Khohang> khohangs = new HashSet<Khohang>(0);
      private Set<Chitietdonhang> chitietdonhangs = new HashSet<Chitietdonhang>(0);
      private Set<Giohang> giohangs = new HashSet<Giohang>(0);
@@ -46,7 +45,7 @@ public class Sanpham  implements java.io.Serializable {
     public Sanpham() {
     }
 
-    public Sanpham(Chatlieu chatlieu, Chungloai chungloai, Loaida loaida, Loaivang loaivang, Mauda mauda, Thuonghieu thuonghieu, Trangsuc trangsuc, String ten, String ma, Integer giaban, String mota, String img, Integer daxoa, Set<Khohang> khohangs, Set<Chitietdonhang> chitietdonhangs, Set<Giohang> giohangs) {
+    public Sanpham(Chatlieu chatlieu, Chungloai chungloai, Loaida loaida, Loaivang loaivang, Mauda mauda, Thuonghieu thuonghieu, Trangsuc trangsuc, String ten, String ma, Integer giaban, String mota, String img, Set<Khohang> khohangs, Set<Chitietdonhang> chitietdonhangs, Set<Giohang> giohangs) {
        this.chatlieu = chatlieu;
        this.chungloai = chungloai;
        this.loaida = loaida;
@@ -59,7 +58,6 @@ public class Sanpham  implements java.io.Serializable {
        this.giaban = giaban;
        this.mota = mota;
        this.img = img;
-       this.daxoa = daxoa;
        this.khohangs = khohangs;
        this.chitietdonhangs = chitietdonhangs;
        this.giohangs = giohangs;
@@ -197,16 +195,6 @@ public class Sanpham  implements java.io.Serializable {
         this.img = img;
     }
 
-    
-    @Column(name="daxoa")
-    public Integer getDaxoa() {
-        return this.daxoa;
-    }
-    
-    public void setDaxoa(Integer daxoa) {
-        this.daxoa = daxoa;
-    }
-
 @OneToMany(fetch=FetchType.LAZY, mappedBy="sanpham")
     public Set<Khohang> getKhohangs() {
         return this.khohangs;
@@ -236,11 +224,10 @@ public class Sanpham  implements java.io.Serializable {
 
     @Override
     public String toString() {
-        return "Sanpham{" + "id=" + id + ", chatlieu=" + chatlieu + ", chungloai=" + chungloai +
-                ", loaida=" + loaida + ", loaivang=" + loaivang + ", mauda=" + mauda + ", thuonghieu=" +
-                thuonghieu + ", trangsuc=" + trangsuc + ", ten=" + ten + ", ma=" + ma + ", giaban=" +
-                giaban + ", mota=" + mota + ", img=" + img + ", daxoa=" + daxoa + ", khohangs=" +
-                khohangs + ", chitietdonhangs=" + chitietdonhangs + ", giohangs=" + giohangs + '}';
+        return "Sanpham{" + "id=" + id + ", chatlieu=" + chatlieu + ", chungloai=" + chungloai + 
+                ", loaida=" + loaida + ", loaivang=" + loaivang + ", mauda=" + mauda +
+                ", thuonghieu=" + thuonghieu + ", trangsuc=" + trangsuc + ", ten=" + ten +
+                ", ma=" + ma + ", giaban=" + giaban + ", mota=" + mota + ", img=" + img + '}';
     }
 
 

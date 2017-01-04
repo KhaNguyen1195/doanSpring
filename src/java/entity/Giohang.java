@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 30, 2016 10:39:50 AM by Hibernate Tools 4.3.1
+// Generated Jan 4, 2017 2:03:24 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -30,18 +30,16 @@ public class Giohang  implements java.io.Serializable {
      private Sanpham sanpham;
      private Integer dongia;
      private Integer soluong;
-     private Integer daxoa;
      private Date ngaytao;
 
     public Giohang() {
     }
 
-    public Giohang(Khachhang khachhang, Sanpham sanpham, Integer dongia, Integer soluong, Integer daxoa, Date ngaytao) {
+    public Giohang(Khachhang khachhang, Sanpham sanpham, Integer dongia, Integer soluong, Date ngaytao) {
        this.khachhang = khachhang;
        this.sanpham = sanpham;
        this.dongia = dongia;
        this.soluong = soluong;
-       this.daxoa = daxoa;
        this.ngaytao = ngaytao;
     }
    
@@ -95,16 +93,6 @@ public class Giohang  implements java.io.Serializable {
     
     public void setSoluong(Integer soluong) {
         this.soluong = soluong;
-    }
-
-    
-    @Column(name="daxoa")
-    public Integer getDaxoa() {
-        return this.daxoa;
-    }
-    
-    public void setDaxoa(Integer daxoa) {
-        this.daxoa = daxoa;
     }
 
     @Temporal(TemporalType.DATE)

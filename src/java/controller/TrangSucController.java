@@ -24,6 +24,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class TrangSucController {
     
     @RequestMapping(value = "danhsachtrangsuc",method = RequestMethod.GET)
+    public String getalLTS(Model m){
+        TrangSucModel model = new TrangSucModel();
+        m.addAttribute("lsttrangsuc",model.getAllTrangSuc());
+        System.out.println("//=================="+model.getAllTrangSuc().size());
+        return "dstrangsucad";
+    }
+    
+    /*@RequestMapping(value = "danhsachtrangsuc",method = RequestMethod.GET)
     public String getalLTS(Model m,HttpServletRequest request, HttpServletResponse response){
         TrangSucModel model = new TrangSucModel();
         String search="";
@@ -33,7 +41,7 @@ public class TrangSucController {
         m.addAttribute("lsttrangsuc",model.getAllTrangSuc(search));
         System.out.println("//=================="+model.getAllTrangSuc(search).size());
         return "dstrangsucad";
-    }
+    }*/
     
     // insert 
     //chuyển từ all sang create

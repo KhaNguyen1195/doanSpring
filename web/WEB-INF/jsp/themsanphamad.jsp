@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <ol class="breadcrumb">
-                            <li><i class="fa fa-home"></i><a href="index.html">Trang chủ</a></li>
+                            <li><i class="fa fa-home"></i><a href="index1.html">Trang chủ</a></li>
                             <li><i class="fa fa-list-alt"></i>Quản lý danh mục</li>
                             <li>Danh sách sản phẩm</li>
                             <li>Thêm mới</li>
@@ -45,25 +45,25 @@
                                         </div>
                                         <div class="form-group col-lg-6">
                                             <label class="control-label col-lg-4">Trang sức <span class="required">*</span></label>
-                                            <div class="col-lg-8"> 
+                                            <div class="col-lg-8">                               
                                                 <form:select path="trangsuc.id" class="form-control" id="trangsuc" name="trangsuc">
                                                     <form:option value="0" label="--- Chọn trang sức ---"/>
                                                     <form:options items="${trangsucList}"/>
-                                                </form:select>
+                                                </form:select> 
                                             </div>
                                         </div>  
                                         <div class="form-group col-lg-6">
                                             <label class="control-label col-lg-4">Thương hiệu <span class="required">*</span></label>
-                                            <div class="col-lg-8"> 
+                                            <div class="col-lg-8">                               
                                                 <form:select path="thuonghieu.id" class="form-control" id="thuonghieu" name="thuonghieu">
                                                     <form:option value="0" label="--- Chọn thương hiệu ---"/>
                                                     <form:options items="${thuonghieuList}"/>
-                                                </form:select>
+                                                </form:select> 
                                             </div>
                                         </div>
                                         <div class="form-group col-lg-6">
                                             <label class="control-label col-lg-4">Chủng loại <span class="required">*</span></label>
-                                            <div class="col-lg-8">  
+                                            <div class="col-lg-8">                               
                                                 <form:select path="chungloai.id" class="form-control" id="chungloai" name="chungloai">
                                                     <form:option value="0" label="--- Chọn chủng loại ---"/>
                                                     <form:options items="${chungloaiList}"/>
@@ -72,16 +72,16 @@
                                         </div>
                                         <div class="form-group col-lg-6">
                                             <label class="control-label col-lg-4">Loại vàng <span class="required">*</span></label>
-                                            <div class="col-lg-8">
+                                            <div class="col-lg-8">                               
                                                 <form:select path="loaivang.id" class="form-control" id="loaivang" name="loaivang">
                                                     <form:option value="0" label="--- Chọn loại vàng ---"/>
                                                     <form:options items="${loaivangList}"/>
-                                                </form:select> 
+                                                </form:select>  
                                             </div>
                                         </div>
                                         <div class="form-group col-lg-6">
                                             <label class="control-label col-lg-4">Chất liệu <span class="required">*</span></label>
-                                            <div class="col-lg-8"> 
+                                            <div class="col-lg-8">                               
                                                 <form:select path="chatlieu.id" class="form-control" id="chatlieu" name="chatlieu">
                                                     <form:option value="0" label="--- Chọn chất liệu ---"/>
                                                     <form:options items="${chatlieuList}"/>
@@ -90,16 +90,16 @@
                                         </div>
                                         <div class="form-group col-lg-6">
                                             <label class="control-label col-lg-4">Loại đá <span class="required">*</span></label>
-                                            <div class="col-lg-8">
+                                            <div class="col-lg-8">                               
                                                 <form:select path="loaida.id" class="form-control" id="loaida" name="loaida">
                                                     <form:option value="0" label="--- Chọn loại đá ---"/>
                                                     <form:options items="${loaidaList}"/>
-                                                </form:select>  
+                                                </form:select> 
                                             </div>
                                         </div>
                                         <div class="form-group col-lg-6">
                                             <label class="control-label col-lg-4">Màu đá <span class="required">*</span></label>
-                                            <div class="col-lg-8">  
+                                            <div class="col-lg-8">                               
                                                 <form:select path="mauda.id" class="form-control" id="mauda" name="mauda">
                                                     <form:option value="0" label="--- Chọn màu đá ---"/>
                                                     <form:options items="${maudaList}"/>
@@ -109,7 +109,7 @@
                                         <div class="form-group col-lg-6">
                                             <label for="mota" class="control-label col-lg-4">Mô tả</label>
                                             <div class="col-lg-8">
-                                                <form:input path="mota" placeholder="Mô tả" class=" form-control" id="mota"/>
+                                                <form:textarea path="mota" placeholder="Mô tả" class=" form-control" id="mota"/>
                                             </div>
                                         </div>
                                         <div class="form-group col-lg-6">

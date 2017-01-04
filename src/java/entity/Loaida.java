@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 30, 2016 10:39:50 AM by Hibernate Tools 4.3.1
+// Generated Jan 4, 2017 2:03:24 PM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -27,7 +27,6 @@ public class Loaida  implements java.io.Serializable {
      private String ten;
      private String ma;
      private String mota;
-     private Integer daxoa;
      private String hinhdang;
      private Long kichthuoc;
      private String chatluong;
@@ -36,11 +35,10 @@ public class Loaida  implements java.io.Serializable {
     public Loaida() {
     }
 
-    public Loaida(String ten, String ma, String mota, Integer daxoa, String hinhdang, Long kichthuoc, String chatluong, Set<Sanpham> sanphams) {
+    public Loaida(String ten, String ma, String mota, String hinhdang, Long kichthuoc, String chatluong, Set<Sanpham> sanphams) {
        this.ten = ten;
        this.ma = ma;
        this.mota = mota;
-       this.daxoa = daxoa;
        this.hinhdang = hinhdang;
        this.kichthuoc = kichthuoc;
        this.chatluong = chatluong;
@@ -87,16 +85,6 @@ public class Loaida  implements java.io.Serializable {
     
     public void setMota(String mota) {
         this.mota = mota;
-    }
-
-    
-    @Column(name="daxoa")
-    public Integer getDaxoa() {
-        return this.daxoa;
-    }
-    
-    public void setDaxoa(Integer daxoa) {
-        this.daxoa = daxoa;
     }
 
     

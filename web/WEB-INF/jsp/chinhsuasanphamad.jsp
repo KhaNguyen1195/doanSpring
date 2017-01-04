@@ -109,7 +109,7 @@
                                         <div class="form-group col-lg-6">
                                             <label for="mota" class="control-label col-lg-4">Mô tả</label>
                                             <div class="col-lg-8">
-                                                <form:input path="mota" placeholder="Mô tả" class=" form-control" id="mota"/>
+                                                <form:textarea path="mota" placeholder="Mô tả" class=" form-control" id="mota"/>
                                             </div>
                                         </div>
                                         <div class="form-group col-lg-6">
@@ -119,7 +119,6 @@
                                         <div class="form-group">
                                             <div class="col-lg-offset-2 col-lg-8">
                                                 <button class="btn btn-primary" type="submit">Lưu</button>
-                                                <button type="reset" class="btn btn-default">Làm mới</button>
                                                 <a href="../danhsachsanpham.htm" class="btn btn-success" type="button">Quay lại</a>
                                             </div>
                                         </div>

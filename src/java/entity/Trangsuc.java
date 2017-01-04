@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 30, 2016 10:39:50 AM by Hibernate Tools 4.3.1
+// Generated Jan 4, 2017 2:03:24 PM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -30,18 +30,16 @@ public class Trangsuc  implements java.io.Serializable {
      private String ten;
      private String ma;
      private String mota;
-     private Integer daxoa;
      private Set<Sanpham> sanphams = new HashSet<Sanpham>(0);
 
     public Trangsuc() {
     }
 
-    public Trangsuc(Loaitrangsuc loaitrangsuc, String ten, String ma, String mota, Integer daxoa, Set<Sanpham> sanphams) {
+    public Trangsuc(Loaitrangsuc loaitrangsuc, String ten, String ma, String mota, Set<Sanpham> sanphams) {
        this.loaitrangsuc = loaitrangsuc;
        this.ten = ten;
        this.ma = ma;
        this.mota = mota;
-       this.daxoa = daxoa;
        this.sanphams = sanphams;
     }
    
@@ -97,16 +95,6 @@ public class Trangsuc  implements java.io.Serializable {
         this.mota = mota;
     }
 
-    
-    @Column(name="daxoa")
-    public Integer getDaxoa() {
-        return this.daxoa;
-    }
-    
-    public void setDaxoa(Integer daxoa) {
-        this.daxoa = daxoa;
-    }
-
 @OneToMany(fetch=FetchType.LAZY, mappedBy="trangsuc")
     public Set<Sanpham> getSanphams() {
         return this.sanphams;
@@ -118,9 +106,12 @@ public class Trangsuc  implements java.io.Serializable {
 
     @Override
     public String toString() {
-        return "Trangsuc{" + "id=" + id + ", loaitrangsuc=" + loaitrangsuc + ", ten=" + ten +
-                ", ma=" + ma + ", mota=" + mota + ", daxoa=" + daxoa + ", sanphams=" + sanphams + '}';
+        return "Trangsuc{" + "id=" + id + ", loaitrangsuc=" + loaitrangsuc + 
+                ", ten=" + ten + ", ma=" + ma + ", mota=" + mota + '}';
     }
+
+
+
 
 }
 

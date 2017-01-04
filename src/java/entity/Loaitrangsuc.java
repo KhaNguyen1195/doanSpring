@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 30, 2016 10:39:50 AM by Hibernate Tools 4.3.1
+// Generated Jan 4, 2017 2:03:24 PM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -27,17 +27,15 @@ public class Loaitrangsuc  implements java.io.Serializable {
      private String ten;
      private String ma;
      private String mota;
-     private Integer daxoa;
      private Set<Trangsuc> trangsucs = new HashSet<Trangsuc>(0);
 
     public Loaitrangsuc() {
     }
 
-    public Loaitrangsuc(String ten, String ma, String mota, Integer daxoa, Set<Trangsuc> trangsucs) {
+    public Loaitrangsuc(String ten, String ma, String mota, Set<Trangsuc> trangsucs) {
        this.ten = ten;
        this.ma = ma;
        this.mota = mota;
-       this.daxoa = daxoa;
        this.trangsucs = trangsucs;
     }
    
@@ -81,16 +79,6 @@ public class Loaitrangsuc  implements java.io.Serializable {
     
     public void setMota(String mota) {
         this.mota = mota;
-    }
-
-    
-    @Column(name="daxoa")
-    public Integer getDaxoa() {
-        return this.daxoa;
-    }
-    
-    public void setDaxoa(Integer daxoa) {
-        this.daxoa = daxoa;
     }
 
 @OneToMany(fetch=FetchType.LAZY, mappedBy="loaitrangsuc")

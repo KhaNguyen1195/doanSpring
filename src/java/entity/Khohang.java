@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 30, 2016 10:39:50 AM by Hibernate Tools 4.3.1
+// Generated Jan 4, 2017 2:03:24 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -139,6 +139,13 @@ public class Khohang  implements java.io.Serializable {
     
     public void setDonvitinh(String donvitinh) {
         this.donvitinh = donvitinh;
+    }
+
+    @Override
+    public String toString() {
+        return "Khohang{" + "id=" + id + ", nhacungcap=" + nhacungcap + ", nhanvien=" + nhanvien +
+                ", sanpham=" + sanpham + ", soluong=" + soluong + ", gianhap1sp=" + gianhap1sp +
+                ", ngaynhapkho=" + ngaynhapkho + ", tongtrigia=" + tongtrigia + ", donvitinh=" + donvitinh + '}';
     }
 
 

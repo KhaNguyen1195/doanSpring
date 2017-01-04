@@ -27,7 +27,7 @@ public class ChatLieuController {
       @RequestMapping(value = "/danhsachchatlieu",method = RequestMethod.GET)
     public String getallCHL(Model m){
         ChatLieuModel model = new ChatLieuModel();
-        m.addAttribute("chlchatlieu",model.getAllChatLieu());
+        m.addAttribute("lstchatlieu",model.getAllChatLieu());
         //System.out.println("//=================="+model.getAll().size());
         return "dschatlieuad";
     }

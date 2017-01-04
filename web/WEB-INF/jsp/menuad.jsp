@@ -128,16 +128,11 @@
                             <li><a class="" href="danhsachnhacungcap.htm">Nhà cung cấp</a></li>
                         </ul>
                     </li>
-                    <li class="sub-menu">
-                        <a href="javascript:;" class="">
+                    <li>
+                        <a class="" href="danhsachkhohang.htm">
                             <i class="fa fa-cubes"></i>
                             <span>Quản lý kho hàng</span>
-                            <span class="menu-arrow arrow_carrot-right"></span>
                         </a>
-                        <ul class="sub">                          
-                            <li><a class="" href="danhsachkhohang.htm">Nhập kho</a></li>
-                            <li><a class="" href=""><span>Xuất kho</span></a></li>
-                        </ul>
                     </li>
                     <li>
                         <a class="" href="">

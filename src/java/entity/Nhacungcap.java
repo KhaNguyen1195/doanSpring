@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 30, 2016 10:39:50 AM by Hibernate Tools 4.3.1
+// Generated Jan 4, 2017 2:03:24 PM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -30,20 +30,18 @@ public class Nhacungcap  implements java.io.Serializable {
      private String dienthoai;
      private String thanhpho;
      private String quocgia;
-     private Integer daxoa;
      private Set<Khohang> khohangs = new HashSet<Khohang>(0);
 
     public Nhacungcap() {
     }
 
-    public Nhacungcap(String ten, String ma, String diachi, String dienthoai, String thanhpho, String quocgia, Integer daxoa, Set<Khohang> khohangs) {
+    public Nhacungcap(String ten, String ma, String diachi, String dienthoai, String thanhpho, String quocgia, Set<Khohang> khohangs) {
        this.ten = ten;
        this.ma = ma;
        this.diachi = diachi;
        this.dienthoai = dienthoai;
        this.thanhpho = thanhpho;
        this.quocgia = quocgia;
-       this.daxoa = daxoa;
        this.khohangs = khohangs;
     }
    
@@ -117,16 +115,6 @@ public class Nhacungcap  implements java.io.Serializable {
     
     public void setQuocgia(String quocgia) {
         this.quocgia = quocgia;
-    }
-
-    
-    @Column(name="daxoa")
-    public Integer getDaxoa() {
-        return this.daxoa;
-    }
-    
-    public void setDaxoa(Integer daxoa) {
-        this.daxoa = daxoa;
     }
 
 @OneToMany(fetch=FetchType.LAZY, mappedBy="nhacungcap")

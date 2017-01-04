@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 30, 2016 10:39:50 AM by Hibernate Tools 4.3.1
+// Generated Jan 4, 2017 2:03:24 PM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -26,16 +26,14 @@ public class Chucvu  implements java.io.Serializable {
      private Integer id;
      private String ten;
      private String ma;
-     private Integer daxoa;
      private Set<Nhanvien> nhanviens = new HashSet<Nhanvien>(0);
 
     public Chucvu() {
     }
 
-    public Chucvu(String ten, String ma, Integer daxoa, Set<Nhanvien> nhanviens) {
+    public Chucvu(String ten, String ma, Set<Nhanvien> nhanviens) {
        this.ten = ten;
        this.ma = ma;
-       this.daxoa = daxoa;
        this.nhanviens = nhanviens;
     }
    
@@ -69,16 +67,6 @@ public class Chucvu  implements java.io.Serializable {
     
     public void setMa(String ma) {
         this.ma = ma;
-    }
-
-    
-    @Column(name="daxoa")
-    public Integer getDaxoa() {
-        return this.daxoa;
-    }
-    
-    public void setDaxoa(Integer daxoa) {
-        this.daxoa = daxoa;
     }
 
 @OneToMany(fetch=FetchType.LAZY, mappedBy="chucvu")

@@ -38,7 +38,7 @@ public class KhoHangController {
     public String redirectCreateKH(Model m){
         m.addAttribute("khohang", new Khohang());
         m.addAttribute("action", "themkhohang");
-        //setSanPhamDropDownList(m);
+        setSanPhamDropDownList(m);
         return "themkhohangad";
     }
     
@@ -51,15 +51,15 @@ public class KhoHangController {
     }
     // end insert
 
-   /* private void setSanPhamDropDownList(Model model) {
-        SanPhamModel lstsanpham = new SanPhamModel();
-        List<Sanpham> ltsList=lstsanpham.getAllSanPham();
-        if(!ltsList.isEmpty()){
-            HashMap<Integer, String> ltsMap=new HashMap<Integer, String>();
-            for(Sanpham sanphamEntity : ltsList){
-                ltsMap.put(sanphamEntity.getId(), sanphamEntity.getTen());
+    private void setSanPhamDropDownList(Model model) {
+        SanPhamModel spsanpham = new SanPhamModel();
+        List<Sanpham> spList=spsanpham.getAllSanPham();
+        if(!spList.isEmpty()){
+            HashMap<Integer, String> spMap=new HashMap<Integer, String>();
+            for(Sanpham sanphamEntity : spList){
+                spMap.put(sanphamEntity.getId(), sanphamEntity.getTen());
             }
-            model.addAttribute("sanphamList", ltsMap);
+            model.addAttribute("sanphamList", spMap);
         }
-    }*/
+    }
 }
