@@ -58,7 +58,7 @@
             </div>
 
             <!--logo start-->
-            <a href="index1.html" class="logo">Quản trị <span class="lite">Hệ thống</span></a>
+            <a href="admin.htm" class="logo">Quản trị <span class="lite">Hệ thống</span></a>
             <!--logo end-->
 
             <div class="top-nav notification-row">                
@@ -93,7 +93,7 @@
                 <!-- sidebar menu start-->
                 <ul class="sidebar-menu">                
                     <li class="active">
-                        <a class="" href="index.jsp">
+                        <a class="" href="admin.htm">
                             <i class="icon_house_alt"></i>
                             <span>Trang chủ</span>
                         </a>

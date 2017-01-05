@@ -14,7 +14,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <ol class="breadcrumb">
-                            <li><i class="fa fa-home"></i><a href="index.htm">Trang chủ</a></li>
+                            <li><i class="fa fa-home"></i><a href="admin.htm">Trang chủ</a></li>
                             <li><i class="fa fa-users"></i>Quản lý người dùng</li>
                             <li>Quản lý khách hàng</li>
                             <li>Chỉnh sửa</li>

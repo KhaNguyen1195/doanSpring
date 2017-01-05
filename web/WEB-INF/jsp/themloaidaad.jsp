@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <ol class="breadcrumb">
-                            <li><i class="fa fa-home"></i><a href="index.htm">Trang chủ</a></li>
+                            <li><i class="fa fa-home"></i><a href="admin.htm">Trang chủ</a></li>
                             <li><i class="fa fa-list-alt"></i>Quản lý danh mục</li>
                             <li>Danh sách loại đá</li>
                             <li>Thêm mới</li>

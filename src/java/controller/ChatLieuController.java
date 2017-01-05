@@ -24,54 +24,54 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequestMapping(value = "/")
 public class ChatLieuController {
-      @RequestMapping(value = "/danhsachchatlieu",method = RequestMethod.GET)
-    public String getallCHL(Model m){
+
+    @RequestMapping(value = "/danhsachchatlieu", method = RequestMethod.GET)
+    public String getallCHL(Model m) {
         ChatLieuModel model = new ChatLieuModel();
-        m.addAttribute("lstchatlieu",model.getAllChatLieu());
+        m.addAttribute("lstchatlieu", model.getAllChatLieu());
         //System.out.println("//=================="+model.getAll().size());
         return "dschatlieuad";
     }
-    
+
     // insert 
     //chuyển từ all sang create
-    @RequestMapping(value = "/chatlieu", method=RequestMethod.GET)
-    public String redirectCreateCHL(Model m){
+    @RequestMapping(value = "/chatlieu", method = RequestMethod.GET)
+    public String redirectCreateCHL(Model m) {
         m.addAttribute("chatlieu", new Chatlieu());
         m.addAttribute("action", "themchatlieu");
         return "themchatlieuad";
     }
-    
-     @RequestMapping(value = "themchatlieu",method = RequestMethod.POST)
-    public String createCHL(@ModelAttribute(value = "chatlieu") Chatlieu chl){
-        ChatLieuModel model =new ChatLieuModel();
+
+    @RequestMapping(value = "themchatlieu", method = RequestMethod.POST)
+    public String createCHL(@ModelAttribute(value = "chatlieu") Chatlieu chl) {
+        ChatLieuModel model = new ChatLieuModel();
         model.CreateChatLieu(chl);
         return "redirect:danhsachchatlieu.htm";
     }
-    
+
     // end insert*/
-    
     // edit
     @RequestMapping(value = "/chinhsuachatlieu/{id}", method = RequestMethod.GET)
-    public String showEditCHL(Model model, @PathVariable int id){
-        ChatLieuModel chl =new ChatLieuModel();
+    public String showEditCHL(Model model, @PathVariable int id) {
+        ChatLieuModel chl = new ChatLieuModel();
         model.addAttribute("chatlieu", chl.findChatLieu(id));
         model.addAttribute("action", "capnhatchatlieu");
         return "chinhsuachatlieuad";
     }
-    
+
     //update
-    @RequestMapping(value = "chinhsuachatlieu/capnhatchatlieu",method = RequestMethod.POST, produces = "application/x-www-form-urlencoded;charset=UTF-8")
-    public String updateCHL(@ModelAttribute(value = "chatlieu") Chatlieu chl){
-        ChatLieuModel model =new ChatLieuModel();
+    @RequestMapping(value = "chinhsuachatlieu/capnhatchatlieu", method = RequestMethod.POST, produces = "application/x-www-form-urlencoded;charset=UTF-8")
+    public String updateCHL(@ModelAttribute(value = "chatlieu") Chatlieu chl) {
+        ChatLieuModel model = new ChatLieuModel();
         //System.out.println("loaitrangsuc"+lts.toString());
         model.editChatLieu(chl);
         return "redirect:/danhsachchatlieu.htm";
     }
-    
+
     // xóa
-    @RequestMapping(value = "/xoachatlieu",method = RequestMethod.GET)
-    public String deleteCHL(@RequestParam(value = "id") int id){
-        ChatLieuModel model =new ChatLieuModel();
+    @RequestMapping(value = "/xoachatlieu", method = RequestMethod.GET)
+    public String deleteCHL(@RequestParam(value = "id") int id) {
+        ChatLieuModel model = new ChatLieuModel();
         Chatlieu chl = model.findChatLieu(id);
         model.deleteChatLieu(chl);
         return "redirect:danhsachchatlieu.htm";

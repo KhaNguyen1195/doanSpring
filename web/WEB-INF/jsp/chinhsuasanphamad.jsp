@@ -1,5 +1,5 @@
 
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@page contentType="text/html; charset=utf-8" pageEncoding="UTF-8" %>
@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <ol class="breadcrumb">
-                            <li><i class="fa fa-home"></i><a href="index.html">Trang chủ</a></li>
+                            <li><i class="fa fa-home"></i><a href="admin.htm">Trang chủ</a></li>
                             <li><i class="fa fa-list-alt"></i>Quản lý danh mục</li>
                             <li>Danh sách sản phẩm</li>
                             <li>Thêm mới</li>
@@ -29,7 +29,8 @@
                             <header class="panel-heading"><h2><strong>Sản phẩm</strong></h2></header>
                             <div class="panel-body">
                                 <div class="form">
-                                    <form:form action="${action}" modelAttribute="sanpham" class="form-group form-validate" id="register-form">
+                                    <form:form action="${action}" modelAttribute="sanpham" id="register-form"
+                                               class="form-group form-validate" enctype="multipart/form-data">
                                         <form:hidden path="id"/>
                                         <div class="form-group col-lg-6">
                                             <label for="ma" class="control-label col-lg-4">Mã sản phẩm <span class="required">*</span></label>
@@ -107,6 +108,12 @@
                                             </div>
                                         </div>
                                         <div class="form-group col-lg-6">
+                                            <label for="giaban" class="control-label col-lg-4">Giá bán <span class="required">*</span></label>
+                                            <div class="col-lg-8">
+                                                <form:input path="giaban" placeholder="Giá bán" class=" form-control" id="giaban"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-lg-6">
                                             <label for="mota" class="control-label col-lg-4">Mô tả</label>
                                             <div class="col-lg-8">
                                                 <form:textarea path="mota" placeholder="Mô tả" class=" form-control" id="mota"/>
@@ -114,7 +121,9 @@
                                         </div>
                                         <div class="form-group col-lg-6">
                                             <label for="exampleInputFile" class="control-label col-lg-4">Hình ảnh</label>
-                                            <div class="col-lg-8"><input type="file" id="exampleInputFile"></div>
+                                            <div class="col-lg-8">
+                                                <form:input type="file" name="img" path="img" id="exampleInputFile"/>
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="col-lg-offset-2 col-lg-8">
