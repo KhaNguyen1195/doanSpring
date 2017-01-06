@@ -14,8 +14,10 @@ import model.SanPhamModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -25,7 +27,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value = "/")
 public class KhoHangController {
     @RequestMapping(value = "danhsachkhohang",method = RequestMethod.GET)
-    public String getalLTS(Model m){
+    public String getallKHG(Model m){
         KhoHangModel model = new KhoHangModel();
         m.addAttribute("lstkhohang",model.getAllKhoHang());
         System.out.println("//=================="+model.getAllKhoHang().size());
@@ -35,15 +37,15 @@ public class KhoHangController {
     // insert 
     //chuyển từ all sang create
     @RequestMapping(value = "khohang", method=RequestMethod.GET)
-    public String redirectCreateKH(Model m){
+    public String redirectCreateKHG(Model m){
         m.addAttribute("khohang", new Khohang());
         m.addAttribute("action", "themkhohang");
-        setSanPhamDropDownList(m);
+        setKhoHangDropDownList(m);
         return "themkhohangad";
     }
     
     @RequestMapping(value = "themkhohang",method = RequestMethod.POST)
-    public String createKH(@ModelAttribute(value = "khohang") Khohang khg){
+    public String createKHG(@ModelAttribute(value = "khohang") Khohang khg){
         //System.out.println("====>"+ts.getId()+"-"+ts.getTen());
         KhoHangModel model =new KhoHangModel();
         model.createKhoHang(khg);
@@ -51,15 +53,47 @@ public class KhoHangController {
     }
     // end insert
 
-    private void setSanPhamDropDownList(Model model) {
-        SanPhamModel spsanpham = new SanPhamModel();
-        List<Sanpham> spList=spsanpham.getAllSanPham();
-        if(!spList.isEmpty()){
-            HashMap<Integer, String> spMap=new HashMap<Integer, String>();
-            for(Sanpham sanphamEntity : spList){
-                spMap.put(sanphamEntity.getId(), sanphamEntity.getTen());
+    private void setKhoHangDropDownList(Model model) {
+        SanPhamModel lstsanphamsp = new SanPhamModel();
+        List<Sanpham> ltsList=lstsanphamsp.getAllSanPham();
+        if(!ltsList.isEmpty()){
+            HashMap<Integer, String> ltsMap=new HashMap<Integer, String>();
+            for(Sanpham sanphamEntity : ltsList){
+                ltsMap.put(sanphamEntity.getId(), sanphamEntity.getTen());
             }
-            model.addAttribute("sanphamList", spMap);
+            model.addAttribute("sanphamList", ltsMap);
         }
+    }
+    
+    // edit
+    @RequestMapping(value = "chinhsuakhohang/{id}", method = RequestMethod.GET)
+    public String showEditKHG(Model m, @PathVariable int id){
+        KhoHangModel khg =new KhoHangModel();
+        m.addAttribute("khohang", khg.findKhoHang(id));
+        m.addAttribute("action", "capnhatkhohang");
+//        System.out.println("--------"+ts.findOne(id).toString());
+//        System.out.println("//============"+ts.findOne(id).toString());
+        setKhoHangDropDownList(m);
+        return "chinhsuakhohangad";
+    }
+
+    
+    //update
+    @RequestMapping(value = "chinhsuakhohang/capnhatkhohang",method = RequestMethod.POST)
+    public String updateKHG(@ModelAttribute(value = "khohang") Khohang khg){
+        KhoHangModel model =new KhoHangModel();
+        model.editKhoHang(khg);
+        return "redirect:/danhsachkhohang.htm";
+    }
+    
+    // end edit
+    
+    // xóa
+    @RequestMapping(value = "/xoakhohang",method = RequestMethod.GET)
+    public String deleteTS(@RequestParam(value = "id") int id){
+        KhoHangModel model =new KhoHangModel();
+        Khohang khg=model.findKhoHang(id);
+        model.deleteKhoHang(khg);
+        return "redirect:danhsachkhohang.htm";
     }
 }

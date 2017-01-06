@@ -35,6 +35,7 @@ public class KhoHangModel {
         return lstkhohang;
     }
     
+    
     //insert  
     public void createKhoHang(Khohang khg) {
         Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
@@ -44,6 +45,46 @@ public class KhoHangModel {
             session.getTransaction().commit();
         } catch (Exception ex) {
             System.out.println("Lỗi" + ex.toString());
+        }
+    }
+    
+    
+    //lấy ra  theo id
+    public Khohang findKhoHang(int id) {
+        Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        Khohang khg = new Khohang();
+        try {
+            session.beginTransaction();
+            khg = (Khohang) session.get(Khohang.class, id);
+            //System.out.println("//=====findOne======"+ts.toString());
+            session.getTransaction().commit();
+        } catch (Exception ex) {
+            System.out.println("Lỗi" + ex.toString());
+        }
+        return khg;
+    }
+
+    //update 
+    public void editKhoHang(Khohang khg) {
+        Session session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        try {
+            session.beginTransaction();
+            session.update(khg);
+            session.getTransaction().commit();
+        } catch (Exception ex) {
+            System.out.println("Lỗi" + ex.toString());
+        }
+    }
+    
+    // xóa 
+    public void deleteKhoHang(Khohang khg){
+        Session session=NewHibernateUtil.getSessionFactory().getCurrentSession();
+        try{
+            session.beginTransaction();
+            session.delete(khg);
+            session.getTransaction().commit();
+        }catch(Exception ex){
+            System.out.println("Lỗi"+ex.toString());
         }
     }
 }
