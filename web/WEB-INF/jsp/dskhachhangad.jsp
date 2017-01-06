@@ -1,8 +1,3 @@
-<%-- 
-    Document   : dskhachhangad
-    Created on : Dec 27, 2016, 11:48:56 AM
-    Author     : Administrator
---%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

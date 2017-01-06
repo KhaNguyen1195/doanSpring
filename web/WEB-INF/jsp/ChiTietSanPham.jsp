@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,6 +9,16 @@
             .loupe { background-color:#555; background:rgba(0, 0, 0, 0.25); border:5px solid rgba(0, 0, 0, 0); 
                      cursor:url(../img/blank.png), url(blank.cur), none;}
             </style>
+            <script src="<c:url value="/libs/js/jquery.loupe.js" />"></script>
+            <script type="text/javascript">                
+                jQuery(document).ready(function ($) {
+
+                    $('#demo').loupe();
+
+                });
+            </script>
+            <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/cdnjs.cloudflare.com_ajax_libs_jquery-easing_1.3_jquery.easing.min.js"></script>
+            <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/ajax.googleapis.com_ajax_libs_jquery_1_jquery.min.js"></script>
         </head>
         <body id="page-top" class="index">
 
@@ -16,7 +27,7 @@
             <div class="container content">
                 <div class="col-md-12">
                     <div class="col-md-4 col-sm-2 chitietimg">
-                        <img class="demo" src="${pageContext.request.contextPath}/libs/img/nhan-nu-kim-cuong-vang-trang-14k1_1_1.jpg" 
+                        <img id="demo" src="${pageContext.request.contextPath}/libs/img/nhan-nu-kim-cuong-vang-trang-14k1_1_1.jpg" 
                              style="width: 100%; height: 326px; top: 0px; left: 0px;border: 1px solid #e5e5e5;"/>
                     </div>
                     <div class="col-md-8">
@@ -25,7 +36,7 @@
                             <div class="masp"><span style="font-weight:bold">Mã sản phẩm:</span><span style="color:blue"> GCTRWA81088.500</span></div>				
                             <div class="giasp"><span style="color:red">23,618,000 VND</span></div>
                             <div class="status"><span style="font-weight:bold;">Tình trạng:</span><span style="color:red"> Còn hàng</span></div>
-                            <div class="mua"><a href="#" class="btn btn-primary btn-md">MUA NGAY</a></div>
+                            <div class="mua"><a href="giohang.htm" class="btn btn-primary btn-md">Thêm vào giỏ hàng</a></div>
                             <div class="chitiet">Gọi đặt mua ngay TP.Đà Nẵng: 0905153806 hoặc 0905160719</div>
                             <div class="chitiet">- Bảo hành sản phẩm. <a href="">Tìm hiểu</a></div>
                             <div class="chitiet">- Giao hàng tận nơi. <a href="">Tìm hiểu</a></div>
@@ -72,9 +83,9 @@
                 </div>
             </div>
         </div>
-      
+
         <jsp:include page="FooterMenu.jsp" />
 
-        <script type="text/javascript">$('.demo').loupe();</script>
+
     </body>
 </html>
