@@ -65,6 +65,7 @@
                                         </c:forEach> 
                                     </tbody>
                                 </table>
+                                <br>
                             </div>
 
                         </section>

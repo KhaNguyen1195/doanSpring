@@ -46,7 +46,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <c:forEach var="item" items="${lstnhanvien}">
+                                        <c:forEach var="item" items="${lstnhanvien}" varStatus="status">
                                             <tr>
                                                 <td class="kc">${status.index + 1}</td>
                                                 <td class="kc">${item.ma}</td>

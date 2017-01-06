@@ -24,7 +24,6 @@ import model.ThuongHieuModel;
 import model.TrangSucModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -72,7 +71,7 @@ public class SanPhamController {
             //System.out.println("//===============ma================");
             sp.setTen(request.getParameter("ten"));
             //System.out.println("//===============ten================");
-            sp.setGiaban(Integer.parseInt(request.getParameter("giaban")));
+            sp.setGiaban(request.getParameter("giaban"));
             //System.out.println("//===============gia================" + sp.getGiaban());
             sp.setImg(filename + "");
             sp.setMota(request.getParameter("mota"));
@@ -163,7 +162,7 @@ public class SanPhamController {
                 //System.out.println("//===============ma================");
                 sp.setTen(request.getParameter("ten"));
                 //System.out.println("//===============ten================");
-                sp.setGiaban(Integer.parseInt(request.getParameter("giaban")));
+                sp.setGiaban(request.getParameter("giaban"));
                 //System.out.println("//===============gia================" + sp.getGiaban());
                 sp.setImg(filename + "");
 

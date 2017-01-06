@@ -45,17 +45,17 @@
                                         </div>
                                     </div>
                                     <div class="form-group col-lg-6">
-                                            <label class="control-label col-lg-4">Loại trang sức</label>
-                                            <div class="col-lg-8">                               
-                                                <select class="form-control" id="loaitrangsuc" name="loaitrangsuc">
-                                                  <option value="">--- Chọn loại trang sức ---</option>
-                                                  <option value="1">Trang sức đá quý</option>
-                                                  <option value="2">Trang sức ngọc trai</option>
-                                                  <option value="3">Media</option>
-                                                  <option value="4">Funny</option>
-                                                </select>  
-                                            </div>
-                                          </div>  
+                                        <label class="control-label col-lg-4">Loại trang sức</label>
+                                        <div class="col-lg-8">                               
+                                            <select class="form-control" id="loaitrangsuc" name="loaitrangsuc">
+                                                <option value="">--- Chọn loại trang sức ---</option>
+                                                <option value="1">Trang sức đá quý</option>
+                                                <option value="2">Trang sức ngọc trai</option>
+                                                <option value="3">Media</option>
+                                                <option value="4">Funny</option>
+                                            </select>  
+                                        </div>
+                                    </div>  
                                     <div class="form-group col-lg-offset-6 col-lg-6">
                                         <button class="btn btn-warning" type="submit">Tìm kiếm</button>
                                     </div>
@@ -76,27 +76,28 @@
                                     </thead>
                                     <tbody>
                                         <c:forEach var="item" items="${lsttrangsuc}" varStatus="status">  
-                                        <tr>
-                                            <td class="kc">${status.index + 1}</td>
-                                            <td class="kc">${item.ma}</td>
-                                            <td class="kc">${item.ten}</td>
-                                            <td class="kc">${item.loaitrangsuc.ten}</td>
-                                            <td class="kc">${item.mota}</td>
-                                            <td>
-                                                <div class="kc">
-                                                    <a href="chinhsuatrangsuc/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
-                                                        <i class="fa fa-pencil"></i></a>
-                                                    <a href="xoatrangsuc.htm?id=${item.id}" onclick="return confirm('Bạn chắc chắn muốn xóa?')" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
-                                                        <i class="fa fa-trash-o"></i></a>
-                                                    
-                                                </div>
-                                            </td>
-                                        </tr>
+                                            <tr>
+                                                <td class="kc">${status.index + 1}</td>
+                                                <td class="kc">${item.ma}</td>
+                                                <td class="kc">${item.ten}</td>
+                                                <td class="kc">${item.loaitrangsuc.ten}</td>
+                                                <td class="kc">${item.mota}</td>
+                                                <td>
+                                                    <div class="kc">
+                                                        <a href="chinhsuatrangsuc/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
+                                                            <i class="fa fa-pencil"></i></a>
+                                                        <a href="xoatrangsuc.htm?id=${item.id}" onclick="return confirm('Bạn chắc chắn muốn xóa?')" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
+                                                            <i class="fa fa-trash-o"></i></a>
+
+                                                    </div>
+                                                </td>
+                                            </tr>
                                         </c:forEach>
                                     </tbody>
                                 </table>
+                                <br>
                             </div>
-                            <br>
+
                         </section>
                     </div>
                 </div>

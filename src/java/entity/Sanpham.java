@@ -1,5 +1,5 @@
 package entity;
-// Generated Jan 4, 2017 2:03:24 PM by Hibernate Tools 4.3.1
+// Generated Jan 6, 2017 10:56:46 AM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -35,7 +35,7 @@ public class Sanpham  implements java.io.Serializable {
      private Trangsuc trangsuc;
      private String ten;
      private String ma;
-     private Integer giaban;
+     private String giaban;
      private String mota;
      private String img;
      private Set<Khohang> khohangs = new HashSet<Khohang>(0);
@@ -45,7 +45,7 @@ public class Sanpham  implements java.io.Serializable {
     public Sanpham() {
     }
 
-    public Sanpham(Chatlieu chatlieu, Chungloai chungloai, Loaida loaida, Loaivang loaivang, Mauda mauda, Thuonghieu thuonghieu, Trangsuc trangsuc, String ten, String ma, Integer giaban, String mota, String img, Set<Khohang> khohangs, Set<Chitietdonhang> chitietdonhangs, Set<Giohang> giohangs) {
+    public Sanpham(Chatlieu chatlieu, Chungloai chungloai, Loaida loaida, Loaivang loaivang, Mauda mauda, Thuonghieu thuonghieu, Trangsuc trangsuc, String ten, String ma, String giaban, String mota, String img, Set<Khohang> khohangs, Set<Chitietdonhang> chitietdonhangs, Set<Giohang> giohangs) {
        this.chatlieu = chatlieu;
        this.chungloai = chungloai;
        this.loaida = loaida;
@@ -166,12 +166,12 @@ public class Sanpham  implements java.io.Serializable {
     }
 
     
-    @Column(name="giaban", precision=5, scale=0)
-    public Integer getGiaban() {
+    @Column(name="giaban", length=50)
+    public String getGiaban() {
         return this.giaban;
     }
     
-    public void setGiaban(Integer giaban) {
+    public void setGiaban(String giaban) {
         this.giaban = giaban;
     }
 
@@ -224,10 +224,10 @@ public class Sanpham  implements java.io.Serializable {
 
     @Override
     public String toString() {
-        return "Sanpham{" + "id=" + id + ", chatlieu=" + chatlieu + ", chungloai=" + chungloai + 
-                ", loaida=" + loaida + ", loaivang=" + loaivang + ", mauda=" + mauda +
-                ", thuonghieu=" + thuonghieu + ", trangsuc=" + trangsuc + ", ten=" + ten +
-                ", ma=" + ma + ", giaban=" + giaban + ", mota=" + mota + ", img=" + img + '}';
+        return "Sanpham{" + "id=" + id + ", chatlieu=" + chatlieu + ", chungloai=" + chungloai + ","
+                + " loaida=" + loaida + ", loaivang=" + loaivang + ", mauda=" + mauda + ","
+                + " thuonghieu=" + thuonghieu + ", trangsuc=" + trangsuc + ", ten=" + ten + ","
+                + " ma=" + ma + ", giaban=" + giaban + ", mota=" + mota + ", img=" + img + '}';
     }
 
 

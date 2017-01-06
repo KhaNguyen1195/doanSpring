@@ -1,5 +1,5 @@
 package entity;
-// Generated Jan 4, 2017 2:03:24 PM by Hibernate Tools 4.3.1
+// Generated Jan 6, 2017 10:56:46 AM by Hibernate Tools 4.3.1
 
 
 import javax.persistence.Column;
@@ -26,12 +26,12 @@ public class Chitietdonhang  implements java.io.Serializable {
      private Donhang donhang;
      private Sanpham sanpham;
      private Integer soluongdathang;
-     private Integer dongia;
+     private String dongia;
 
     public Chitietdonhang() {
     }
 
-    public Chitietdonhang(Donhang donhang, Sanpham sanpham, Integer soluongdathang, Integer dongia) {
+    public Chitietdonhang(Donhang donhang, Sanpham sanpham, Integer soluongdathang, String dongia) {
        this.donhang = donhang;
        this.sanpham = sanpham;
        this.soluongdathang = soluongdathang;
@@ -81,12 +81,12 @@ public class Chitietdonhang  implements java.io.Serializable {
     }
 
     
-    @Column(name="dongia", precision=5, scale=0)
-    public Integer getDongia() {
+    @Column(name="dongia", length=50)
+    public String getDongia() {
         return this.dongia;
     }
     
-    public void setDongia(Integer dongia) {
+    public void setDongia(String dongia) {
         this.dongia = dongia;
     }
 

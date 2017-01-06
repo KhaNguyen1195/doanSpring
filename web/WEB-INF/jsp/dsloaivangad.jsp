@@ -43,33 +43,34 @@
                                             <th class="kc">Mã loại vàng</th>
                                             <th class="kc">Tên loại vàng</th>
                                             <th class="kc">Mô tả</th>
-                                           
+
                                             <th class="kc" style="min-width:50px;">Hành động</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <c:forEach var="item" items="${lstloaivang}" varStatus="status">  
-                                        <tr>
-                                           
-                                            <td class="kc">${status.index + 1}</td>
-                                            <td class="kc">${item.ma}</td>
-                                            <td class="kc">${item.ten}</td>
-                                          
-                                            <td class="kc">${item.mota}</td>
-                                           
-                                            <td>
-                                                 <div class="kc">
-                                                    <a href="chinhsualoaivang/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
-                                                        <i class="fa fa-pencil"></i></a>
-                                                     <a href="xoaloaivang.htm?id=${item.id}" onclick="return confirm('Bạn chắc chắn muốn xóa?')" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
+                                            <tr>
+
+                                                <td class="kc">${status.index + 1}</td>
+                                                <td class="kc">${item.ma}</td>
+                                                <td class="kc">${item.ten}</td>
+
+                                                <td class="kc">${item.mota}</td>
+
+                                                <td>
+                                                    <div class="kc">
+                                                        <a href="chinhsualoaivang/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
+                                                            <i class="fa fa-pencil"></i></a>
+                                                        <a href="xoaloaivang.htm?id=${item.id}" onclick="return confirm('Bạn chắc chắn muốn xóa?')" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
                                                             <i class="fa fa-trash-o"></i></a>
-                                                    
-                                                </div>
-                                            </td>
-                                        </tr>
-                                       </c:forEach>
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </c:forEach>
                                     </tbody>
                                 </table>
+                                <br>
                             </div>
 
                         </section>

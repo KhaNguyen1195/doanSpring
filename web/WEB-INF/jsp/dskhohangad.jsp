@@ -45,24 +45,25 @@
                                     </thead>
                                     <tbody>
                                         <c:forEach var="item" items="${lstkhohang}" varStatus="status"> 
-                                        <tr>
-                                            <td class="kc">${status.index + 1}</td>
-                                            <td class="kc">${item.gianhap1sp}</td>
-                                            <td class="kc">${item.soluong}</td>
-                                            <td class="kc">${item.tongtrigia}</td>
-                                            <td class="kc">${item.ngaynhapkho}</td>
-                                            <td>
-                                                <div class="kc">
-                                                    <a href="" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
-                                                        <i class="fa fa-pencil"></i></a>
-                                                    <a href="" onclick="return confirm('Bạn chắc chắn muốn xóa?')" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
-                                                        <i class="fa fa-trash-o"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                            <tr>
+                                                <td class="kc">${status.index + 1}</td>
+                                                <td class="kc">${item.gianhap1sp}</td>
+                                                <td class="kc">${item.soluong}</td>
+                                                <td class="kc">${item.tongtrigia}</td>
+                                                <td class="kc">${item.ngaynhapkho}</td>
+                                                <td>
+                                                    <div class="kc">
+                                                        <a href="" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
+                                                            <i class="fa fa-pencil"></i></a>
+                                                        <a href="" onclick="return confirm('Bạn chắc chắn muốn xóa?')" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
+                                                            <i class="fa fa-trash-o"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
                                         </c:forEach>
                                     </tbody>
                                 </table>
+                                <br>
                             </div>
 
                         </section>
