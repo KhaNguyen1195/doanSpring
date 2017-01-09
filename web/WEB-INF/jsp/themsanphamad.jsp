@@ -1,9 +1,97 @@
 <%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html; charset=utf-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="<c:url value="/libs/js/jquery-ad.js" />"></script>
+        <script type="text/javascript" src="<c:url value="/libs/js/jquery.validate.min.js" />"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+
+                $("#register-form").validate({
+                    debug: true,
+                    rules: {
+                        ten: {
+                            required: true,
+                            minlength: 5
+                        },
+                        ma: {
+                            required: true,
+                            minlength: 5
+                        },
+                        tendangnhap: {
+                            required: true,
+                            minlength: 5
+                        },
+                        matkhau: {
+                            required: true,
+                            minlength: 5
+                        },
+                        sodienthoai: {
+                            required: true,
+                            minlength: 5
+                        },
+                        diachi: {
+                            required: true
+                        },
+                        confirm_password: {
+                            required: true,
+                            minlength: 5,
+                            equalTo: "#password"
+                        },
+                        ngaysinh: {
+                            required: true,
+                            email: true
+                        },
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        topic: {
+                            required: "#newsletter:checked",
+                            minlength: 2
+                        },
+                        'loaitrangsuc': "required"
+                    },
+                    messages: {
+                        ten: {
+                            required: '<span style="color:red;">Vui lòng nhập tên.</span>',
+                            minlength: '<span style="color:red;">Tên của bạn phải trên 5 ký tự.</span>'
+                        },
+                        ma: {
+                            required: '<span style="color:red;">Vui lòng nhập mã.</span>',
+                            minlength: '<span style="color:red;">Mã của bạn phải trên 5 ký tự.</span>'
+                        },
+                        tendangnhap: {
+                            required: "Vui lòng nhập tên đăng nhập.",
+                            minlength: "Tên đăng nhập của bạn phải trên 5 ký tự."
+                        },
+                        matkhau: {
+                            required: "Vui lòng nhập mật khẩu.",
+                            minlength: "Mật khẩu của bạn phải trên 5 ký tự."
+                        },
+                        confirm_password: {
+                            required: "Vui lòng nhập lại mật khẩu.",
+                            minlength: "Mật khẩu của bạn phải trên 5 ký tự.",
+                            equalTo: "Nhập đúng mật khẩu bạn vừa nhập."
+                        },
+                        sodienthoai: {
+                            required: "Vui lòng nhập số điện thoại.",
+                            minlength: "số điện thoại của bạn phải trên 5 ký tự."
+                        },
+                        diachi: {
+                            required: "Vui lòng nhập điạ chỉ."
+                        },
+                        email: "Vui lòng nhập đúng định dạng email.",
+                        ngaysinh: "Vui lòng nhập đúng định dạng ngày sinh.",
+                        'loaitrangsuc': '<span style="color:red;"> Vui lòng chọn trang sức</span>'
+                    }
+                });
+            });
+
+        </script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <jsp:include page="menuad.jsp" />
     </head>

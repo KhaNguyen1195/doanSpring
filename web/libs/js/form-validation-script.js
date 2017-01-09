@@ -2,9 +2,14 @@ var Script = function () {
 
     $.validator.setDefaults({
         submitHandler: function () {
-            alert("submitted!");
+            alert("Vui lòng nhập vào các trường có dấu * !");
         }
     });
+    jQuery(document).ready(function($) {
+
+	$('#msg').html("This is updated by jQuery")
+
+});
 
     $().ready(function () {
         // validate the comment form when it is submitted
@@ -91,6 +96,7 @@ var Script = function () {
             }
         });
         // end thêm nhân viên
+        
 
         // propose username by combining first- and lastname
         $("#username").focus(function () {

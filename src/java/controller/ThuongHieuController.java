@@ -5,6 +5,7 @@ import entity.Thuonghieu;
 import model.ThuongHieuModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,8 +34,16 @@ public class ThuongHieuController {
     
     @RequestMapping(value = "themthuonghieu",method = RequestMethod.POST, produces = "application/x-www-form-urlencoded;charset=UTF-8")
     public String createTH(@ModelAttribute(value = "thuonghieu") Thuonghieu th){
-        ThuongHieuModel model =new ThuongHieuModel();
+        //ThuongHieuValidator thValidator = new ThuongHieuValidator();
+        //thValidator.validate(th, result);
+        /*if (result.hasErrors()){*/
+          ThuongHieuModel model =new ThuongHieuModel();
         model.CreateThuongHieu(th);
+        /*}
+        else {
+          // do something else
+        }*/
+        
         return "redirect:danhsachthuonghieu.htm";
     }
     // end insert

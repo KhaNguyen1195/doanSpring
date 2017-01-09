@@ -1,11 +1,41 @@
-
-
 <%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@page contentType="text/html; charset=utf-8" pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="<c:url value="/libs/js/jquery-ad.js" />"></script>
+        <script type="text/javascript" src="<c:url value="/libs/js/jquery.validate.min.js" />"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+
+                $("#register-form").validate({
+                    debug: true,
+                    rules: {
+                        ten: {
+                            required: true,
+                            minlength: 5
+                        },
+                        ma: {
+                            required: true,
+                            minlength: 5
+                        }
+                    },
+                    messages: {
+                        ten: {
+                            required: '<span style="color:red;">Vui lòng nhập tên.</span>',
+                            minlength: '<span style="color:red;">Tên của bạn phải trên 5 ký tự.</span>'
+                        },
+                        ma: {
+                            required: '<span style="color:red;">Vui lòng nhập mã.</span>',
+                            minlength: '<span style="color:red;">Mã của bạn phải trên 5 ký tự.</span>'
+                        }
+                    }
+                });
+            });
+
+        </script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <jsp:include page="menuad.jsp" />
     </head>
@@ -29,7 +59,8 @@
                             <header class="panel-heading"><h2><strong>Trang sức</strong></h2></header>
                             <div class="panel-body">
                                 <div class="form">
-                                    <form:form action="${action}" modelAttribute="trangsuc" class="form-group form-validate form-horizontal" id="register-form">
+                                    <form:form action="${action}" modelAttribute="trangsuc" class="form-group form-validate form-horizontal"
+                                               id="register-form">
                                         <form:hidden path="id"/>
                                         <div class="form-group">
                                             <label for="ma" class="control-label col-lg-2">Mã trang sức <span class="required">*</span></label>

@@ -30,11 +30,9 @@
         <!--custome script for all page-->
         <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/scripts.js"></script>
         <!-- custom script for this page-->
-        <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/jquery.validate.min.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/morris.min.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/morris-script.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/jquery.tagsinput.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/form-validation-script.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/form-component.js"></script>
         <!-- bootstrap -->
         <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/bootstrap-ad.min.js"></script>

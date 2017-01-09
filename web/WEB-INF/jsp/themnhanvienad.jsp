@@ -1,15 +1,89 @@
-<%-- 
-    Document   : nhanvienad
-    Created on : Dec 27, 2016, 6:11:11 PM
-    Author     : Administrator
---%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="<c:url value="/libs/js/jquery-ad.js" />"></script>
+        <script type="text/javascript" src="<c:url value="/libs/js/jquery.validate.min.js" />"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+
+                $("#register-form").validate({
+                    rules: {
+                        ten: {
+                            required: true,
+                            minlength: 5
+                        },
+                        ma: {
+                            required: true,
+                            minlength: 5
+                        },
+                        tendangnhap: {
+                            required: true,
+                            minlength: 5
+                        },
+                        matkhau: {
+                            required: true,
+                            minlength: 5
+                        },
+                        sodienthoai: {
+                            required: true,
+                            minlength: 5,
+                            number:true
+                        },
+                        diachi: {
+                            required: true
+                        },
+                        confirm_password: {
+                            required: true,
+                            minlength: 5,
+                            equalTo: "#password"
+                        },
+                        ngaysinh: {
+                            required: true
+                        }
+                        
+                    },
+                    messages: {
+                        ten: {
+                            required: '<span style="color:red;">Vui lòng nhập tên.</span>',
+                            minlength: '<span style="color:red;">Tên của bạn phải trên 5 ký tự.</span>'
+                        },
+                        ma: {
+                            required: '<span style="color:red;">Vui lòng nhập mã.</span>',
+                            minlength: '<span style="color:red;">Mã của bạn phải trên 5 ký tự.</span>'
+                        },
+                        tendangnhap: {
+                            required: '<span style="color:red;">Vui lòng nhập tên đăng nhập.</span>',
+                            minlength: '<span style="color:red;">Tên đăng nhập của bạn phải trên 5 ký tự.</span>'
+                        },
+                        matkhau: {
+                            required: '<span style="color:red;">Vui lòng nhập mật khẩu.</span>',
+                            minlength: '<span style="color:red;">Mật khẩu của bạn phải trên 5 ký tự.</span>'
+                        },
+                        confirm_password: {
+                            required: '<span style="color:red;">Vui lòng nhập lại mật khẩu.</span>',
+                            minlength: '<span style="color:red;">Mật khẩu của bạn phải trên 5 ký tự.</span>',
+                            equalTo: '<span style="color:red;">Nhập đúng mật khẩu bạn vừa nhập.</span>'
+                        },
+                        sodienthoai: {
+                            required: '<span style="color:red;">Vui lòng nhập số điện thoại.</span>',
+                            minlength: '<span style="color:red;">Số điện thoại của bạn phải trên 5 ký tự.</span>',
+                            number: '<span style="color:red;"> Vui lòng nhập đúng định dạng số</span>'
+                        },
+                        diachi: {
+                            required: "Vui lòng nhập điạ chỉ."
+                        },
+                        ngaysinh: {
+                            required: "Vui lòng nhập ngày sinh."
+                        }
+                    }
+                });
+
+            });
+        </script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <jsp:include page="menuad.jsp" />
     </head>
@@ -88,7 +162,7 @@
                                         <div class="form-group col-lg-6">
                                             <label for="confirm_password" class="control-label col-lg-4">Nhập lại mật khẩu <span class="required">*</span></label>
                                             <div class="col-lg-8">
-                                                <form:input path="matkhau" placeholder="Nhập lại mật khẩu" class=" form-control" id="matkhau" type="password"/>
+                                                <form:input path="matkhau" placeholder="Nhập lại mật khẩu" class=" form-control" id="confirm_password" type="password"/>
                                             </div>
                                         </div>
                                         <div class="form-group col-lg-6">
