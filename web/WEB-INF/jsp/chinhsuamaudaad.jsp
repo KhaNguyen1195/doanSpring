@@ -47,13 +47,13 @@
                                         <div class="form-group">
                                             <label for="mota" class="control-label col-lg-2">Mô tả</label>
                                             <div class="col-lg-10">
-                                                <form:input path="mota" placeholder="Mô tả" class=" form-control" id="mota"/>
+                                                <form:textarea path="mota" placeholder="Mô tả" class=" form-control" id="mota"/>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="col-lg-offset-2 col-lg-10">
                                                 <button class="btn btn-primary" type="submit">Lưu</button>
-                                                <a href="../danhsachmauda.htm" class="btn btn-success" type="button">Quay lại</a>
+                                                <a href="danhsachmauda.htm" class="btn btn-success" type="button">Quay lại</a>
                                             </div>
                                         </div>
                                     </form:form>

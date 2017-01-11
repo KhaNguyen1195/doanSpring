@@ -2,6 +2,7 @@ package entity;
 // Generated Jan 10, 2017 7:57:48 AM by Hibernate Tools 4.3.1
 
 
+
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.Column;

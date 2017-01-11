@@ -42,7 +42,7 @@
                             <div class="giasp"><span style="color:red">${sp.giaban} VNĐ</span></div>
                             <div class="status"><span style="font-weight:bold;">Tình trạng:</span><span style="color:red"> Còn hàng</span></div>
                             <div class="mua">
-                                <a href="giohang.htm" class="btn btn-primary btn-md">Thêm vào giỏ hàng</a>
+                                <a href="../giohang.htm" class="btn btn-primary btn-md">Thêm vào giỏ hàng</a>
                                 <a href="../sanphamloaitrangsuc.htm" class="btn btn-success btn-md">Quay lại</a>
                             </div>
                             <div class="chitiet">Gọi đặt mua ngay TP.Đà Nẵng: 0905153806 hoặc 0905160719</div>

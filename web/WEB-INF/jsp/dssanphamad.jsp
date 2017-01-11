@@ -61,8 +61,6 @@
                                             </td>-->
                                             <td>
                                                 <div class="kc">
-                                                    <a href="" class=" btn btn-default btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xem chi tiết">
-                                                        <i class="fa fa-info"></i></a>
                                                     <a href="chinhsuasanpham/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
                                                         <i class="fa fa-pencil"></i></a>
                                                         <a href="xoasanpham.htm?id=${item.id}" onclick="return confirm('Bạn chắc chắn muốn xóa?')" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">

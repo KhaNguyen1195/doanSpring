@@ -65,13 +65,13 @@ public class KhachHangController {
     @RequestMapping(value = "dangky", method=RequestMethod.GET)
     public String redirectCreateKH(Model m){
         m.addAttribute("khachhang", new Khachhang());
-        m.addAttribute("action", "themkhachhang");
+        m.addAttribute("action", "avc");
         return "DangKy";
     }
     
-    @RequestMapping(value = "themkhachhang",method = RequestMethod.POST)
+    @RequestMapping(value = "avc",method = RequestMethod.POST)
     public String createKH(@ModelAttribute(value = "khachhang") Khachhang kh){
-        //System.out.println("====>"+ts.getId()+"-"+ts.getTen());
+        System.out.println("====>"+kh.getId()+"-"+kh.getTen());
         KhachHangModel model = new KhachHangModel();
         model.CreateKhachHang(kh);
         return "redirect:trangchu.htm";

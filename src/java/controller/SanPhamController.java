@@ -15,6 +15,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import model.ChatLieuModel;
+import model.ChiTietSanPhamModel;
 import model.ChungLoaiModel;
 import model.LoaiDaModel;
 import model.LoaiVangModel;
