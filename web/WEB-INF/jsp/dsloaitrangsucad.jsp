@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <ol class="breadcrumb">
-                            <li><i class="fa fa-home"></i><a href="admin.htm">Trang chủ</a></li>
+                            <li><i class="fa fa-home"></i><a href="quantri.htm">Trang chủ</a></li>
                             <li><i class="fa fa-list-alt"></i>Quản lý danh mục</li>
                             <li>Loại trang sức</li>
                         </ol>
@@ -49,7 +49,7 @@
                                     <div class="form-group col-lg-offset-6 col-lg-6">
                                         <button class="btn btn-warning" type="submit" name="search">Tìm kiếm</button>
                                     </div>
-                                </fom>
+                                    </fom>
                             </div>
                             <br>
                             <div class="table-responsive ">
@@ -59,7 +59,7 @@
                                             <th class="kc">#</th>
                                             <th class="kc">Mã loại trang sức</th>
                                             <th class="kc">Tên loại trang sức</th>
-                                            <th class="kc" style="width:600px;">Mô tả</th>
+                                            <th class="kc" style="width:400px;">Mô tả</th>
                                             <th class="kc" style="min-width:50px;">Hành động</th>
                                         </tr>
                                     </thead>
@@ -70,17 +70,19 @@
                                                 <td class="kc">${item.ma}</td>
                                                 <td class="kc">${item.ten}</td>
                                                 <td class="kc">${item.mota}</td>
+                                                
                                                 <td>
-                                                    <div class="kc">
+                                                
+                                        <div class="kc">
 
-                                                        <a href="chinhsualoaitrangsuc/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
-                                                            <i class="fa fa-pencil"></i></a>
-                                                        <a href="xoaloaitrangsuc.htm?id=${item.id}" onclick="return confirm('Bạn chắc chắn muốn xóa?')" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
-                                                            <i class="fa fa-trash-o"></i></a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </c:forEach> 
+                                            <a href="chinhsualoaitrangsuc/${item.id}" class=" btn btn-info btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Chỉnh sửa">
+                                                <i class="fa fa-pencil"></i></a>
+                                            <a href="xoaloaitrangsuc.htm?id=${item.id}" onclick="return confirm('Bạn chắc chắn muốn xóa?')" class=" btn btn-danger btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xóa">
+                                                <i class="fa fa-trash-o"></i></a>
+                                        </div>
+                                        </td>
+                                        </tr>
+                                    </c:forEach> 
                                     </tbody>
                                 </table>
                                 <br>

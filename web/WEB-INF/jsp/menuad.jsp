@@ -56,7 +56,7 @@
             </div>
 
             <!--logo start-->
-            <a href="admin.htm" class="logo">Quản trị <span class="lite">Hệ thống</span></a>
+            <a href="quantri.htm" class="logo">Quản trị <span class="lite">Hệ thống</span></a>
             <!--logo end-->
 
             <div class="top-nav notification-row">                
@@ -65,16 +65,16 @@
 
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="username">Jenifer Smith</span>
+                            <span class="username">${u.getTendangnhap()}</span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
                             <div class="log-arrow-up"></div>
                             <li class="eborder-top">
-                                <a href="#"><i class="icon_profile"></i> My Profile</a>
+                                <a href="doimatkhau.htm"><i class="icon_profile"></i> Đổi mật khẩu</a>
                             </li>
                             <li>
-                                <a href="login.html"><i class="icon_key_alt"></i> Log Out</a>
+                                <a href="dangXuatAdmin.htm"><i class="icon_key_alt"></i> Đăng xuất</a>
                             </li>
                         </ul>
                     </li>
@@ -91,7 +91,7 @@
                 <!-- sidebar menu start-->
                 <ul class="sidebar-menu">                
                     <li class="active">
-                        <a class="" href="admin.htm">
+                        <a class="" href="quantri.htm">
                             <i class="icon_house_alt"></i>
                             <span>Trang chủ</span>
                         </a>

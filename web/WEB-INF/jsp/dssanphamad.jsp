@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <ol class="breadcrumb">
-                            <li><i class="fa fa-home"></i><a href="admin.htm">Trang chủ</a></li>
+                            <li><i class="fa fa-home"></i><a href="quantri.htm">Trang chủ</a></li>
                             <li><i class="fa fa-list-alt"></i>Quản lý danh mục</li>
                             <li>Sản phẩm</li>
                         </ol>
@@ -42,7 +42,6 @@
                                             <th class="kc">Trang sức</th>
                                             <th class="kc">Thương hiệu</th>
                                             <th class="kc">Chủng loại</th>
-                                            <th class="kc"  style="max-width: 50px;">Hình ảnh</th>
                                             <th class="kc" style="min-width:50px;">Hành động</th>
                                         </tr>
                                     </thead>
@@ -55,11 +54,11 @@
                                             <td class="kc">${item.trangsuc.ten}</td>
                                             <td class="kc">${item.thuonghieu.ten}</td>
                                             <td class="kc">${item.chungloai.ten}</td>
-                                            <td>
+                                            <!--<td>
                                                 <img src="<c:url value="/libs/img/${item.img}" />" 
-                                                     alt="" max-width="100" height="100" 
+                                                     alt="" width="100" height="100" 
                                                      style="border: 1px solid #eeeeee;"/>
-                                            </td>
+                                            </td>-->
                                             <td>
                                                 <div class="kc">
                                                     <a href="" class=" btn btn-default btn-sm tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Xem chi tiết">

@@ -25,16 +25,20 @@
         <!-- Loại trang sức -->
         <div id="home-blog">
             <div class="container content">
+                
                 <div class="col-md-12">
+                    
                     <div class="col-md-4 col-sm-2 chitietimg">
-                        <img id="demo" src="${pageContext.request.contextPath}/libs/img/nhan-nu-kim-cuong-vang-trang-14k1_1_1.jpg" 
+                        <img id="demo" src="${pageContext.request.contextPath}/libs/img/nhan-nu-ruby-vang-18k.jpg" 
                              style="width: 100%; height: 326px; top: 0px; left: 0px;border: 1px solid #e5e5e5;"/>
                     </div>
+                    <c:forEach var="item" items="${lstsanpham}" varStatus="status">
                     <div class="col-md-8">
+                        
                         <div class="col-md-12 content-info">
-                            <div class="tensp"><h2>Bông tai Kim Cương Vàng trắng 14k</h2></div>
-                            <div class="masp"><span style="font-weight:bold">Mã sản phẩm:</span><span style="color:blue"> GCTRWA81088.500</span></div>				
-                            <div class="giasp"><span style="color:red">23,618,000 VND</span></div>
+                            <div class="tensp"><h2>${item.ten}</h2></div>
+                            <div class="masp"><span style="font-weight:bold">Mã sản phẩm:</span><span style="color:blue"> ${item.ma}</span></div>				
+                            <div class="giasp"><span style="color:red">${item.giaban} VNĐ</span></div>
                             <div class="status"><span style="font-weight:bold;">Tình trạng:</span><span style="color:red"> Còn hàng</span></div>
                             <div class="mua"><a href="giohang.htm" class="btn btn-primary btn-md">Thêm vào giỏ hàng</a></div>
                             <div class="chitiet">Gọi đặt mua ngay TP.Đà Nẵng: 0905153806 hoặc 0905160719</div>
@@ -42,8 +46,10 @@
                             <div class="chitiet">- Giao hàng tận nơi. <a href="">Tìm hiểu</a></div>
                             <div class="chitiet">- Thanh toán an toàn tiện lợi. <a href="">Tìm hiểu</a></div>
                         </div>
+                        
                     </div>
-                </div>	
+                    </c:forEach>
+                </div>
                 <div class="col-md-12 image">
                     <img src="${pageContext.request.contextPath}/libs/img/banner4.jpg" width="100%"/>
                 </div>

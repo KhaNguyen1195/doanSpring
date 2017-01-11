@@ -1,5 +1,5 @@
 package entity;
-// Generated Jan 6, 2017 10:56:46 AM by Hibernate Tools 4.3.1
+// Generated Jan 10, 2017 7:57:48 AM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -224,10 +224,7 @@ public class Sanpham  implements java.io.Serializable {
 
     @Override
     public String toString() {
-        return "Sanpham{" + "id=" + id + ", chatlieu=" + chatlieu + ", chungloai=" + chungloai + ","
-                + " loaida=" + loaida + ", loaivang=" + loaivang + ", mauda=" + mauda + ","
-                + " thuonghieu=" + thuonghieu + ", trangsuc=" + trangsuc + ", ten=" + ten + ","
-                + " ma=" + ma + ", giaban=" + giaban + ", mota=" + mota + ", img=" + img + '}';
+        return "Sanpham{" + "id=" + id + ", chatlieu=" + chatlieu + ", chungloai=" + chungloai + ", loaida=" + loaida + ", loaivang=" + loaivang + ", mauda=" + mauda + ", thuonghieu=" + thuonghieu + ", trangsuc=" + trangsuc + ", ten=" + ten + ", ma=" + ma + ", giaban=" + giaban + ", mota=" + mota + ", img=" + img + '}';
     }
 
 

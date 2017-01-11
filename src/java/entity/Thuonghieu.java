@@ -1,8 +1,7 @@
 package entity;
-// Generated Jan 6, 2017 10:56:46 AM by Hibernate Tools 4.3.1
+// Generated Jan 10, 2017 7:57:48 AM by Hibernate Tools 4.3.1
 
 
-import com.sun.istack.internal.NotNull;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.Column;

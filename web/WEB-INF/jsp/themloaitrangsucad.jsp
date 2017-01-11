@@ -1,7 +1,7 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
+
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@page contentType="text/html; charset=utf-8" pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,7 +11,6 @@
             jQuery(document).ready(function ($) {
 
                 $("#register-form").validate({
-                    debug: true,
                     rules: {
                         ten: {
                             required: true,
@@ -21,7 +20,6 @@
                             required: true,
                             minlength: 4
                         }
-                        
                     },
                     messages: {
                         ten: {
@@ -34,8 +32,8 @@
                         }
                     }
                 });
-            });
 
+            });
         </script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <jsp:include page="menuad.jsp" />
@@ -46,7 +44,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <ol class="breadcrumb">
-                            <li><i class="fa fa-home"></i><a href="admin.htm">Trang chủ</a></li>
+                            <li><i class="fa fa-home"></i><a href="quantri.htm">Trang chủ</a></li>
                             <li><i class="fa fa-list-alt"></i>Quản lý danh mục</li>
                             <li>Danh sách loại trang sức</li>
                             <li>Thêm mới</li>
@@ -74,11 +72,16 @@
                                                 <form:input path="ten" placeholder="Tên loại trang sức" class=" form-control" id="ten"/>
                                             </div>
                                         </div>
-
                                         <div class="form-group">
                                             <label for="mota" class="control-label col-lg-2">Mô tả</label>
                                             <div class="col-lg-10">
-                                                <form:textarea path="mota" placeholder="Mô tả" class=" form-control" id="mota"/>
+                                                <form:input path="mota" placeholder="Mô tả" class=" form-control" id="mota"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile" class="control-label col-lg-2">Hình ảnh</label>
+                                            <div class="col-lg-10">
+                                                <form:input type="file" path="imgUrl" id="exampleInputFile"/>
                                             </div>
                                         </div>
                                         <div class="form-group">

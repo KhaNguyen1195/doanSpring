@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,8 +18,9 @@
                     </div>
                 </div>
                 <div class="row">
+                    <c:forEach var="item" items="${lstloaitrangsuc}" varStatus="status"> 
                     <div class="col-sm-4 loaitrangsuc-item" >
-                        <h3 style="text-align:center; font-size:20px;"><span>Trang sức đá quý</span></h3>
+                        <h3 style="text-align:center; font-size:20px;"><span>${item.ten}</span></h3>
                         <a href="sanphamloaitrangsuc.htm" class="loaitrangsuc-link">
                             <div class="caption">
                                 <div class="caption-content">
@@ -29,61 +30,7 @@
                             <img src="${pageContext.request.contextPath}/libs/img/trangsuckimcuong.jpg" class="img-responsive loaitrangsuc" alt="">
                         </a>
                     </div>
-                    <div class="col-sm-4 loaitrangsuc-item">
-                        <h3 style="text-align:center; font-size:20px;"><span>Trang sức đá quý</span></h3>
-                        <a href="sanphamloaitrangsuc.htm" class="loaitrangsuc-link">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="${pageContext.request.contextPath}/libs/img/trangsuckimcuong.jpg" class="img-responsive loaitrangsuc" alt="">
-                        </a>
-                    </div>
-                    <div class="col-sm-4 loaitrangsuc-item">
-                        <h3 style="text-align:center; font-size:20px;"><span>Trang sức đá quý</span></h3>
-                        <a href="sanphamloaitrangsuc.htm" class="loaitrangsuc-link">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="${pageContext.request.contextPath}/libs/img/trangsuckimcuong.jpg" class="img-responsive loaitrangsuc" alt="">
-                        </a>
-                    </div>
-                    <div class="col-sm-4 loaitrangsuc-item">
-                        <h3 style="text-align:center; font-size:20px;"><span>Trang sức đá quý</span></h3>
-                        <a href="sanphamloaitrangsuc.htm" class="loaitrangsuc-link">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="${pageContext.request.contextPath}/libs/img/trangsuckimcuong.jpg" class="img-responsive loaitrangsuc" alt="">
-                        </a>
-                    </div>
-                    <div class="col-sm-4 loaitrangsuc-item">
-                        <h3 style="text-align:center; font-size:20px;"><span>Trang sức đá quý</span></h3>
-                        <a href="sanphamloaitrangsuc.htm" class="loaitrangsuc-link">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="${pageContext.request.contextPath}/libs/img/trangsuckimcuong.jpg" class="img-responsive loaitrangsuc" alt="">
-                        </a>
-                    </div>
-                    <div class="col-sm-4 loaitrangsuc-item">
-                        <h3 style="text-align:center; font-size:20px;"><span>Trang sức đá quý</span></h3>
-                        <a href="sanphamloaitrangsuc.htm" class="loaitrangsuc-link">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="${pageContext.request.contextPath}/libs/img/trangsuckimcuong.jpg" class="img-responsive loaitrangsuc" alt="">
-                        </a>
-                    </div>
+                    </c:forEach> 
                 </div>
             </div>
         </section>

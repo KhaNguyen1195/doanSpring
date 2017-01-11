@@ -1,5 +1,5 @@
 package entity;
-// Generated Jan 6, 2017 10:56:46 AM by Hibernate Tools 4.3.1
+// Generated Jan 10, 2017 7:57:48 AM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -106,8 +106,7 @@ public class Trangsuc  implements java.io.Serializable {
 
     @Override
     public String toString() {
-        return "Trangsuc{" + "id=" + id + ", loaitrangsuc=" + loaitrangsuc + ", ten=" + ten + ","
-                + " ma=" + ma + ", mota=" + mota + '}';
+        return "Trangsuc{" + "id=" + id + ", loaitrangsuc=" + loaitrangsuc + ", ten=" + ten + ", ma=" + ma + ", mota=" + mota + '}';
     }
 
 

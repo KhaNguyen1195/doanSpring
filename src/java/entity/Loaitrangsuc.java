@@ -1,5 +1,5 @@
 package entity;
-// Generated Jan 6, 2017 10:56:46 AM by Hibernate Tools 4.3.1
+// Generated Jan 10, 2017 7:57:48 AM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -27,15 +27,17 @@ public class Loaitrangsuc  implements java.io.Serializable {
      private String ten;
      private String ma;
      private String mota;
+     private String imgUrl;
      private Set<Trangsuc> trangsucs = new HashSet<Trangsuc>(0);
 
     public Loaitrangsuc() {
     }
 
-    public Loaitrangsuc(String ten, String ma, String mota, Set<Trangsuc> trangsucs) {
+    public Loaitrangsuc(String ten, String ma, String mota, String imgUrl, Set<Trangsuc> trangsucs) {
        this.ten = ten;
        this.ma = ma;
        this.mota = mota;
+       this.imgUrl = imgUrl;
        this.trangsucs = trangsucs;
     }
    
@@ -81,6 +83,16 @@ public class Loaitrangsuc  implements java.io.Serializable {
         this.mota = mota;
     }
 
+    
+    @Column(name="imgUrl", length=500)
+    public String getImgUrl() {
+        return this.imgUrl;
+    }
+    
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
 @OneToMany(fetch=FetchType.LAZY, mappedBy="loaitrangsuc")
     public Set<Trangsuc> getTrangsucs() {
         return this.trangsucs;
@@ -88,6 +100,11 @@ public class Loaitrangsuc  implements java.io.Serializable {
     
     public void setTrangsucs(Set<Trangsuc> trangsucs) {
         this.trangsucs = trangsucs;
+    }
+
+    @Override
+    public String toString() {
+        return "Loaitrangsuc{" + "id=" + id + ", ten=" + ten + ", ma=" + ma + ", mota=" + mota + ", imgUrl=" + imgUrl + '}';
     }
 
 

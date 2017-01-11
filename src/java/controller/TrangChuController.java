@@ -1,5 +1,6 @@
 package controller;
 
+import model.LoaiTrangSucModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,9 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class TrangChuController {
     @RequestMapping(value = "/trangchu", method = RequestMethod.GET)
     public String getallTrangChu(Model m) {
-        //ChatLieuModel model = new ChatLieuModel();
-        //m.addAttribute("lstchatlieu", model.getAllChatLieu());
-        //System.out.println("//=================="+model.getAll().size());
+        LoaiTrangSucModel model = new LoaiTrangSucModel();
+        m.addAttribute("lstloaitrangsuc",model.getAllLoaiTrangSuc());
         return "TrangChu";
     }
 }
