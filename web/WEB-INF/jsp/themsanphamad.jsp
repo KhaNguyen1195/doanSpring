@@ -21,39 +21,11 @@
                             required: true,
                             minlength: 5
                         },
-                        tendangnhap: {
-                            required: true,
-                            minlength: 5
-                        },
-                        matkhau: {
-                            required: true,
-                            minlength: 5
-                        },
-                        sodienthoai: {
-                            required: true,
-                            minlength: 5
-                        },
-                        diachi: {
-                            required: true
-                        },
-                        confirm_password: {
+                        giaban: {
                             required: true,
                             minlength: 5,
-                            equalTo: "#password"
-                        },
-                        ngaysinh: {
-                            required: true,
-                            email: true
-                        },
-                        email: {
-                            required: true,
-                            email: true
-                        },
-                        topic: {
-                            required: "#newsletter:checked",
-                            minlength: 2
-                        },
-                        'loaitrangsuc': "required"
+                            number: true
+                        }
                     },
                     messages: {
                         ten: {
@@ -64,29 +36,11 @@
                             required: '<span style="color:red;">Vui lòng nhập mã.</span>',
                             minlength: '<span style="color:red;">Mã của bạn phải trên 5 ký tự.</span>'
                         },
-                        tendangnhap: {
-                            required: "Vui lòng nhập tên đăng nhập.",
-                            minlength: "Tên đăng nhập của bạn phải trên 5 ký tự."
-                        },
-                        matkhau: {
-                            required: "Vui lòng nhập mật khẩu.",
-                            minlength: "Mật khẩu của bạn phải trên 5 ký tự."
-                        },
-                        confirm_password: {
-                            required: "Vui lòng nhập lại mật khẩu.",
-                            minlength: "Mật khẩu của bạn phải trên 5 ký tự.",
-                            equalTo: "Nhập đúng mật khẩu bạn vừa nhập."
-                        },
-                        sodienthoai: {
-                            required: "Vui lòng nhập số điện thoại.",
-                            minlength: "số điện thoại của bạn phải trên 5 ký tự."
-                        },
-                        diachi: {
-                            required: "Vui lòng nhập điạ chỉ."
-                        },
-                        email: "Vui lòng nhập đúng định dạng email.",
-                        ngaysinh: "Vui lòng nhập đúng định dạng ngày sinh.",
-                        'loaitrangsuc': '<span style="color:red;"> Vui lòng chọn trang sức</span>'
+                        giaban: {
+                            required: '<span style="color:red;">Vui lòng nhập giá bán.</span>',
+                            minlength: '<span style="color:red;">Mã của bạn phải trên 5 ký tự.</span>',
+                            number: '<span style="color:red;"> Vui lòng nhập đúng định dạng số</span>'
+                        }
                     }
                 });
             });

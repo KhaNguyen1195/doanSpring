@@ -27,7 +27,7 @@
                             <header class="panel-heading"><h2><strong>Chất liệu</strong></h2></header>
                             <div class="panel-body">
                                 <div class="form">
-                                    <form:form action="capnhatchatlieu.htm" modelAttribute="chatlieu" class="form-group form-validate form-horizontal" id="register-form">
+                                    <form:form action="${action}" modelAttribute="chatlieu" class="form-group form-validate form-horizontal" id="register-form">
                                         <div class="form-group">
                                             <label for="ma" class="control-label col-lg-2">Mã chất liệu <span class="required">*</span></label>
                                             <div class="col-lg-10">

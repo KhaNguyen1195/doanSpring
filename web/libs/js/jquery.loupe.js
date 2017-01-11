@@ -17,7 +17,7 @@
 				move, hide = function () { $loupe.hide(); },
 				time;
 
-			if ($this.data('loupe') != null) {
+			if ($this.data('loupe') !== null) {
 				return $this.data('loupe', arg);
 			}
 

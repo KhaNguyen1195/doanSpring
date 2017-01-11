@@ -5,12 +5,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <jsp:include page="MenuTC.jsp" />
+        <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/cdnjs.cloudflare.com_ajax_libs_jquery-easing_1.3_jquery.easing.min.js"></script>
+            <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/ajax.googleapis.com_ajax_libs_jquery_1_jquery.min.js"></script>
         <style type="text/css" media="screen">
             .loupe { background-color:#555; background:rgba(0, 0, 0, 0.25); border:5px solid rgba(0, 0, 0, 0); 
                      cursor:url(../img/blank.png), url(blank.cur), none;}
             </style>
-            <script src="<c:url value="/libs/js/jquery.loupe.js" />"></script>
-            <script type="text/javascript">                
+            <script src="${pageContext.request.contextPath}/libs/js/jquery.loupe.js" />></script>
+            <script type="text/javascript">
                 jQuery(document).ready(function ($) {
 
                     $('#demo').loupe();
@@ -25,30 +27,32 @@
         <!-- Loại trang sức -->
         <div id="home-blog">
             <div class="container content">
-                
+
                 <div class="col-md-12">
-                    
+
                     <div class="col-md-4 col-sm-2 chitietimg">
-                        <img id="demo" src="${pageContext.request.contextPath}/libs/img/nhan-nu-ruby-vang-18k.jpg" 
+                        <img class="demo" src="<c:url value="/libs/img/${sp.img}" />" 
                              style="width: 100%; height: 326px; top: 0px; left: 0px;border: 1px solid #e5e5e5;"/>
                     </div>
-                    <c:forEach var="item" items="${lstsanpham}" varStatus="status">
-                    <div class="col-md-8">
-                        
-                        <div class="col-md-12 content-info">
-                            <div class="tensp"><h2>${item.ten}</h2></div>
-                            <div class="masp"><span style="font-weight:bold">Mã sản phẩm:</span><span style="color:blue"> ${item.ma}</span></div>				
-                            <div class="giasp"><span style="color:red">${item.giaban} VNĐ</span></div>
-                            <div class="status"><span style="font-weight:bold;">Tình trạng:</span><span style="color:red"> Còn hàng</span></div>
-                            <div class="mua"><a href="giohang.htm" class="btn btn-primary btn-md">Thêm vào giỏ hàng</a></div>
-                            <div class="chitiet">Gọi đặt mua ngay TP.Đà Nẵng: 0905153806 hoặc 0905160719</div>
-                            <div class="chitiet">- Bảo hành sản phẩm. <a href="">Tìm hiểu</a></div>
-                            <div class="chitiet">- Giao hàng tận nơi. <a href="">Tìm hiểu</a></div>
-                            <div class="chitiet">- Thanh toán an toàn tiện lợi. <a href="">Tìm hiểu</a></div>
+                    
+                        <div class="col-md-8">
+
+                            <div class="col-md-12 content-info">
+                                <div class="tensp"><h2>${sp.ten}</h2></div>
+                                <div class="masp"><span style="font-weight:bold">Mã sản phẩm:</span><span style="color:blue"> ${sp.ma}</span></div>				
+                                <div class="giasp"><span style="color:red">${sp.giaban} VNĐ</span></div>
+                                <div class="status"><span style="font-weight:bold;">Tình trạng:</span><span style="color:red"> Còn hàng</span></div>
+                                <div class="mua">
+                                    <a href="giohang.htm" class="btn btn-primary btn-md">Thêm vào giỏ hàng</a>
+                                    <a href="../sanphamloaitrangsuc.htm" class="btn btn-success btn-md">Quay lại</a>
+                                </div>
+                                <div class="chitiet">Gọi đặt mua ngay TP.Đà Nẵng: 0905153806 hoặc 0905160719</div>
+                                <div class="chitiet">- Bảo hành sản phẩm. <a href="">Tìm hiểu</a></div>
+                                <div class="chitiet">- Giao hàng tận nơi. <a href="">Tìm hiểu</a></div>
+                                <div class="chitiet">- Thanh toán an toàn tiện lợi. <a href="">Tìm hiểu</a></div>
+                            </div>
+
                         </div>
-                        
-                    </div>
-                    </c:forEach>
                 </div>
                 <div class="col-md-12 image">
                     <img src="${pageContext.request.contextPath}/libs/img/banner4.jpg" width="100%"/>

@@ -60,7 +60,7 @@ public class ChatLieuController {
     }
 
     //update
-    @RequestMapping(value = "chinhsuachatlieu/capnhatchatlieu", method = RequestMethod.POST, produces = "application/x-www-form-urlencoded;charset=UTF-8")
+    @RequestMapping(value = "chinhsuachatlieu/capnhatchatlieu", method = RequestMethod.POST)
     public String updateCHL(@ModelAttribute(value = "chatlieu") Chatlieu chl) {
         ChatLieuModel model = new ChatLieuModel();
         //System.out.println("loaitrangsuc"+lts.toString());
