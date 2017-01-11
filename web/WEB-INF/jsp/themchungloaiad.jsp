@@ -5,38 +5,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="<c:url value="/libs/js/jquery-ad.js" />"></script>
-        <script type="text/javascript" src="<c:url value="/libs/js/jquery.validate.min.js" />"></script>
-        <script type="text/javascript">
-            jQuery(document).ready(function ($) {
-
-                $("#register-form").validate({
-                    debug: true,
-                    rules: {
-                        ten: {
-                            required: true,
-                            minlength: 5
-                        },
-                        ma: {
-                            required: true,
-                            minlength: 5
-                        }
-                        
-                    },
-                    messages: {
-                        ten: {
-                            required: '<span style="color:red;">Vui lòng nhập tên.</span>',
-                            minlength: '<span style="color:red;">Tên của bạn phải trên 5 ký tự.</span>'
-                        },
-                        ma: {
-                            required: '<span style="color:red;">Vui lòng nhập mã.</span>',
-                            minlength: '<span style="color:red;">Mã của bạn phải trên 5 ký tự.</span>'
-                        }
-                    }
-                });
-            });
-
-        </script>
+        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <jsp:include page="menuad.jsp" />
     </head>
@@ -60,7 +29,7 @@
                             <header class="panel-heading"><h2><strong>Chủng loại</strong></h2></header>
                             <div class="panel-body">
                                 <div class="form">
-                                    <form:form action="${action}" modelAttribute="chungloai" class="form-group form-validate form-horizontal" id="register-form">
+                                    <form:form action="${action}" modelAttribute="chungloai" class="form-group form-validate form-horizontal" id="chungloaiform">
                                         <div class="form-group">
                                             <label for="ma" class="control-label col-lg-2">Mã chủng loại <span class="required">*</span></label>
                                             <div class="col-lg-10">
@@ -98,4 +67,36 @@
             </section>
         </section>
     </body>
+    <script src="<${pageContext.request.contextPath}/libs/js/jquery-ad.js" /></script>
+        <script type="text/javascript" src="<${pageContext.request.contextPath}/libs/js/jquery.validate.min.js" /></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+
+                $("#chungloaiform").validate({
+                    debug: true,
+                    rules: {
+                        ten: {
+                            required: true,
+                            minlength: 5
+                        },
+                        ma: {
+                            required: true,
+                            minlength: 5
+                        }
+                        
+                    },
+                    messages: {
+                        ten: {
+                            required: '<span style="color:red;">Vui lòng nhập tên.</span>',
+                            minlength: '<span style="color:red;">Tên của bạn phải trên 5 ký tự.</span>'
+                        },
+                        ma: {
+                            required: '<span style="color:red;">Vui lòng nhập mã.</span>',
+                            minlength: '<span style="color:red;">Mã của bạn phải trên 5 ký tự.</span>'
+                        }
+                    }
+                });
+            });
+
+        </script>
 </html>

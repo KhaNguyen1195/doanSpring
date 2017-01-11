@@ -5,46 +5,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="<c:url value="/libs/js/jquery-ad.js" />"></script>
-        <script type="text/javascript" src="<c:url value="/libs/js/jquery.validate.min.js" />"></script>
-        <script type="text/javascript">
-            jQuery(document).ready(function ($) {
-
-                $("#register-form").validate({
-                    debug: true,
-                    rules: {
-                        gianhap1sp: {
-                            required: true,
-                            number:true
-                        },
-                        soluong: {
-                            required: true,
-                            number: true
-                        },
-                        tongtrigia: {
-                            required: true,
-                            number:true
-                        }
-                        
-                    },
-                    messages: {
-                        gianhap1sp: {
-                            required: '<span style="color:red;">Vui lòng nhập giá của sản phẩm.</span>',
-                            number: '<span style="color:red;"> Vui lòng nhập đúng định dạng số</span>'
-                        },
-                        soluong: {
-                            required: '<span style="color:red;">Vui lòng nhập số lượng.</span>',
-                            number: '<span style="color:red;"> Vui lòng nhập đúng định dạng số</span>'
-                        },
-                        tongtrigia: {
-                            required: '<span style="color:red;">Vui lòng nhập tổng giá trị.</span>',
-                            number: '<span style="color:red;"> Vui lòng nhập đúng định dạng số</span>'
-                        }
-                    }
-                });
-            });
-
-        </script>
+        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <jsp:include page="menuad.jsp" />
     </head>
@@ -69,7 +30,7 @@
                             <header class="panel-heading"><h2><strong>Kho hàng</strong></h2></header>
                             <div class="panel-body">
                                 <div class="form">
-                                    <form:form action="${action}" modelAttribute="khohang" class="form-group form-validate form-horizontal" id="register-form">
+                                    <form:form action="${action}" modelAttribute="khohang" class="form-group form-validate form-horizontal" id="khohangform">
                                         <form:hidden path="id"/>
                                         <div class="form-group">
                                             <label class="control-label col-lg-2">Sản phẩm <span class="required">*</span></label>
@@ -122,4 +83,44 @@
         </section>
         <!--main content end-->
     </body>
+    <script src="${pageContext.request.contextPath}/libs/js/jquery-ad.js" ></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/libs/js/jquery.validate.min.js" ></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+
+                $("#khohangform").validate({
+                    debug: true,
+                    rules: {
+                        gianhap1sp: {
+                            required: true,
+                            number:true
+                        },
+                        soluong: {
+                            required: true,
+                            number: true
+                        },
+                        tongtrigia: {
+                            required: true,
+                            number:true
+                        }
+                        
+                    },
+                    messages: {
+                        gianhap1sp: {
+                            required: '<span style="color:red;">Vui lòng nhập giá của sản phẩm.</span>',
+                            number: '<span style="color:red;"> Vui lòng nhập đúng định dạng số</span>'
+                        },
+                        soluong: {
+                            required: '<span style="color:red;">Vui lòng nhập số lượng.</span>',
+                            number: '<span style="color:red;"> Vui lòng nhập đúng định dạng số</span>'
+                        },
+                        tongtrigia: {
+                            required: '<span style="color:red;">Vui lòng nhập tổng giá trị.</span>',
+                            number: '<span style="color:red;"> Vui lòng nhập đúng định dạng số</span>'
+                        }
+                    }
+                });
+            });
+
+        </script>
 </html>
