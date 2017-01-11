@@ -5,59 +5,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="<c:url value="/libs/js/jquery-ad.js" />"></script>
-        <script type="text/javascript" src="<c:url value="/libs/js/jquery.validate.min.js" />"></script>
-        <script type="text/javascript">
-            jQuery(document).ready(function ($) {
-
-                $("#register-form").validate({
-                    debug: true,
-                    rules: {
-                        ten: {
-                            required: true,
-                            minlength: 5
-                        },
-                        ma: {
-                            required: true,
-                            minlength: 5
-                        },
-                        hinhdang: {
-                            required: true
-                        },
-                        kichthuoc: {
-                            required: true,
-                            number:true
-                        },
-                        chatluong: {
-                            required: true
-                        }
-                        
-                    },
-                    messages: {
-                        ten: {
-                            required: '<span style="color:red;">Vui lòng nhập tên.</span>',
-                            minlength: '<span style="color:red;">Tên của bạn phải trên 5 ký tự.</span>'
-                        },
-                        ma: {
-                            required: '<span style="color:red;">Vui lòng nhập mã.</span>',
-                            minlength: '<span style="color:red;">Mã của bạn phải trên 5 ký tự.</span>'
-                        },
-                        hinhdang: {
-                            required: '<span style="color:red;">Vui lòng nhập hình dáng đá.</span>'
-                        }
-                        ,
-                        kichthuoc: {
-                            required: '<span style="color:red;">Vui lòng nhập kích thước đá.</span>',
-                            number: '<span style="color:red;"> Vui lòng nhập đúng định dạng số</span>'
-                        },
-                        chatluong: {
-                            required: '<span style="color:red;">Vui lòng nhập chất lượng.</span>'
-                        }
-                    }
-                });
-            });
-
-        </script>
+        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <jsp:include page="menuad.jsp" />
     </head>
