@@ -1,7 +1,6 @@
 package controller;
 
-import model.LoaiTrangSucModel;
-import model.TrangSucModel;
+import model.SanPhamModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,8 +12,8 @@ public class TrangChuLTSController {
     
     @RequestMapping(value = "sanphamloaitrangsuc",method = RequestMethod.GET)
     public String getallTrangChuLTS(Model m){
-        TrangSucModel model = new TrangSucModel();
-        m.addAttribute("lsttrangsuc",model.getAllTrangSuc());
+        SanPhamModel model = new SanPhamModel();
+        m.addAttribute("lstsanpham", model.getAllSanPham());
         return "TrangChuLTS";
     }
     
