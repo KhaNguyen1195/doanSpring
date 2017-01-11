@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping(value = "/")
 public class ChatLieuController {
 
-    @RequestMapping(value = "/danhsachchatlieu", method = RequestMethod.GET)
+    @RequestMapping(value = "danhsachchatlieu", method = RequestMethod.GET)
     public String getallCHL(Model m) {
         ChatLieuModel model = new ChatLieuModel();
         m.addAttribute("lstchatlieu", model.getAllChatLieu());
@@ -35,15 +35,22 @@ public class ChatLieuController {
 
     // insert 
     //chuyển từ all sang create
-    @RequestMapping(value = "/chatlieu", method = RequestMethod.GET)
+    @RequestMapping(value = "chatlieu", method = RequestMethod.GET)
     public String redirectCreateCHL(Model m) {
         m.addAttribute("chatlieu", new Chatlieu());
         m.addAttribute("action", "themchatlieu");
         return "themchatlieuad";
     }
 
-    @RequestMapping(value = "themchatlieu", method = RequestMethod.POST)
+    /*@RequestMapping(value = "themchatlieu", method = RequestMethod.POST)
     public String createCHL(@ModelAttribute(value = "chatlieu") Chatlieu chl) {
+        ChatLieuModel model = new ChatLieuModel();
+        model.CreateChatLieu(chl);
+        return "redirect:danhsachchatlieu.htm";
+    }*/
+    @RequestMapping(value = "themchatlieu",method = RequestMethod.POST)
+    public String createCHL(@ModelAttribute(value = "chatlieu") Chatlieu chl){
+        //System.out.println("====>"+ts.getId()+"-"+ts.getTen());
         ChatLieuModel model = new ChatLieuModel();
         model.CreateChatLieu(chl);
         return "redirect:danhsachchatlieu.htm";

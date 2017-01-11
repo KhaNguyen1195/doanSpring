@@ -66,7 +66,8 @@
                             <header class="panel-heading"><h2><strong>Chất liệu</strong></h2></header>
                             <div class="panel-body">
                                 <div class="form">
-                                    <form:form action="${action}" modelAttribute="chatlieu" class="form-group form-validate form-horizontal" id="register-form">
+                                    <form:form action="${action}" modelAttribute="chatlieu" class="form-group form-horizontal" id="register-form">
+                                        <form:hidden path="id"/>
                                         <div class="form-group">
                                             <label for="ma" class="control-label col-lg-2">Mã chất liệu <span class="required">*</span></label>
                                             <div class="col-lg-10">
@@ -80,7 +81,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="mauchatlieu" class="control-label col-lg-2">Màu chất liệu <span class="required">*</span></label>
+                                            <label for="mauchatlieu" class="control-label col-lg-2">Màu chất liệu</label>
                                             <div class="col-lg-10">
                                                 <form:input path="mauchatlieu" placeholder="Màu chất liệu" class=" form-control" id="mauchatlieu"/>
                                             </div>
@@ -88,7 +89,7 @@
                                         <div class="form-group">
                                             <label for="mota" class="control-label col-lg-2">Mô tả</label>
                                             <div class="col-lg-10">
-                                               <form:input path="mota" placeholder="Mô tả" class=" form-control" id="mota"/>
+                                                <form:textarea path="mota" placeholder="Mô tả" class=" form-control" id="mota"/>
                                             </div>
                                         </div>
                                         <div class="form-group">

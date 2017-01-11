@@ -66,7 +66,7 @@
                             <a href="#thuonghieu">Thương hiệu</a>
                         </li>
                         <li class="page-scroll">
-                            <a href="#dangky" class="portfolio-link" data-toggle="modal">Đăng ký</a>
+                            <a href="dangky.htm">Đăng ký</a>
                         </li>
                         <li class="page-scroll">
                             <a href="#">Đăng nhập</a>

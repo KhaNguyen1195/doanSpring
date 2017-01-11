@@ -10,6 +10,7 @@ import model.LoaiTrangSucModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -82,7 +83,7 @@ public class LoaiTrangSucController {
     // end insert
     
     // edit
-    /*@RequestMapping(value = "chinhsualoaitrangsuc/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "chinhsualoaitrangsuc/{id}", method = RequestMethod.GET)
     public String showEditLTS(Model model, @PathVariable int id){
         LoaiTrangSucModel lts =new LoaiTrangSucModel();
         model.addAttribute("loaitrangsuc", lts.findLoaiTrangSuc(id));
@@ -99,7 +100,7 @@ public class LoaiTrangSucController {
         //System.out.println("loaitrangsuc"+lts.toString());
         model.editLoaiTrangSuc(lts);
         return "redirect:/danhsachloaitrangsuc.htm";
-    }*/
+    }
     
     // end edit
     

@@ -131,7 +131,7 @@
                                         <div class="form-group">
                                             <label for="mota" class="control-label col-lg-2">Mô tả</label>
                                             <div class="col-lg-10">
-                                                <form:input path="mota" placeholder="Mô tả" class=" form-control" id="mota"/>
+                                                <form:textarea path="mota" placeholder="Mô tả" class=" form-control" id="mota"/>
                                             </div>
                                         </div>
                                         <div class="form-group">

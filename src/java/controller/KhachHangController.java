@@ -59,4 +59,21 @@ public class KhachHangController {
         model.removeKhachHang(kh);
         return "redirect:danhsachkhachhang.htm";
     }
+    
+    // insert 
+    //chuyển từ all sang create
+    @RequestMapping(value = "dangky", method=RequestMethod.GET)
+    public String redirectCreateKH(Model m){
+        m.addAttribute("khachhang", new Khachhang());
+        m.addAttribute("action", "themkhachhang");
+        return "DangKy";
+    }
+    
+    @RequestMapping(value = "themkhachhang",method = RequestMethod.POST)
+    public String createKH(@ModelAttribute(value = "khachhang") Khachhang kh){
+        //System.out.println("====>"+ts.getId()+"-"+ts.getTen());
+        KhachHangModel model = new KhachHangModel();
+        model.CreateKhachHang(kh);
+        return "redirect:trangchu.htm";
+    }
 }

@@ -24,7 +24,7 @@ public class LoginAD {
                     HttpSession session = request.getSession();
                     session.setAttribute("user", u.getTendangnhap());
                     session.setAttribute("idAdmin", u.getId());
-                  return "redirect:quantri.htm?loi=2";
+                  return "redirect:quantri.htm";
             }
         }
         return "redirect:dangnhap.htm?loi=1";
