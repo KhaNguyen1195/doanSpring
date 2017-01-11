@@ -7,8 +7,8 @@
 	$.fn.loupe = function (arg) {
 		var options = $.extend({
 			loupe: 'loupe',
-			width: 220,
-			height: 180
+			width: 200,
+			height: 150
 		}, arg || {});
 
 		return this.length ? this.each(function () {
@@ -17,7 +17,7 @@
 				move, hide = function () { $loupe.hide(); },
 				time;
 
-			if ($this.data('loupe') !== null) {
+			if ($this.data('loupe') != null) {
 				return $this.data('loupe', arg);
 			}
 
